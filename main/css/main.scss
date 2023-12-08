@@ -1,0 +1,47 @@
+//colors
+$background-light: #FAF9F6;
+$background-dark: #28282B;
+
+//default sets & designs
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+
+//body
+body {
+  display: flex;
+  padding: 100px;
+  height: 100vh;
+  background-color: $background-light;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  img{
+    height: 6rem;
+    margin: 0 10px;
+    border: 5px solid $background-dark;
+    border-radius: 50%;
+  }
+  h1{
+    margin: 0 10px;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    .name{
+      margin-left: 10px;
+      font-size: 2rem;
+    }
+  }
+}
