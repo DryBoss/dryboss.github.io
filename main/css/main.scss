@@ -2,10 +2,43 @@
 $background-light: #FAF9F6;
 $background-dark: #28282B;
 
+//animations
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes apearFromNothing {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
 //default sets & designs
 *, *:before, *:after {
   box-sizing: inherit;
   margin: 0;
+  overflow: hidden;
 }
 html {
   box-sizing: border-box;
@@ -19,6 +52,7 @@ a {
 //body
 body {
   display: flex;
+  flex-direction: column;
   padding: 100px;
   height: 100vh;
   background-color: $background-light;
@@ -27,21 +61,51 @@ body {
 .title {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  margin: 20px 0;
   img{
     height: 6rem;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
     border: 5px solid $background-dark;
     border-radius: 50%;
+    animation: apearFromNothing 0.5s ease-out 0s 1 normal both;
   }
   h1{
-    margin: 0 10px;
-    font-size: 1.5em;
+    margin: 0 0 0 10px;
+    font-size: 1.5rem;
     letter-spacing: 5px;
+    animation: slideFromRight 0.5s ease-out 0s 1 normal both;
     .name{
-      margin-left: 10px;
+      margin: 0 0 0 10px;
       font-size: 2rem;
     }
+  }
+}
+
+.main-section {
+  display: flex;
+  margin: 20px 0;
+  .details {
+    animation: slideFromBottom 0.5s ease-out 0s 1 normal both;
+    p{
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: transparent;
+      color: $background-dark;
+      border: 5px solid $background-dark;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    & > * {
+      margin: 10px;
+    }
+  }
+  & > * {
+    flex-basis: 100%;
   }
 }
