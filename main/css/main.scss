@@ -1,53 +1,12 @@
-//colors
-$background-light: #FAF9F6;
-$background-dark: #28282B;
+//color-variables
+$primary-white: #D9D9D9;
+$secondary-white: #8C8C8C;
+$neutral: #737373;
+$secondary-black: #262626;
+$primary-black: #0D0D0D;
 
 //animations
-@keyframes slideFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slideFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes apearFromNothing {
-  from {
-    scale: 0;
-  }
-  to {
-    scale: 1;
-  }
-}
-
-//default sets & designs
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  overflow: hidden;
-}
-html {
-  box-sizing: border-box;
-  font-family: 'Cabin', sans-serif;
-  font-size: 16px;
-}
-a {
-  text-decoration: none;
-}
+@import '_animation', '_default-sets';
 
 //body
 body {
@@ -69,7 +28,7 @@ body {
     margin: 0 10px 0 0;
     border: 5px solid $background-dark;
     border-radius: 50%;
-    animation: apearFromNothing 0.5s ease-out 0s 1 normal both;
+    animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
   }
   h1{
     margin: 0 0 0 10px;
@@ -87,7 +46,6 @@ body {
   display: flex;
   margin: 20px 0;
   .details {
-    animation: slideFromBottom 0.5s ease-out 0s 1 normal both;
     p{
       font-size: 1.2rem;
       letter-spacing: 3px;

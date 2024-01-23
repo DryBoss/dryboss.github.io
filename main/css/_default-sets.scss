@@ -1,0 +1,13 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  overflow: hidden;
+}
+html {
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}

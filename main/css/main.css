@@ -18,7 +18,7 @@
     transform: translateY(0px);
   }
 }
-@keyframes apearFromNothing {
+@keyframes appearFromNothing {
   from {
     scale: 0;
   }
@@ -62,7 +62,7 @@ body {
   margin: 0 10px 0 0;
   border: 5px solid #28282B;
   border-radius: 50%;
-  animation: apearFromNothing 0.5s ease-out 0s 1 normal both;
+  animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
 }
 .title h1 {
   margin: 0 0 0 10px;
@@ -78,9 +78,6 @@ body {
 .main-section {
   display: flex;
   margin: 20px 0;
-}
-.main-section .details {
-  animation: slideFromBottom 0.5s ease-out 0s 1 normal both;
 }
 .main-section .details p {
   font-size: 1.2rem;
