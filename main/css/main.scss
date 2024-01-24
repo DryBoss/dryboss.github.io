@@ -5,38 +5,42 @@ $neutral: #737373;
 $secondary-black: #262626;
 $primary-black: #0D0D0D;
 
-//animations
-@import '_animation', '_default-sets';
+//imports
+@import '_animation', 'drystyle/_default-sets';
 
 //body
+html {
+  color: $secondary-black;
+  font-family: 'Cabin', sans-serif;
+}
 body {
   display: flex;
-  flex-direction: column;
-  padding: 100px;
   height: 100vh;
-  background-color: $background-light;
+  padding: 100px;
+  background-color: $primary-white;
 }
-
+.home, .menu {
+  flex: 1;
+}
 .title {
   display: flex;
-  flex-direction: row;
-  justify-content: left;
   align-items: center;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   img{
-    height: 6rem;
+    height: 80px;
     margin: 0 10px 0 0;
-    border: 5px solid $background-dark;
+    border: 5px solid $primary-black;
     border-radius: 50%;
     animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
   }
   h1{
     margin: 0 0 0 10px;
-    font-size: 1.5rem;
+    font-size: 24px;
     letter-spacing: 5px;
     animation: slideFromRight 0.5s ease-out 0s 1 normal both;
     .name{
       margin: 0 0 0 10px;
+      color: $primary-black;
       font-size: 2rem;
     }
   }
@@ -53,8 +57,8 @@ body {
     button {
       padding: 10px 20px;
       background-color: transparent;
-      color: $background-dark;
-      border: 5px solid $background-dark;
+      color: $primary-black;
+      border: 5px solid $primary-black;
       border-radius: 10px;
       font-size: 1rem;
       font-weight: bold;
