@@ -137,15 +137,28 @@ body {
   padding: 5px;
 }
 
+.card:hover {
+  transform: scale(1.05);
+  transition: 100ms;
+}
+.card:hover > .title, .card:hover img {
+  display: none;
+}
+
 #contact {
   grid-area: 1/2/3/3;
   justify-self: left;
   align-self: center;
 }
 
-#blogs, #projects {
+#projects {
   justify-self: right;
-  align-self: center;
+  align-self: end;
+}
+
+#blogs {
+  justify-self: right;
+  align-self: start;
 }
 
 #projects img {
