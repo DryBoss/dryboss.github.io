@@ -119,6 +119,7 @@ body {
     padding: 5px 10px;
     color: $secondary-white;
     font-weight: normal;
+    text-align: center;
     background-color: $secondary-black;
     transform: translate(-2px, -2px);
     transition: 1s;
@@ -135,7 +136,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     transform: translateY(-200px);
   }
 }

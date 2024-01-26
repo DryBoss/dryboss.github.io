@@ -150,6 +150,7 @@ body {
   padding: 5px 10px;
   color: #8C8C8C;
   font-weight: normal;
+  text-align: center;
   background-color: #262626;
   transform: translate(-2px, -2px);
   transition: 1s;
@@ -167,7 +168,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   transform: translateY(-200px);
 }
 
