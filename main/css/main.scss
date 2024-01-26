@@ -6,7 +6,7 @@ $secondary-black: #262626;
 $primary-black: #0D0D0D;
 
 //imports
-@import '_animation', 'drystyle/_default-sets';
+@import '_animation', '_default-sets';
 
 //body
 html {
@@ -114,6 +114,8 @@ body {
   }
   .details {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     width: 150px;
     padding: 5px 10px;
@@ -133,9 +135,6 @@ body {
     transform: translateY(-200px);
   }
   .details{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transform: translateY(-200px);
   }
 }

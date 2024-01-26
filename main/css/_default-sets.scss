@@ -1,0 +1,11 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  overflow: hidden;
+}
+html {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
