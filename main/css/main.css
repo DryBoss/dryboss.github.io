@@ -52,6 +52,14 @@ body {
   background-color: #D9D9D9;
 }
 
+.change-mode {
+  position: fixed;
+  top: 50px;
+  right: 100px;
+  width: 32px;
+  height: 32px;
+}
+
 .home, .menu {
   flex: 1;
 }
