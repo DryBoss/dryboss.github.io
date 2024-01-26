@@ -22,29 +22,32 @@ body {
 .home, .menu {
   flex: 1;
 }
-.title {
-  display: flex;
-  align-items: center;
-  margin: 0 0 20px 0;
-  img{
-    height: 80px;
-    margin: 0 10px 0 0;
-    border: 5px solid $primary-black;
-    border-radius: 50%;
-    animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
-  }
-  h1{
-    margin: 0 0 0 10px;
-    font-size: 24px;
-    letter-spacing: 5px;
-    animation: slideFromRight 0.5s ease-out 0s 1 normal both;
-    .name{
+.home {
+  .title {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+    img{
+      height: 80px;
+      margin: 0 10px 0 0;
+      border: 5px solid $primary-black;
+      border-radius: 50%;
+      animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
+    }
+    h1{
       margin: 0 0 0 10px;
-      color: $primary-black;
-      font-size: 32px;
+      font-size: 24px;
+      letter-spacing: 5px;
+      animation: slideFromRight 0.5s ease-out 0s 1 normal both;
+      .name{
+        margin: 0 0 0 10px;
+        color: $primary-black;
+        font-size: 32px;
+      }
     }
   }
 }
+
 
 .home {
   display: flex;
@@ -96,17 +99,41 @@ body {
   width: 150px;
   color: $secondary-black;
   font-weight: bold;
-  border: 3px solid $secondary-black;
+  border: 3px solid $primary-black;
   border-radius: 20px;
   & > * {
     padding: 5px;
+  }
+  .overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 150px;
+  }
+  .details {
+    display: none;
+    height: 200px;
+    width: 150px;
+    padding: 5px 10px;
+    color: $secondary-white;
+    font-weight: normal;
+    background-color: $secondary-black;
   }
 }
 .card:hover {
   transform: scale(1.05);
   transition: 100ms;
-  & > .title, img{
+  .overview {
     display: none;
+  }
+  .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
   }
 }
 

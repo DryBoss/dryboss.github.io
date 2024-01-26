@@ -56,25 +56,25 @@ body {
   flex: 1;
 }
 
-.title {
+.home .title {
   display: flex;
   align-items: center;
   margin: 0 0 20px 0;
 }
-.title img {
+.home .title img {
   height: 80px;
   margin: 0 10px 0 0;
   border: 5px solid #0D0D0D;
   border-radius: 50%;
   animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
 }
-.title h1 {
+.home .title h1 {
   margin: 0 0 0 10px;
   font-size: 24px;
   letter-spacing: 5px;
   animation: slideFromRight 0.5s ease-out 0s 1 normal both;
 }
-.title h1 .name {
+.home .title h1 .name {
   margin: 0 0 0 10px;
   color: #0D0D0D;
   font-size: 32px;
@@ -130,19 +130,43 @@ body {
   width: 150px;
   color: #262626;
   font-weight: bold;
-  border: 3px solid #262626;
+  border: 3px solid #0D0D0D;
   border-radius: 20px;
 }
 .card > * {
   padding: 5px;
+}
+.card .overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 200px;
+  width: 150px;
+}
+.card .details {
+  display: none;
+  height: 200px;
+  width: 150px;
+  padding: 5px 10px;
+  color: #8C8C8C;
+  font-weight: normal;
+  background-color: #262626;
 }
 
 .card:hover {
   transform: scale(1.05);
   transition: 100ms;
 }
-.card:hover > .title, .card:hover img {
+.card:hover .overview {
   display: none;
+}
+.card:hover .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
 #contact {
