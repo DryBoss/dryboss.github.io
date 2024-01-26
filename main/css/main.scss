@@ -26,10 +26,9 @@ body {
   .title {
     display: flex;
     align-items: center;
-    margin: 0 0 20px 0;
+    padding: 10px;
     img{
       height: 80px;
-      margin: 0 10px 0 0;
       border: 5px solid $primary-black;
       border-radius: 50%;
       animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
@@ -53,21 +52,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
   button:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: 100ms;
   }
 }
 .home-sections {
-  margin: 20px 0 0 0;
   .home-section-1 {
     p {
+      padding: 10px;
       font-size: 20px;
       letter-spacing: 3px;
     }
     button {
       padding: 10px 20px;
+      margin: 10px;
       background-color: $primary-white;
       color: $secondary-black;
       border: 4px solid $secondary-black;
@@ -76,7 +75,7 @@ body {
       font-weight: bold;
     }
     & > * {
-      margin: 10px;
+      
     }
   }
   & > * {
@@ -91,19 +90,14 @@ body {
   gap: 50px;
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 200px;
   width: 150px;
   color: $secondary-black;
+  text-align: center;
   font-weight: bold;
   border: 3px solid $primary-black;
   border-radius: 20px;
-  & > * {
-    padding: 5px;
-  }
+  box-shadow: $neutral 0px 5px 15px;
   .overview {
     display: flex;
     flex-direction: column;
@@ -111,33 +105,38 @@ body {
     align-items: center;
     height: 200px;
     width: 150px;
+    transform: translate(-2px, -2px);
+    transition: 1s;
   }
   .details {
-    display: none;
+    display: flex;
     height: 200px;
     width: 150px;
     padding: 5px 10px;
     color: $secondary-white;
     font-weight: normal;
     background-color: $secondary-black;
+    transform: translate(-2px, -2px);
+    transition: 1s;
   }
 }
 .card:hover {
   transform: scale(1.05);
   transition: 100ms;
-  .overview {
-    display: none;
+  box-shadow: none;
+  .overview{
+    transform: translateY(-200px);
   }
   .details{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
+    transform: translateY(-200px);
   }
 }
 
-#contact {
+#achievements {
   grid-area: 1 / 2 / 3 / 3;
   justify-self: left;
   align-self: center;
