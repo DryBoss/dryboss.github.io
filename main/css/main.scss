@@ -11,20 +11,21 @@ $primary-black: #0D0D0D;
 //body
 html {
   color: $secondary-black;
+  font-size: 16px;
   font-family: 'Cabin', sans-serif;
 }
 body {
   display: flex;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 5rem;
   background-color: $primary-white;
 }
 .change-mode {
   position: fixed;
   top: 50px;
   right: 100px;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   &:hover {
     transform: rotate(360deg);
     transition: 1s;
@@ -37,22 +38,22 @@ body {
   .title {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 0.5rem;
     img{
-      height: 80px;
-      border: 5px solid $primary-black;
+      height: 5rem;
+      border: 0.25rem solid $primary-black;
       border-radius: 50%;
       animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
     }
     h1{
-      margin: 0 0 0 10px;
-      font-size: 24px;
-      letter-spacing: 5px;
+      margin: 0 0 0 0.5rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.25rem;
       animation: slideFromRight 0.5s ease-out 0s 1 normal both;
       .name{
-        margin: 0 0 0 10px;
+        margin: 0 0 0 0.5rem;
         color: $primary-black;
-        font-size: 32px;
+        font-size: 2rem;
       }
     }
   }
@@ -70,18 +71,18 @@ body {
 .home-sections {
   .home-section-1 {
     p {
-      padding: 10px;
-      font-size: 20px;
-      letter-spacing: 3px;
+      padding: 0.5rem;
+      font-size: 1.25rem;
+      letter-spacing: 0.2rem;
     }
     button {
-      padding: 10px 20px;
-      margin: 10px;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
       background-color: $primary-white;
       color: $secondary-black;
-      border: 4px solid $secondary-black;
-      border-radius: 10px;
-      font-size: 16px;
+      border: 0.25rem solid $secondary-black;
+      border-radius: 0.5rem;
+      font-size: 1rem;
       font-weight: bold;
     }
   }
@@ -91,11 +92,11 @@ body {
 }
 
 .socials {
-  padding: 10px;
+  padding: 0.5rem;
   & > * {
-    width: 24px;
-    height: 24px;
-    margin: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
     &:hover {
       transform: scale(1.2);
       transition: 100ms;
@@ -107,40 +108,43 @@ body {
   display: grid;
   grid-template-rows: 1 1;
   grid-template-columns: 1 1;
-  gap: 50px;
+  gap: 3rem;
 }
 .card {
-  height: 200px;
-  width: 150px;
+  height: 12.5rem;
+  width: 10rem;
   color: $secondary-black;
   text-align: center;
   font-weight: bold;
-  border: 3px solid $primary-black;
-  border-radius: 20px;
-  box-shadow: $neutral 0px 5px 15px;
+  border: 0.25rem solid $primary-black;
+  border-radius: 1rem;
+  box-shadow: $neutral 0px 0.25rem 1rem;
   .overview {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 200px;
-    width: 150px;
-    transform: translate(-2px, -2px);
+    height: 12.5rem;
+    width: 10rem;
+    transform: translate(-0.15rem, -0.15rem);
     transition: 1s;
+    img {
+      height: 4rem;
+    }
   }
   .details {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
-    width: 150px;
-    padding: 5px 10px;
+    height: 12.5rem;
+    width: 10rem;
+    padding: 0.25rem 0.5rem;
     color: $secondary-white;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: normal;
     text-align: center;
     background-color: $secondary-black;
-    transform: translate(-2px, -2px);
+    transform: translate(-0.15rem, -0.15rem);
     transition: 1s;
   }
 }
@@ -149,10 +153,10 @@ body {
   transition: 100ms;
   box-shadow: none;
   .overview{
-    transform: translateY(-200px);
+    transform: translateY(-12.5rem);
   }
   .details{
-    transform: translateY(-200px);
+    transform: translateY(-12.5rem);
   }
 }
 
@@ -170,5 +174,7 @@ body {
   align-self: start;
 }
 #projects img {
-  transform: translateX(5px);
+  transform: translateX(0.25rem);
 }
+
+@import 'responsive/_under1200'

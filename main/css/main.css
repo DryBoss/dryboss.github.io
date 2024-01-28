@@ -1,21 +1,11 @@
 @keyframes slideFromRight {
   from {
     opacity: 0;
-    transform: translateX(300px);
+    transform: translateX(10rem);
   }
   to {
     opacity: 1;
     transform: translateX(0px);
-  }
-}
-@keyframes slideFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
   }
 }
 @keyframes appearFromNothing {
@@ -42,13 +32,14 @@ a {
 
 html {
   color: #262626;
+  font-size: 16px;
   font-family: "Cabin", sans-serif;
 }
 
 body {
   display: flex;
   height: 100vh;
-  padding: 0 100px;
+  padding: 0 5rem;
   background-color: #D9D9D9;
 }
 
@@ -56,8 +47,8 @@ body {
   position: fixed;
   top: 50px;
   right: 100px;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
 }
 .change-mode:hover {
   transform: rotate(360deg);
@@ -71,24 +62,24 @@ body {
 .home .title {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 0.5rem;
 }
 .home .title img {
-  height: 80px;
-  border: 5px solid #0D0D0D;
+  height: 5rem;
+  border: 0.25rem solid #0D0D0D;
   border-radius: 50%;
   animation: appearFromNothing 0.5s ease-out 0s 1 normal both;
 }
 .home .title h1 {
-  margin: 0 0 0 10px;
-  font-size: 24px;
-  letter-spacing: 5px;
+  margin: 0 0 0 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
   animation: slideFromRight 0.5s ease-out 0s 1 normal both;
 }
 .home .title h1 .name {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0.5rem;
   color: #0D0D0D;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .home {
@@ -102,18 +93,18 @@ body {
 }
 
 .home-sections .home-section-1 p {
-  padding: 10px;
-  font-size: 20px;
-  letter-spacing: 3px;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
 }
 .home-sections .home-section-1 button {
-  padding: 10px 20px;
-  margin: 10px;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   background-color: #D9D9D9;
   color: #262626;
-  border: 4px solid #262626;
-  border-radius: 10px;
-  font-size: 16px;
+  border: 0.25rem solid #262626;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .home-sections > * {
@@ -121,12 +112,12 @@ body {
 }
 
 .socials {
-  padding: 10px;
+  padding: 0.5rem;
 }
 .socials > * {
-  width: 24px;
-  height: 24px;
-  margin: 10px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
 }
 .socials > *:hover {
   transform: scale(1.2);
@@ -137,42 +128,45 @@ body {
   display: grid;
   grid-template-rows: 1 1;
   grid-template-columns: 1 1;
-  gap: 50px;
+  gap: 3rem;
 }
 
 .card {
-  height: 200px;
-  width: 150px;
+  height: 12.5rem;
+  width: 10rem;
   color: #262626;
   text-align: center;
   font-weight: bold;
-  border: 3px solid #0D0D0D;
-  border-radius: 20px;
-  box-shadow: #737373 0px 5px 15px;
+  border: 0.25rem solid #0D0D0D;
+  border-radius: 1rem;
+  box-shadow: #737373 0px 0.25rem 1rem;
 }
 .card .overview {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 200px;
-  width: 150px;
-  transform: translate(-2px, -2px);
+  height: 12.5rem;
+  width: 10rem;
+  transform: translate(-0.15rem, -0.15rem);
   transition: 1s;
+}
+.card .overview img {
+  height: 4rem;
 }
 .card .details {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 150px;
-  padding: 5px 10px;
+  height: 12.5rem;
+  width: 10rem;
+  padding: 0.25rem 0.5rem;
   color: #8C8C8C;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: normal;
   text-align: center;
   background-color: #262626;
-  transform: translate(-2px, -2px);
+  transform: translate(-0.15rem, -0.15rem);
   transition: 1s;
 }
 
@@ -182,10 +176,10 @@ body {
   box-shadow: none;
 }
 .card:hover .overview {
-  transform: translateY(-200px);
+  transform: translateY(-12.5rem);
 }
 .card:hover .details {
-  transform: translateY(-200px);
+  transform: translateY(-12.5rem);
 }
 
 #achievements {
@@ -205,5 +199,16 @@ body {
 }
 
 #projects img {
-  transform: translateX(5px);
+  transform: translateX(0.25rem);
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 12px;
+  }
 }
