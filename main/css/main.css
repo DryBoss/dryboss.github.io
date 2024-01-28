@@ -212,3 +212,8 @@ body {
     font-size: 12px;
   }
 }
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}

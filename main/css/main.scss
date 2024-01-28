@@ -177,4 +177,4 @@ body {
   transform: translateX(0.25rem);
 }
 
-@import 'responsive/_under1200'
+@import 'responsive/_wide-screen', 'responsive/long-screen';
