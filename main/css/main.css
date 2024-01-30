@@ -39,6 +39,7 @@ html {
 body {
   display: flex;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 0 5rem;
   background-color: #D9D9D9;
 }
