@@ -224,6 +224,10 @@ body {
   html {
     font-size: 20px;
   }
+  .change-mode {
+    top: 2rem;
+    right: 3rem;
+  }
   .title {
     flex-direction: column;
   }
