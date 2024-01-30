@@ -1,5 +1,23 @@
 @media screen and (max-width: 800px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  .title {
+    img {
+      margin: 10px;
+    }
+    flex-direction: column;
+  }
+  .title, p, .socials {
+    text-align: center;
+  }
+  .buttons {
+    text-align: center;
+  }
+  .projects , .blogs , .achievements {
+    display: inline;
+  }
+  .menu {
+    display: none;
   }
 }

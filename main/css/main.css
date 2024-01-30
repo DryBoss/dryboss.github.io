@@ -111,6 +111,14 @@ body {
   flex-basis: 100%;
 }
 
+.buttons {
+  line-height: 0;
+}
+
+.projects, .blogs, .achievements {
+  display: none;
+}
+
 .socials {
   padding: 0.5rem;
 }
@@ -214,6 +222,24 @@ body {
 }
 @media screen and (max-width: 800px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
+  }
+  .title {
+    flex-direction: column;
+  }
+  .title img {
+    margin: 10px;
+  }
+  .title, p, .socials {
+    text-align: center;
+  }
+  .buttons {
+    text-align: center;
+  }
+  .projects, .blogs, .achievements {
+    display: inline;
+  }
+  .menu {
+    display: none;
   }
 }

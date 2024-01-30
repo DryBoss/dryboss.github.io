@@ -91,6 +91,14 @@ body {
   }
 }
 
+.buttons {
+  line-height: 0;
+}
+
+.projects , .blogs , .achievements {
+  display: none;
+}
+
 .socials {
   padding: 0.5rem;
   & > * {
