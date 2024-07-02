@@ -1,0 +1,29 @@
+//colors
+//dark
+$primary-dark: #0a0c10;
+$secondary-dark: #343143;
+$tertiary-dark: #30363d;
+$active-dark: #26cd41;
+$inactive-dark: #15381f;
+$neutral-dark: #c2c4c8;
+$red-dark: #ff4445;
+$border-dark: #7a828e;
+//light
+$primary-light: #fafbfc;
+$secondary-light: #f6f8fa;
+$active-light: #055d20;
+$inactive-light: #d2fedb;
+$neutral-light: #24292f;
+$red-light: #a0111f;
+$border-light: #373b41;
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $active-dark;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: center;
+}

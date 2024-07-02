@@ -10,13 +10,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
   margin: 0;
 }
-
 html {
   box-sizing: border-box;
   color: #c2c4c8;
@@ -30,10 +30,10 @@ body {
 
 h1 {
   font-size: 1.5rem;
-}
-h1 span {
-  font-family: "consolas", sans-serif;
-  font-size: 2rem;
+  span {
+    font-family: "consolas", sans-serif;
+    font-size: 2rem;
+  }
 }
 
 .section {

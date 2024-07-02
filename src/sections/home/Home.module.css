@@ -1,0 +1,10 @@
+.logo {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #26cd41;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: center;
+}
