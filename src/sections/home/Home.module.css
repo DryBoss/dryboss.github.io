@@ -1,10 +1,36 @@
+.title {
+  display: flex;
+  align-items: center;
+}
+.title h1 {
+  margin-left: 20px;
+}
+
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 2px solid #26cd41;
   border-radius: 50%;
 }
 
-.title {
-  text-align: center;
+.shortAboutMe {
+  margin: 20px 0;
+}
+.shortAboutMe div {
+  background-color: #30363d;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.moreAboutMe button {
+  background-color: transparent;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 2px solid #7a828e;
+  border-radius: 5px;
+}
+.moreAboutMe button:hover {
+  scale: 1.1;
 }

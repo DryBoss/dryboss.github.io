@@ -24,6 +24,11 @@ html {
   font-size: 12px;
 }
 
+button {
+  color: #c2c4c8;
+  border: none;
+}
+
 body {
   background-color: #0a0c10;
 }
@@ -39,5 +44,5 @@ h1 span {
 .section {
   width: 100vw;
   height: 100vh;
-  padding: 50px 20px;
+  padding: 20px 20px;
 }

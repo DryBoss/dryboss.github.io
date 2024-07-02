@@ -17,13 +17,42 @@ $neutral-light: #24292f;
 $red-light: #a0111f;
 $border-light: #373b41;
 
+//title
+.title {
+  display: flex;
+  align-items: center;
+  h1 {
+    margin-left: 20px;
+  }
+}
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 2px solid $active-dark;
   border-radius: 50%;
 }
 
-.title {
-  text-align: center;
+//short about me
+.shortAboutMe {
+  margin: 20px 0;
+  div {
+    background-color: $tertiary-dark;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+}
+
+.moreAboutMe {
+  button {
+    background-color: transparent;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 2px solid $border-dark;
+    border-radius: 5px;
+    &:hover {
+      scale: 1.1;
+    }
+  }
 }
