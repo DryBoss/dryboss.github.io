@@ -32,6 +32,7 @@ html {
   color: $text;
   font-family: "segoeui", sans-serif;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 button {
   color: $text;
@@ -66,4 +67,10 @@ h1 {
 
 svg:hover {
   fill: #fafbfc;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 50px;
+  }
 }

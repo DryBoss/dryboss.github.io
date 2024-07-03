@@ -23,6 +23,7 @@ html {
   color: #c2c4c8;
   font-family: "segoeui", sans-serif;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -56,4 +57,10 @@ h1 span {
 
 svg:hover {
   fill: #fafbfc;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 50px;
+  }
 }

@@ -5,6 +5,10 @@ $inactive: #d2fedb;
 $text: #24292f;
 $red: #a0111f;
 $border: #373b41;*/
+.intro {
+  flex: 1;
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -56,7 +60,8 @@ $border: #373b41;*/
   display: flex;
   margin-left: 10px;
 }
-.menu p {
+.menu a {
+  text-decoration: none;
   padding: 5px 15px;
   margin: 15px 5px 5px 5px;
   color: #26cd41;
@@ -64,6 +69,21 @@ $border: #373b41;*/
   background-color: #15381f;
   border-radius: 5px;
 }
-.menu p:hover {
+.menu a:hover {
   scale: 1.1;
+}
+
+.featured {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin: 50px;
+  }
+  .featured {
+    display: block;
+    margin: 50px;
+  }
 }

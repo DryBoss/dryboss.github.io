@@ -17,6 +17,9 @@ $text: #24292f;
 $red: #a0111f;
 $border: #373b41;*/
 
+.intro {
+  flex: 1;
+}
 //title
 .title {
   display: flex;
@@ -72,7 +75,8 @@ $border: #373b41;*/
 .menu {
   display: flex;
   margin-left: 10px;
-  p {
+  a {
+    text-decoration: none;
     padding: 5px 15px;
     margin: 15px 5px 5px 5px;
     color: $active;
@@ -83,4 +87,28 @@ $border: #373b41;*/
       scale: 1.1;
     }
   }
+}
+
+.featured {
+  flex: 1;
+  display: none;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin: 50px;
+  }
+  .featured {
+    display: block;
+    margin: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }
