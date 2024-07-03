@@ -1,3 +1,12 @@
+$primary: #0a0c10;
+$secondary: #343143;
+$tertiary: #30363d;
+$active: #26cd41;
+$inactive: #15381f;
+$text: #c2c4c8;
+$red: #ff4445;
+$border: #7a828e;
+
 @font-face {
   font-family: "segoeui";
   src: url("./assets/fonts/segoeui.ttf") format("ttf");
@@ -19,29 +28,37 @@
 }
 html {
   box-sizing: border-box;
-  color: #c2c4c8;
+  color: $text;
   font-family: "segoeui", sans-serif;
   font-size: 12px;
 }
 button {
-  color: #c2c4c8;
+  color: $text;
   border: none;
 }
 
 body {
-  background-color: #0a0c10;
+  background-color: $primary;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-weight: normal;
+  font-size: 1rem;
   span {
-    font-family: "consolas", sans-serif;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 }
 
 .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   padding: 20px 20px;
+}
+
+svg:hover {
+  fill: #fafbfc;
 }

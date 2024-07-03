@@ -1,36 +1,65 @@
+/*$primary: #fafbfc;
+$secondary: #f6f8fa;
+$active: #055d20;
+$inactive: #d2fedb;
+$text: #24292f;
+$red: #a0111f;
+$border: #373b41;*/
 .title {
   display: flex;
   align-items: center;
 }
 .title h1 {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border: 2px solid #26cd41;
   border-radius: 50%;
 }
 
-.shortAboutMe {
-  margin: 20px 0;
-}
-.shortAboutMe div {
+.aboutMe {
   background-color: #30363d;
   padding: 10px;
   margin: 10px 0;
-  font-size: 1rem;
   border-radius: 5px;
+}
+.aboutMe p {
+  margin: 0 5px;
+  font-size: 1.2em;
+  line-height: 2rem;
 }
 
 .moreAboutMe button {
   background-color: transparent;
   padding: 5px 10px;
-  margin: 0 5px;
+  margin: 15px 5px;
   border: 2px solid #7a828e;
   border-radius: 5px;
 }
 .moreAboutMe button:hover {
   scale: 1.1;
+  color: #26cd41;
+  border-color: #26cd41;
+}
+
+.socials img {
+  margin: 5px;
+}
+.socials img:hover {
+  scale: 1.2;
+}
+
+.menu {
+  display: flex;
+  margin-left: 10px;
+}
+.menu p {
+  padding: 5px 15px;
+  margin: 15px 5px 5px 5px;
+  color: #26cd41;
+  background-color: #15381f;
+  border-radius: 5px;
 }

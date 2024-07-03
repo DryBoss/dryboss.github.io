@@ -1,46 +1,47 @@
 //colors
 //dark
-$primary-dark: #0a0c10;
-$secondary-dark: #343143;
-$tertiary-dark: #30363d;
-$active-dark: #26cd41;
-$inactive-dark: #15381f;
-$neutral-dark: #c2c4c8;
-$red-dark: #ff4445;
-$border-dark: #7a828e;
+$primary: #0a0c10;
+$secondary: #343143;
+$tertiary: #30363d;
+$active: #26cd41;
+$inactive: #15381f;
+$text: #c2c4c8;
+$red: #ff4445;
+$border: #7a828e;
 //light
-$primary-light: #fafbfc;
-$secondary-light: #f6f8fa;
-$active-light: #055d20;
-$inactive-light: #d2fedb;
-$neutral-light: #24292f;
-$red-light: #a0111f;
-$border-light: #373b41;
+/*$primary: #fafbfc;
+$secondary: #f6f8fa;
+$active: #055d20;
+$inactive: #d2fedb;
+$text: #24292f;
+$red: #a0111f;
+$border: #373b41;*/
 
 //title
 .title {
   display: flex;
   align-items: center;
   h1 {
-    margin-left: 20px;
+    margin-left: 1rem;
   }
 }
 .logo {
-  width: 80px;
-  height: 80px;
-  border: 2px solid $active-dark;
+  width: 50px;
+  height: 50px;
+  border: 2px solid $active;
   border-radius: 50%;
 }
 
 //short about me
-.shortAboutMe {
-  margin: 20px 0;
-  div {
-    background-color: $tertiary-dark;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 1rem;
-    border-radius: 5px;
+.aboutMe {
+  background-color: $tertiary;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  p {
+    margin: 0 5px;
+    font-size: 1.2em;
+    line-height: 2rem;
   }
 }
 
@@ -48,11 +49,34 @@ $border-light: #373b41;
   button {
     background-color: transparent;
     padding: 5px 10px;
-    margin: 0 5px;
-    border: 2px solid $border-dark;
+    margin: 15px 5px;
+    border: 2px solid $border;
     border-radius: 5px;
     &:hover {
       scale: 1.1;
+      color: $active;
+      border-color: $active;
     }
+  }
+}
+
+.socials {
+  img {
+    margin: 5px;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  margin-left: 10px;
+  p {
+    padding: 5px 15px;
+    margin: 15px 5px 5px 5px;
+    color: $active;
+    background-color: $inactive;
+    border-radius: 5px;
   }
 }

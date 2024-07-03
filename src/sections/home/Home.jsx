@@ -1,6 +1,10 @@
 import styles from "./Home.module.css";
 import dryBossLogo from "./../../assets/images/dryboss-logo.png";
-import facebookLogo from "./../../assets/icons/socials/facebook.png";
+import facebookLogo from "./../../assets/icons/facebook.svg";
+import instagramLogo from "./../../assets/icons/instagram.svg";
+import xLogo from "./../../assets/icons/x.svg";
+import linkedinLogo from "./../../assets/icons/linkedin.svg";
+import githubLogo from "./../../assets/icons/github.svg";
 
 export default function Home() {
   return (
@@ -9,46 +13,39 @@ export default function Home() {
         <div className={styles.title}>
           <img src={dryBossLogo} alt="DryBoss Logo" className={styles.logo} />
           <h1>
-            it's me
+            <span>Mohammad Taiham</span>
             <br />
-            <span> Mohammad Taiham</span>
-            <br />
-            aka<span> DryBoss</span>
+            Web developer
           </h1>
         </div>
-        <div className={styles.shortAboutMe}>
-          <div>
+        <div className={styles.menu}>
+          <p>projects</p>
+          <p>writings</p>
+          <p>achievements</p>
+        </div>
+        <div className={styles.aboutMe}>
+          <p>
             I am an undergraduate Mathematics student at the University of
-            Chittagong, with a keen interest in leveraging technology and data
-            to solve complex problems.
+            Chittagong, passionate about leveraging technology and data.
+            <br />I specialize in frontend development with JavaScript and
+            React.js and am expanding into data analysis and backend
+            development. My research focuses on AI and Big Data.
+            <br />I actively contribute to various projects and enjoy gaming to
+            enhance creativity and strategic thinking
+          </p>
+          <div className={styles.moreAboutMe}>
+            <button>More about me</button>
+            <button>Download CV</button>
           </div>
-          <div>
-            Specializing in frontend web development with JavaScript and
-            React.js, I am also expanding my expertise in data analysis, backend
-            development, and software development.
+          <div className={styles.socials}>
+            <img src={facebookLogo} alt="facebook" />
+            <img src={instagramLogo} alt="instagram" />
+            <img src={xLogo} alt="x" />
+            <img src={linkedinLogo} alt="linkedin" />
+            <img src={githubLogo} alt="github" />
           </div>
-          <div>
-            My research interests include exploring Artificial Intelligence and
-            Big Data to drive innovation and address real-world issues.
-          </div>
-          <div>
-            I actively contribute to several open source and private projects,
-            fostering collaboration and continuous learning.
-          </div>
-          <div>
-            In my leisure time, I enjoy playing games, which enhance my
-            creativity and strategic thinking. cd
-          </div>
-        </div>
-        <div className={styles.moreAboutMe}>
-          <button>More about me</button>
-          <button>Download CV</button>
-        </div>
-        <div className="socials">
-          <img src={facebookLogo} alt="facebook" />
         </div>
       </div>
-      <div className="menu"></div>
     </div>
   );
 }
