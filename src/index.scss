@@ -1,11 +1,4 @@
-$primary: #0a0c10;
-$secondary: #343143;
-$tertiary: #30363d;
-$active: #26cd41;
-$inactive: #15381f;
-$text: #c2c4c8;
-$red: #ff4445;
-$border: #7a828e;
+@import "./pages/styles/colors";
 
 @font-face {
   font-family: "segoeui";
@@ -51,6 +44,10 @@ h1 {
     font-weight: bold;
     font-size: 1.5rem;
   }
+}
+
+h2 {
+  color: $active;
 }
 
 .section {

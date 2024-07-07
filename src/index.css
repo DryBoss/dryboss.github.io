@@ -1,3 +1,10 @@
+/*$primary: #fafbfc;
+$secondary: #f6f8fa;
+$active: #055d20;
+$inactive: #d2fedb;
+$text: #24292f;
+$red: #a0111f;
+$border: #373b41;*/
 @font-face {
   font-family: "segoeui";
   src: url("./assets/fonts/segoeui.ttf") format("ttf");
@@ -43,6 +50,10 @@ h1 {
 h1 span {
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+h2 {
+  color: #26cd41;
 }
 
 .section {

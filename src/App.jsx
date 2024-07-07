@@ -1,12 +1,20 @@
-import Home from "./sections/home/Home";
-import Projects from "./sections/projects/Projects";
+import { useState } from "react";
+import Home from "./pages/home/Home";
+import Projects from "./pages/projects/Projects";
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  const [currentPage, setCurrentPage] = useState("home");
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case "home":
+        return <Home setCurrentPage={setCurrentPage} />;
+      case "projects":
+        return <Projects />;
+      default:
+        return <Home />;
+    }
+  };
+  return <>{renderCurrentPage()}</>;
 }
 
 export default App;
