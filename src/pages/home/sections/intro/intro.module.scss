@@ -22,6 +22,19 @@
   }
 }
 
+.menu {
+  button {
+    padding: 8px 12px;
+    margin: 16px 4px;
+    background-color: $active-secondary;
+    border: none;
+    border-radius: 8px;
+    a {
+      color: $active;
+    }
+  }
+}
+
 .aboutMe {
   padding: 16px;
   background-color: $background-secondary;
@@ -30,7 +43,7 @@
     line-height: 1.5rem;
   }
   div {
-    margin: 16px 8px;
+    margin: 16px 4px;
     button {
       padding: 8px 12px;
       margin: 0 4px;
@@ -43,6 +56,9 @@
         color: $active;
         border-color: $active;
       }
+    }
+    img:hover {
+      scale: 1.1;
     }
   }
 }

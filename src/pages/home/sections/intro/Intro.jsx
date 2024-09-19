@@ -12,6 +12,14 @@ function Intro() {
             <p>Web Developer</p>
           </div>
         </div>
+        <div className={styles.menu}>
+          <button>
+            <a href="">projects</a>
+          </button>
+          <button>
+            <a href="">blogs</a>
+          </button>
+        </div>
         <div className={styles.aboutMe}>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ea

@@ -20,6 +20,17 @@
   font-size: 1.5rem;
 }
 
+.menu button {
+  padding: 8px 12px;
+  margin: 16px 4px;
+  background-color: #15381f;
+  border: none;
+  border-radius: 8px;
+}
+.menu button a {
+  color: #26cd41;
+}
+
 .aboutMe {
   padding: 16px;
   background-color: #24292f;
@@ -29,7 +40,7 @@
   line-height: 1.5rem;
 }
 .aboutMe div {
-  margin: 16px 8px;
+  margin: 16px 4px;
 }
 .aboutMe div button {
   padding: 8px 12px;
@@ -43,4 +54,7 @@
   scale: 1.1;
   color: #26cd41;
   border-color: #26cd41;
+}
+.aboutMe div img:hover {
+  scale: 1.1;
 }
