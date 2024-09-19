@@ -1,0 +1,46 @@
+.profile,
+.featured {
+  flex: 1;
+  margin: 5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.header img {
+  width: 4rem;
+  border: 2px solid #26cd41;
+  border-radius: 50%;
+}
+.header .title {
+  margin: 0 0 0 12px;
+}
+.header .title h1 {
+  font-size: 1.5rem;
+}
+
+.aboutMe {
+  padding: 16px;
+  background-color: #24292f;
+  border-radius: 16px;
+}
+.aboutMe p {
+  line-height: 1.5rem;
+}
+.aboutMe div {
+  margin: 16px 8px;
+}
+.aboutMe div button {
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+}
+.aboutMe div button:hover {
+  scale: 1.1;
+  color: #26cd41;
+  border-color: #26cd41;
+}

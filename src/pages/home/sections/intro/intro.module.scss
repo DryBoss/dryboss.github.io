@@ -1,0 +1,48 @@
+@import "./../../../../styles/colors";
+
+.profile,
+.featured {
+  flex: 1;
+  margin: 5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  img {
+    width: 4rem;
+    border: 2px solid $active;
+    border-radius: 50%;
+  }
+  .title {
+    margin: 0 0 0 12px;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.aboutMe {
+  padding: 16px;
+  background-color: $background-secondary;
+  border-radius: 16px;
+  p {
+    line-height: 1.5rem;
+  }
+  div {
+    margin: 16px 8px;
+    button {
+      padding: 8px 12px;
+      margin: 0 4px;
+      color: $text;
+      background-color: transparent;
+      border: 2px solid $text;
+      border-radius: 8px;
+      &:hover {
+        scale: 1.1;
+        color: $active;
+        border-color: $active;
+      }
+    }
+  }
+}
