@@ -1,9 +1,12 @@
 @import "./../../../../styles/colors";
 
-.profile,
+.profile {
+  flex: 2;
+  margin: 3rem;
+}
 .featured {
   flex: 1;
-  margin: 5rem;
+  margin: 3rem;
 }
 
 .header {
@@ -30,7 +33,7 @@
     border: none;
     border-radius: 8px;
     a {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: $active;
     }
     &:hover {
@@ -40,7 +43,7 @@
 }
 
 .aboutMe {
-  padding: 16px 12px;
+  padding: 12px;
   background-color: $background-secondary;
   border-radius: 16px;
   p {
@@ -48,7 +51,7 @@
     line-height: 1.5rem;
   }
   div {
-    padding: 12px 0px;
+    padding: 14px 0 2px 0;
     button {
       padding: 8px 12px;
       margin: 0 4px;
@@ -57,7 +60,7 @@
       border: 2px solid $text;
       border-radius: 8px;
       a {
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
       &:hover {
         a {
@@ -68,10 +71,19 @@
       }
     }
     img {
-      margin: 0 8px;
+      margin: 0 4px;
       &:hover {
         scale: 1.2;
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+  .featured {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
 }

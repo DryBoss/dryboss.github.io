@@ -1,7 +1,3 @@
-.section {
-  flex-direction: column;
-}
-
 h1 {
   font-size: 1rem;
 }
@@ -9,17 +5,16 @@ h1 span {
   font-size: 1.5rem;
 }
 
-.subSections {
+.coreSection {
   display: flex;
-  width: 100%;
-}
-.subSections div {
-  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .detailWithIcon {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 .detailWithIcon img {
