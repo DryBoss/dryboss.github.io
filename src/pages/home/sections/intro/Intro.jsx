@@ -1,5 +1,8 @@
 import styles from "./intro.module.css";
 import drybossLogo from "./../../../../../public/dryboss-logo.png";
+import facebookLogo from "./../../../../assets/icons/facebook.svg";
+import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
+import githubLogo from "./../../../../assets/icons/github.svg";
 
 function Intro() {
   return (
@@ -14,7 +17,7 @@ function Intro() {
         </div>
         <div className={styles.menu}>
           <button>
-            <a href="">projects</a>
+            <a href="#projects">projects</a>
           </button>
           <button>
             <a href="">blogs</a>
@@ -32,14 +35,23 @@ function Intro() {
             fugiat explicabo quidem!
           </p>
           <div className={styles.moreAboutMe}>
-            <button>more about me</button>
-            <button>Download CV</button>
+            <button>
+              <a href="">more about me</a>
+            </button>
+            <button>
+              <a href="">Download CV</a>
+            </button>
           </div>
           <div className={styles.socials}>
-            <img src="" alt="facebook" />
-            <img src="" alt="linkedin" />
-            <img src="" alt="github" />
-            <img src="" alt="twitter" />
+            <a href="">
+              <img src={facebookLogo} alt="facebook" />
+            </a>
+            <a href="">
+              <img src={linkedinLogo} alt="linkedin" />
+            </a>
+            <a href="">
+              <img src={githubLogo} alt="github" />
+            </a>
           </div>
         </div>
       </div>

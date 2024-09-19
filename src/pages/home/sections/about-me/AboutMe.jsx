@@ -1,4 +1,5 @@
 import styles from "./AboutMe.module.css";
+import educationLogo from "./../../../../assets/icons/education.svg";
 
 function AboutMe() {
   return (
@@ -10,9 +11,9 @@ function AboutMe() {
       </h1>
       <div className={styles.subSections}>
         <div>
-          <div>
-            <img src="" alt="education" /> Graduating in Mathematics from
-            University of Chittagong
+          <div className={styles.detailWithIcon}>
+            <img src={educationLogo} alt="education" /> Graduating in
+            Mathematics from University of Chittagong
           </div>
         </div>
         <div>

@@ -30,20 +30,25 @@
     border: none;
     border-radius: 8px;
     a {
+      font-size: 1rem;
       color: $active;
+    }
+    &:hover {
+      scale: 1.1;
     }
   }
 }
 
 .aboutMe {
-  padding: 16px;
+  padding: 16px 12px;
   background-color: $background-secondary;
   border-radius: 16px;
   p {
+    margin: 0 4px;
     line-height: 1.5rem;
   }
   div {
-    margin: 16px 4px;
+    padding: 12px 0px;
     button {
       padding: 8px 12px;
       margin: 0 4px;
@@ -51,14 +56,22 @@
       background-color: transparent;
       border: 2px solid $text;
       border-radius: 8px;
+      a {
+        font-size: 1rem;
+      }
       &:hover {
-        scale: 1.1;
-        color: $active;
+        a {
+          color: $active;
+        }
+        scale: 1.05;
         border-color: $active;
       }
     }
-    img:hover {
-      scale: 1.1;
+    img {
+      margin: 0 8px;
+      &:hover {
+        scale: 1.2;
+      }
     }
   }
 }

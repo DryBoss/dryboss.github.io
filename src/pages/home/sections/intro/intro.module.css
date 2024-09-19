@@ -28,19 +28,24 @@
   border-radius: 8px;
 }
 .menu button a {
+  font-size: 1rem;
   color: #26cd41;
+}
+.menu button:hover {
+  scale: 1.1;
 }
 
 .aboutMe {
-  padding: 16px;
+  padding: 16px 12px;
   background-color: #24292f;
   border-radius: 16px;
 }
 .aboutMe p {
+  margin: 0 4px;
   line-height: 1.5rem;
 }
 .aboutMe div {
-  margin: 16px 4px;
+  padding: 12px 0px;
 }
 .aboutMe div button {
   padding: 8px 12px;
@@ -50,11 +55,19 @@
   border: 2px solid #ffffff;
   border-radius: 8px;
 }
+.aboutMe div button a {
+  font-size: 1rem;
+}
 .aboutMe div button:hover {
-  scale: 1.1;
-  color: #26cd41;
+  scale: 1.05;
   border-color: #26cd41;
 }
+.aboutMe div button:hover a {
+  color: #26cd41;
+}
+.aboutMe div img {
+  margin: 0 8px;
+}
 .aboutMe div img:hover {
-  scale: 1.1;
+  scale: 1.2;
 }

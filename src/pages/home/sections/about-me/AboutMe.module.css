@@ -11,4 +11,17 @@ h1 span {
 
 .subSections {
   display: flex;
+  width: 100%;
+}
+.subSections div {
+  flex: 1;
+}
+
+.detailWithIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailWithIcon img {
+  margin-right: 8px;
 }
