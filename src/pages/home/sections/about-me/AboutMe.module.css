@@ -11,14 +11,14 @@ h1 span {
   justify-content: space-evenly;
   height: 100vh;
   flex: 1;
-  margin: 2rem 1rem 2rem 4rem;
+  margin: 4rem;
 }
 
 .additionalSection {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin: 4rem 4rem 1rem 1rem;
+  margin: 4rem;
 }
 
 .detailWithIcon {
@@ -40,4 +40,15 @@ h1 span {
   font-size: 0.8rem;
   background-color: #2f3742;
   border-radius: 16px;
+}
+
+@media (max-width: 1024px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
 }

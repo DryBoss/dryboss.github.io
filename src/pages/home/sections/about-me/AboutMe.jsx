@@ -6,7 +6,7 @@ import skills from "./../../../../database/myself.js";
 
 function AboutMe() {
   return (
-    <div className="home-section" id="more-about-me">
+    <div className={`${styles.aboutMe} home-section`} id="about-me">
       <div className={styles.coreSection}>
         <h1>
           Hi, I am <span>Mohammad Taiham</span>
