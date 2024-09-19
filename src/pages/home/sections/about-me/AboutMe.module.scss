@@ -1,3 +1,5 @@
+@import "./../../../../styles/colors";
+
 h1 {
   font-size: 1rem;
   span {
@@ -9,7 +11,15 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
+  height: 100vh;
+  flex: 1;
+  margin: 2rem 1rem 2rem 4rem;
+}
+.additionalSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 4rem 4rem 1rem 1rem;
 }
 
 .detailWithIcon {
@@ -18,5 +28,19 @@ h1 {
   align-items: center;
   img {
     margin-right: 8px;
+  }
+}
+
+.skills {
+  h3 {
+    margin: 8px 0;
+  }
+  p {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 4px;
+    font-size: 0.8rem;
+    background-color: $background-tertiary;
+    border-radius: 16px;
   }
 }
