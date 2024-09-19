@@ -11,14 +11,14 @@ h1 span {
   justify-content: space-evenly;
   height: 100vh;
   flex: 1;
-  margin: 4rem;
+  margin: 3rem 6rem;
 }
 
 .additionalSection {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin: 4rem;
+  margin: 3rem;
 }
 
 .detailWithIcon {
@@ -45,6 +45,10 @@ h1 span {
 @media (max-width: 1024px) {
   .aboutMe {
     flex-direction: column;
+  }
+  .coreSection,
+  .additionalSection {
+    margin: 0 3rem;
   }
 }
 @media (max-width: 600px) {
