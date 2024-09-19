@@ -5,13 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="./public/dryboss-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DryBoss</title>
+    <script>
+      //creating a variable to maintain proper vh on mobile browsers
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx">
-      //creating a variable to maintain proper vh on mobile browsers
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
