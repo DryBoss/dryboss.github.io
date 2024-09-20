@@ -7,6 +7,9 @@
   padding: 16px;
   width: 100%;
   background-color: $background-secondary;
+  opacity: 0;
+  transform: translateY(-80px);
+  transition: 0.5s;
   .title {
     display: flex;
     align-items: center;
@@ -38,27 +41,31 @@
       }
     }
   }
-}
-
-.resume {
-  padding: 8px 12px;
-  background-color: transparent;
-  border: 2px solid $active;
-  border-radius: 16px;
-  a {
-    color: $text;
-    font-weight: bold;
-  }
-  &:hover {
-    background-color: $active;
+  .resume {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 2px solid $active;
+    border-radius: 16px;
     a {
-      color: $background;
+      color: $text;
+      font-weight: bold;
+    }
+    &:hover {
+      background-color: $active;
+      a {
+        color: $background;
+      }
+    }
+  }
+
+  .socials {
+    a {
+      margin: 8px;
     }
   }
 }
 
-.socials {
-  a {
-    margin: 8px;
-  }
+.showMenuPc {
+  opacity: 1;
+  transform: translateY(0);
 }

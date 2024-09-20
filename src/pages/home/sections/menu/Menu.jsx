@@ -1,12 +1,16 @@
-import styles from "./MenuPc.module.css";
+import styles from "./Menu.module.css";
 import drybossLogo from "./../../../../../public/dryboss-logo.png";
 import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function MenuPc() {
+function Menu({ showMenu }) {
   return (
-    <div className={`menu-pc ${styles.menuPc}`}>
+    <div
+      className={`menu-pc ${styles.menuPc} ${
+        showMenu ? styles.showMenuPc : ""
+      }`}
+    >
       <div className={styles.title}>
         <img src={drybossLogo} alt="dryboss" />
         <h1>Mohammad Taiham</h1>
@@ -37,4 +41,4 @@ function MenuPc() {
   );
 }
 
-export default MenuPc;
+export default Menu;

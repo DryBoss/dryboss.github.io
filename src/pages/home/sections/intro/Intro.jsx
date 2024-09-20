@@ -6,7 +6,7 @@ import githubLogo from "./../../../../assets/icons/github.svg";
 
 function Intro() {
   return (
-    <div className="home-section">
+    <div className="home-section" id="intro">
       <div className={styles.profile}>
         <div className={styles.header}>
           <img src={drybossLogo} alt="dryboss" />
