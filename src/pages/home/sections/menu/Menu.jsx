@@ -27,7 +27,7 @@ function Menu({ showMenuPC }) {
       <div
         className={`menu-pc ${styles.menubar} ${
           showMenuPC ? styles.showMenuPc : ""
-        } ${showMenuMobile ? styles.showMenuMobile : ""}`}
+        } ${showMenuMobile && showMenuPC ? styles.showMenuMobile : ""}`}
       >
         <div className={styles.title}>
           <img src={drybossLogo} alt="dryboss" />
