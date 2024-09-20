@@ -1,43 +1,65 @@
+import { useState } from "react";
 import styles from "./Menu.module.css";
+
+import menuIcon from "./../../../../assets/icons/menu.svg";
+import cancelIcon from "./../../../../assets/icons/cancel.svg";
 import drybossLogo from "./../../../../../public/dryboss-logo.png";
 import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function Menu({ showMenu }) {
+function Menu({ showMenuPC }) {
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
+
+  function handleMenuIconClick() {
+    setShowMenuMobile(!showMenuMobile);
+  }
   return (
-    <div
-      className={`menu-pc ${styles.menuPc} ${
-        showMenu ? styles.showMenuPc : ""
-      }`}
-    >
-      <div className={styles.title}>
-        <img src={drybossLogo} alt="dryboss" />
-        <h1>Mohammad Taiham</h1>
-      </div>
-      <div className={styles.menu}>
-        <button>
-          <a href="#projects">projects</a>
+    <>
+      <img
+        src={showMenuMobile ? cancelIcon : menuIcon}
+        alt="menu"
+        className={`menu-pc ${styles.menuButton} ${
+          showMenuPC ? styles.showMenuButton : ""
+        }`}
+        onClick={handleMenuIconClick}
+      />
+      <div
+        className={`menu-pc ${styles.menubar} ${
+          showMenuPC ? styles.showMenuPc : ""
+        } ${showMenuMobile ? styles.showMenuMobile : ""}`}
+      >
+        <div className={styles.title}>
+          <img src={drybossLogo} alt="dryboss" />
+          <h1>Mohammad Taiham</h1>
+        </div>
+        <div className={styles.menu}>
+          <button>
+            <a href="#about-me">about me</a>
+          </button>
+          <button>
+            <a href="#projects">projects</a>
+          </button>
+          <button>
+            <a href="">blogs</a>
+          </button>
+        </div>
+        <button className={styles.resume}>
+          <a href="">resume</a>
         </button>
-        <button>
-          <a href="">blogs</a>
-        </button>
+        <div className={styles.socials}>
+          <a href="">
+            <img src={facebookLogo} alt="facebook" />
+          </a>
+          <a href="">
+            <img src={linkedinLogo} alt="linkedin" />
+          </a>
+          <a href="">
+            <img src={githubLogo} alt="github" />
+          </a>
+        </div>
       </div>
-      <button className={styles.resume}>
-        <a href="">resume</a>
-      </button>
-      <div className={styles.socials}>
-        <a href="">
-          <img src={facebookLogo} alt="facebook" />
-        </a>
-        <a href="">
-          <img src={linkedinLogo} alt="linkedin" />
-        </a>
-        <a href="">
-          <img src={githubLogo} alt="github" />
-        </a>
-      </div>
-    </div>
+    </>
   );
 }
 

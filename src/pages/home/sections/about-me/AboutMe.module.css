@@ -51,8 +51,3 @@ h1 span {
     margin: 0 3rem;
   }
 }
-@media (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-}

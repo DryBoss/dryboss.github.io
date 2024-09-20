@@ -7,17 +7,16 @@ import Projects from "./sections/projects/Projects";
 import Footer from "./sections/footer/Footer";
 
 function Home() {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenuPC, setShowMenuPC] = useState(false);
 
   function handleScroll() {
     if (
       window.scrollY >
-      document.getElementById("intro").getBoundingClientRect().top +
-        window.scrollY
+      document.getElementById("intro").getBoundingClientRect().bottom
     ) {
-      setShowMenu(true);
+      setShowMenuPC(true);
     } else {
-      setShowMenu(false);
+      setShowMenuPC(false);
     }
   }
 
@@ -33,7 +32,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <Menu showMenu={showMenu} />
+      <Menu showMenuPC={showMenuPC} />
       <Intro />
       <AboutMe />
       <Projects />

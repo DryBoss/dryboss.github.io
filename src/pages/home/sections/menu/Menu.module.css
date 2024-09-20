@@ -1,4 +1,12 @@
-.menuPc {
+.menuButton {
+  margin: 16px;
+  z-index: 100;
+  opacity: 1;
+  transform: translateX(-80px);
+  transition: 0.5s;
+}
+
+.menubar {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -9,53 +17,78 @@
   transform: translateY(-80px);
   transition: 0.5s;
 }
-.menuPc .title {
+.menubar .title {
   display: flex;
   align-items: center;
 }
-.menuPc .title img {
+.menubar .title img {
   width: 2rem;
   border: 2px solid #26cd41;
   border-radius: 50%;
 }
-.menuPc .title h1 {
+.menubar .title h1 {
   font-size: 1rem;
   margin-left: 8px;
 }
-.menuPc .menu button {
+.menubar .menu button {
   margin: 8px;
   background-color: transparent;
   border: none;
 }
-.menuPc .menu button a {
+.menubar .menu button a {
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
 }
-.menuPc .menu button:hover a {
+.menubar .menu button:hover a {
   color: #26cd41;
 }
-.menuPc .resume {
+.menubar .resume {
   padding: 8px 12px;
   background-color: transparent;
   border: 2px solid #26cd41;
   border-radius: 16px;
 }
-.menuPc .resume a {
+.menubar .resume a {
   color: #ffffff;
   font-weight: bold;
 }
-.menuPc .resume:hover {
+.menubar .resume:hover {
   background-color: #26cd41;
 }
-.menuPc .resume:hover a {
+.menubar .resume:hover a {
   color: #0a0c10;
 }
-.menuPc .socials a {
+.menubar .socials a {
   margin: 8px;
 }
 
 .showMenuPc {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .showMenuButton {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .menubar {
+    padding: 16px 32px;
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  .showMenuMobile {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .menubar {
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+  }
+  .menubar .menu {
+    display: flex;
+    flex-direction: column;
+  }
 }
