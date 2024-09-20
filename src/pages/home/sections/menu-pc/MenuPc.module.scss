@@ -1,0 +1,64 @@
+@import "./../../../../styles/colors";
+
+.menuPc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  background-color: $background-secondary;
+  .title {
+    display: flex;
+    align-items: center;
+    img {
+      width: 2rem;
+      border: 2px solid $active;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 1rem;
+      margin-left: 8px;
+    }
+  }
+  .menu {
+    button {
+      margin: 8px;
+      background-color: transparent;
+      border: none;
+
+      a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: $text;
+      }
+      &:hover {
+        a {
+          color: $active;
+        }
+      }
+    }
+  }
+}
+
+.resume {
+  padding: 8px 12px;
+  background-color: transparent;
+  border: 2px solid $active;
+  border-radius: 16px;
+  a {
+    color: $text;
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: $active;
+    a {
+      color: $background;
+    }
+  }
+}
+
+.socials {
+  a {
+    margin: 8px;
+  }
+}
