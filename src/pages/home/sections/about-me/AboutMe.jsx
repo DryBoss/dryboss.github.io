@@ -3,12 +3,21 @@ import locationLogo from "./../../../../assets/icons/location.svg";
 import educationLogo from "./../../../../assets/icons/education.svg";
 import workLogo from "./../../../../assets/icons/work.svg";
 import catImage from "./../../../../assets/images/cat.png";
+import meowSound from "./../../../../assets/sounds/meow.mp3";
 
 import hobbies from "./../../../../database/myself.js";
 import { useState } from "react";
 
 function AboutMe() {
   const [catLurk, setCatLurk] = useState(false);
+
+  const meow = new Audio(meowSound);
+  meow.volume = 0.01;
+
+  function HandleCatsHover() {
+    setCatLurk(true);
+    meow.play();
+  }
 
   return (
     <div className={`${styles.aboutMe} home-section`} id="about-me">
@@ -51,7 +60,7 @@ function AboutMe() {
               key={index}
               className={styles[hobby]}
               onMouseEnter={() => {
-                hobby == "cats" ? setCatLurk(true) : "";
+                hobby == "cats" ? HandleCatsHover() : "";
               }}
               onMouseLeave={() => (hobby == "cats" ? setCatLurk(false) : "")}
             >
