@@ -2,7 +2,9 @@ import styles from "./AboutMe.module.css";
 import locationLogo from "./../../../../assets/icons/location.svg";
 import educationLogo from "./../../../../assets/icons/education.svg";
 import workLogo from "./../../../../assets/icons/work.svg";
+
 import catImage from "./../../../../assets/images/cat.png";
+import controllerImage from "./../../../../assets/images/controller.png";
 import meowSound from "./../../../../assets/sounds/meow.mp3";
 
 import hobbies from "./../../../../database/myself.js";
@@ -11,6 +13,7 @@ import { useState } from "react";
 function AboutMe() {
   const [catLurk, setCatLurk] = useState(false);
   const [catStay, setCatStay] = useState(false);
+  const [giveController, setGiveController] = useState(false);
 
   const meow = new Audio(meowSound);
   meow.volume = 0.1;
@@ -18,14 +21,25 @@ function AboutMe() {
   function handleCatsHover() {
     setCatLurk(true);
   }
-
   function handleCatsClick() {
     setCatStay(!catStay);
     meow.play();
   }
 
+  function handleGamingClick() {
+    setGiveController(!giveController);
+  }
+
   return (
     <div className={`${styles.aboutMe} home-section`} id="about-me">
+      <img
+        src={controllerImage}
+        alt="controller"
+        className={`${styles.controllerImage} ${
+          giveController ? styles.controllerGive : ""
+        }`}
+        onClick={() => handleCatsClick()}
+      />
       <img
         src={catImage}
         alt="cat"
@@ -69,9 +83,15 @@ function AboutMe() {
               onMouseEnter={() => {
                 hobby == "cats" ? handleCatsHover() : "";
               }}
-              onMouseLeave={() => (hobby == "cats" ? setCatLurk(false) : "")}
+              onMouseLeave={() => {
+                hobby == "cats" ? setCatLurk(false) : "";
+              }}
               onClick={() => {
-                hobby == "cats" ? handleCatsClick() : "";
+                hobby == "cats"
+                  ? handleCatsClick()
+                  : hobby == "gaming"
+                  ? handleGamingClick()
+                  : "";
               }}
             >
               {hobby}

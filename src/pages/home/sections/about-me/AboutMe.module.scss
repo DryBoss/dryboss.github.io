@@ -53,6 +53,18 @@ h1 {
   cursor: url("./../../../../assets/icons/paw.svg"), auto;
 }
 
+.controllerImage {
+  transform: rotate(90);
+  position: fixed;
+  bottom: 200px;
+  right: -100px;
+  transition: 0.5s;
+  pointer-events: all;
+}
+.controllerGive {
+  right: -5px;
+}
+
 .catImage {
   position: fixed;
   bottom: -100px;
