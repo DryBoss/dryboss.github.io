@@ -1,12 +1,22 @@
 import styles from "./AboutMe.module.css";
+import locationLogo from "./../../../../assets/icons/location.svg";
 import educationLogo from "./../../../../assets/icons/education.svg";
 import workLogo from "./../../../../assets/icons/work.svg";
+import catImage from "./../../../../assets/images/cat.png";
 
 import hobbies from "./../../../../database/myself.js";
+import { useState } from "react";
 
 function AboutMe() {
+  const [catLurk, setCatLurk] = useState(false);
+
   return (
     <div className={`${styles.aboutMe} home-section`} id="about-me">
+      <img
+        src={catImage}
+        alt="cat"
+        className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""}`}
+      />
       <div className={styles.coreSection}>
         <h1>
           Hi, I am <span>Mohammad Taiham</span>
@@ -26,12 +36,27 @@ function AboutMe() {
             Graduating in <b>Mathematics</b> at <b>University of Chittagong</b>
           </p>
         </div>
+        <div className={styles.detailWithIcon}>
+          <img src={locationLogo} alt="education" />
+          <p>
+            From & living in <b>Chittagong, Bangladesh</b>
+          </p>
+        </div>
       </div>
       <div className={styles.additionalSection}>
         <div className={styles.hobbies}>
           <h3>things I like,</h3>
           {hobbies.map((hobby, index) => (
-            <p key={index}>{hobby}</p>
+            <p
+              key={index}
+              className={styles[hobby]}
+              onMouseEnter={() => {
+                hobby == "cats" ? setCatLurk(true) : "";
+              }}
+              onMouseLeave={() => (hobby == "cats" ? setCatLurk(false) : "")}
+            >
+              {hobby}
+            </p>
           ))}
         </div>
       </div>

@@ -42,6 +42,26 @@ h1 span {
   border-radius: 16px;
 }
 
+.gaming {
+  cursor: url("./../../../../assets/icons/sword.svg"), auto;
+}
+
+.cats {
+  cursor: url("./../../../../assets/icons/paw.svg"), auto;
+}
+
+.catImage {
+  position: fixed;
+  bottom: -100px;
+  right: 50px;
+  transition: 0.5s;
+  pointer-events: all;
+}
+
+.catImageLurk {
+  bottom: -10px;
+}
+
 @media (max-width: 1024px) {
   .aboutMe {
     flex-direction: column;
