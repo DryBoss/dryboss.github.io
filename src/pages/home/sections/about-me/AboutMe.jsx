@@ -10,12 +10,17 @@ import { useState } from "react";
 
 function AboutMe() {
   const [catLurk, setCatLurk] = useState(false);
+  const [catStay, setCatStay] = useState(false);
 
   const meow = new Audio(meowSound);
-  meow.volume = 0.01;
+  meow.volume = 0.1;
 
-  function HandleCatsHover() {
+  function handleCatsHover() {
     setCatLurk(true);
+  }
+
+  function handleCatsClick() {
+    setCatStay(!catStay);
     meow.play();
   }
 
@@ -24,7 +29,9 @@ function AboutMe() {
       <img
         src={catImage}
         alt="cat"
-        className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""}`}
+        className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""} ${
+          catStay ? styles.catImageStay : ""
+        }`}
       />
       <div className={styles.coreSection}>
         <h1>
@@ -60,9 +67,12 @@ function AboutMe() {
               key={index}
               className={styles[hobby]}
               onMouseEnter={() => {
-                hobby == "cats" ? HandleCatsHover() : "";
+                hobby == "cats" ? handleCatsHover() : "";
               }}
               onMouseLeave={() => (hobby == "cats" ? setCatLurk(false) : "")}
+              onClick={() => {
+                hobby == "cats" ? handleCatsClick() : "";
+              }}
             >
               {hobby}
             </p>

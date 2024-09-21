@@ -59,6 +59,10 @@ h1 span {
 }
 
 .catImageLurk {
+  bottom: -30px;
+}
+
+.catImageStay {
   bottom: -10px;
 }
 
