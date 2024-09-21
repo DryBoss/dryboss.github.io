@@ -19,9 +19,6 @@ function Intro() {
           <button>
             <a href="#projects">projects</a>
           </button>
-          <button>
-            <a href="">blogs</a>
-          </button>
         </div>
         <div className={styles.aboutMe}>
           <p>
