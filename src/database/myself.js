@@ -1,7 +1,3 @@
-const skills = [
-  ["Frontend web development", "sass", "js", "react js", "svelte js"],
-  ["Data manipulation", "python", "pandas", "matplotlib"],
-  ["Scientific writing", "latex", "matlab"],
-];
+const hobbies = ["gaming", "coding", "cats", "logic", "camping"];
 
-export default skills;
+export default hobbies;

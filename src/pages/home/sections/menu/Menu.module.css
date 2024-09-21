@@ -1,5 +1,9 @@
 .menuButton {
-  margin: 16px;
+  margin: 8px;
+  padding: 8px;
+  background-color: #0a0c10;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
   z-index: 100;
   opacity: 1;
   transform: translateX(-80px);
@@ -33,7 +37,8 @@
   margin-left: 8px;
 }
 .menubar .menu button {
-  margin: 8px;
+  margin: 4px;
+  padding: 8px;
   background-color: transparent;
   border: none;
 }
@@ -79,7 +84,14 @@
   .menubar {
     padding: 16px 32px;
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateX(-700px);
+  }
+  .menubar .title {
+    flex-direction: column;
+  }
+  .menubar .title h1 {
+    margin-top: 8px;
+    margin-left: 0;
   }
   .showMenuMobile {
     opacity: 1;
@@ -94,5 +106,8 @@
   .menubar .menu {
     display: flex;
     flex-direction: column;
+  }
+  .menubar .menu button {
+    border-bottom: 2px solid #ffffff;
   }
 }

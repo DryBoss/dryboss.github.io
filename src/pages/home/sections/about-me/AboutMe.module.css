@@ -30,14 +30,14 @@ h1 span {
   margin-right: 8px;
 }
 
-.skills h3 {
+.hobbies h3 {
   margin: 8px 0;
 }
-.skills p {
+.hobbies p {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 8px 16px;
   margin: 4px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: #2f3742;
   border-radius: 16px;
 }

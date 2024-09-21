@@ -2,7 +2,7 @@ import styles from "./AboutMe.module.css";
 import educationLogo from "./../../../../assets/icons/education.svg";
 import workLogo from "./../../../../assets/icons/work.svg";
 
-import skills from "./../../../../database/myself.js";
+import hobbies from "./../../../../database/myself.js";
 
 function AboutMe() {
   return (
@@ -28,14 +28,10 @@ function AboutMe() {
         </div>
       </div>
       <div className={styles.additionalSection}>
-        <div className={styles.skills}>
-          <h3>Skills:</h3>
-          {skills.map((skill, index) => (
-            <div key={index} className={styles.skill}>
-              {skill.map((subSkill, index) => (
-                <p key={index}>{subSkill}</p>
-              ))}
-            </div>
+        <div className={styles.hobbies}>
+          <h3>things I like,</h3>
+          {hobbies.map((hobby, index) => (
+            <p key={index}>{hobby}</p>
           ))}
         </div>
       </div>
