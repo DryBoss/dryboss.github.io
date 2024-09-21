@@ -18,6 +18,8 @@ h1 {
 .additionalSection {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
   flex: 1;
   margin: 3rem;
 }
@@ -59,7 +61,6 @@ h1 {
   bottom: 200px;
   right: -100px;
   transition: 0.5s;
-  pointer-events: all;
 }
 .controllerGive {
   right: -5px;
@@ -70,13 +71,30 @@ h1 {
   bottom: -100px;
   right: 50px;
   transition: 0.5s;
-  pointer-events: all;
 }
 .catImageLurk {
   bottom: -30px;
 }
 .catImageStay {
   bottom: -10px;
+}
+
+.funFact,
+.thought {
+  p {
+    text-align: center;
+  }
+}
+
+.socials {
+  padding: 14px 0;
+  text-align: center;
+  img {
+    margin: 0 8px;
+    &:hover {
+      scale: 1.2;
+    }
+  }
 }
 
 @media (max-width: 1024px) {

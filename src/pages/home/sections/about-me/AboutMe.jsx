@@ -2,18 +2,22 @@ import styles from "./AboutMe.module.css";
 import locationLogo from "./../../../../assets/icons/location.svg";
 import educationLogo from "./../../../../assets/icons/education.svg";
 import workLogo from "./../../../../assets/icons/work.svg";
+import instagramIcon from "./../../../../assets/icons/instagram.svg";
+import discordIcon from "./../../../../assets/icons/discord.svg";
 
 import catImage from "./../../../../assets/images/cat.png";
 import controllerImage from "./../../../../assets/images/controller.png";
 import meowSound from "./../../../../assets/sounds/meow.mp3";
 
-import hobbies from "./../../../../database/myself.js";
-import { useState } from "react";
+import { hobbies, funFacts, thoughts } from "./../../../../database/myself.js";
+import { useState, useEffect } from "react";
 
 function AboutMe() {
   const [catLurk, setCatLurk] = useState(false);
   const [catStay, setCatStay] = useState(false);
   const [giveController, setGiveController] = useState(false);
+  const [randomFact, setRandomFact] = useState("");
+  const [randomThought, setRandomThought] = useState("");
 
   const meow = new Audio(meowSound);
   meow.volume = 0.1;
@@ -30,6 +34,24 @@ function AboutMe() {
     setGiveController(!giveController);
   }
 
+  useEffect(() => {
+    const updateRandom = () => {
+      const randomIndex1 = Math.floor(Math.random() * funFacts.length);
+      setRandomFact(funFacts[randomIndex1]);
+      const randomIndex2 = Math.floor(Math.random() * thoughts.length);
+      setRandomThought(thoughts[randomIndex2]);
+    };
+
+    // Set an initial fact
+    updateRandom();
+
+    // Change the fact every 5 seconds (5000ms)
+    const intervalId = setInterval(updateRandom, 5000);
+
+    // Cleanup the interval when component unmounts
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures it runs once on mount
+
   return (
     <div className={`${styles.aboutMe} home-section`} id="about-me">
       <img
@@ -38,7 +60,6 @@ function AboutMe() {
         className={`${styles.controllerImage} ${
           giveController ? styles.controllerGive : ""
         }`}
-        onClick={() => handleCatsClick()}
       />
       <img
         src={catImage}
@@ -46,6 +67,7 @@ function AboutMe() {
         className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""} ${
           catStay ? styles.catImageStay : ""
         }`}
+        onClick={() => handleCatsClick()}
       />
       <div className={styles.coreSection}>
         <h1>
@@ -97,6 +119,20 @@ function AboutMe() {
               {hobby}
             </p>
           ))}
+        </div>
+        <div className={styles.funFact}>
+          <p>{randomFact}</p>
+        </div>
+        <div className={styles.thought}>
+          <p>{randomThought}</p>
+        </div>
+        <div className={styles.socials}>
+          <a href="">
+            <img src={instagramIcon} alt="instagram" />
+          </a>
+          <a href="">
+            <img src={discordIcon} alt="discord" />
+          </a>
         </div>
       </div>
     </div>
