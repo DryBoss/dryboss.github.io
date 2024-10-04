@@ -23,8 +23,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .menu-pc {

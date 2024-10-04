@@ -17,8 +17,11 @@
   justify-content: space-around;
   align-items: center;
   padding: 16px;
-  width: 100%;
+  margin: 16px;
+  width: calc(100% - 64px);
   background-color: $background-secondary;
+  border: 2px solid $text;
+  border-radius: 16px;
   opacity: 0;
   transform: translateY(-80px);
   transition: 0.5s;
@@ -92,6 +95,9 @@
   }
   .menubar {
     padding: 16px 32px;
+    margin: 0;
+    border: 0;
+    border-right: 2px solid $text;
     opacity: 0;
     transform: translateX(-700px);
     .title {
