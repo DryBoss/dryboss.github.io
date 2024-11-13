@@ -4,6 +4,12 @@ import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
+import jsLogo from "./../../../../assets/icons/js.svg";
+import pythonLogo from "./../../../../assets/icons/python.svg";
+import reactLogo from "./../../../../assets/icons/react.svg";
+import pandasLogo from "./../../../../assets/icons/pandas.svg";
+import scikitlearnLogo from "./../../../../assets/icons/scikit-learn.svg";
+
 function Intro() {
   return (
     <div className="home-section" id="intro">
@@ -53,10 +59,11 @@ function Intro() {
         </div>
       </div>
       <div className={styles.featured}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam impedit,
-        maiores harum cumque necessitatibus possimus quas tempore qui facere
-        facilis corrupti recusandae veritatis reprehenderit beatae consequuntur
-        vel, aut pariatur at!
+        <img src={jsLogo} alt="" />
+        <img src={pythonLogo} alt="" />
+        <img src={reactLogo} alt="" />
+        <img src={pandasLogo} alt="" />
+        <img src={scikitlearnLogo} alt="" />
       </div>
     </div>
   );

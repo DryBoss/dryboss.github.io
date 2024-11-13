@@ -48,10 +48,6 @@ h1 span {
   cursor: url("./../../../../assets/icons/sword.svg"), auto;
 }
 
-.cats {
-  cursor: url("./../../../../assets/icons/paw.svg"), auto;
-}
-
 .controllerImage {
   transform: rotate(90);
   position: fixed;
@@ -72,10 +68,6 @@ h1 span {
 }
 
 .catImageLurk {
-  bottom: -30px;
-}
-
-.catImageStay {
   bottom: -10px;
 }
 

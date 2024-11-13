@@ -14,7 +14,6 @@ import { useState, useEffect } from "react";
 
 function AboutMe({ isInView }) {
   const [catLurk, setCatLurk] = useState(false);
-  const [catStay, setCatStay] = useState(false);
   const [giveController, setGiveController] = useState(false);
   const [randomFact, setRandomFact] = useState("");
   const [randomThought, setRandomThought] = useState("");
@@ -29,14 +28,6 @@ function AboutMe({ isInView }) {
       setCatLurk(false);
     }
   }, [isInView]);
-
-  function handleCatsHover() {
-    setCatLurk(true);
-  }
-  function handleCatsClick() {
-    setCatStay(!catStay);
-    meow.play();
-  }
 
   function handleGamingClick() {
     setGiveController(!giveController);
@@ -72,9 +63,7 @@ function AboutMe({ isInView }) {
       <img
         src={catImage}
         alt="cat"
-        className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""} ${
-          catStay ? styles.catImageStay : ""
-        }`}
+        className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""}`}
         onClick={() => handleCatsClick()}
       />
       <div className={styles.coreSection}>
