@@ -11,6 +11,23 @@ import pandasLogo from "./../../../../assets/icons/pandas.svg";
 import scikitlearnLogo from "./../../../../assets/icons/scikit-learn.svg";
 
 function Intro() {
+  const techs = document.querySelectorAll(".techs");
+
+  techs.forEach((tech) => {
+    tech.addEventListener("mousemove", (e) => {
+      let x = e.offsetX;
+      let y = e.offsetY;
+
+      let width = tech.clientWidth;
+      let height = tech.clientHeight;
+
+      let transX = x - width;
+      let transY = y - height;
+
+      tech.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+    });
+  });
+
   return (
     <div className="home-section" id="intro">
       <div className={styles.profile}>
@@ -58,13 +75,7 @@ function Intro() {
           </div>
         </div>
       </div>
-      <div className={styles.featured}>
-        <img src={jsLogo} alt="" />
-        <img src={pythonLogo} alt="" />
-        <img src={reactLogo} alt="" />
-        <img src={pandasLogo} alt="" />
-        <img src={scikitlearnLogo} alt="" />
-      </div>
+      <div className={styles.featured}></div>
     </div>
   );
 }

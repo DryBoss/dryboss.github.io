@@ -1,3 +1,24 @@
+@keyframes appearDisappear {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+@keyframes disappear {
+  50% {
+    transform: translateY(0) scale(1);
+    border-radius: 0%;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0);
+    border-radius: 100%;
+  }
+}
 * {
   margin: 0;
   overflow-x: hidden;
