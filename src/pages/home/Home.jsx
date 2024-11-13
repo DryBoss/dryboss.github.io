@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Menu from "./sections/menu/Menu";
 import Intro from "./sections/intro/Intro";
@@ -8,6 +8,8 @@ import Footer from "./sections/footer/Footer";
 
 function Home() {
   const [showMenuPC, setShowMenuPC] = useState(false);
+  const [isAboutMeInView, setIsAboutMeInView] = useState(false);
+  const targetRef = useRef(null);
 
   function handleScroll() {
     if (
@@ -24,9 +26,23 @@ function Home() {
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener when the component unmounts
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsAboutMeInView(entry.isIntersecting); // Update state based on visibility
+      },
+      { threshold: 0.5 } // 50% of the div must be in view to trigger
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    // Clean up observer on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
     };
   }, []);
 
@@ -34,7 +50,9 @@ function Home() {
     <div className="Home">
       <Menu showMenuPC={showMenuPC} />
       <Intro />
-      <AboutMe />
+      <div ref={targetRef}>
+        <AboutMe isInView={isAboutMeInView} />
+      </div>
       <Projects />
       <Footer />
     </div>

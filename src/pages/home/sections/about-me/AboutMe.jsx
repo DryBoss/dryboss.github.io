@@ -12,7 +12,7 @@ import meowSound from "./../../../../assets/sounds/meow.mp3";
 import { hobbies, funFacts, thoughts } from "./../../../../database/myself.js";
 import { useState, useEffect } from "react";
 
-function AboutMe() {
+function AboutMe({ isInView }) {
   const [catLurk, setCatLurk] = useState(false);
   const [catStay, setCatStay] = useState(false);
   const [giveController, setGiveController] = useState(false);
@@ -21,6 +21,14 @@ function AboutMe() {
 
   const meow = new Audio(meowSound);
   meow.volume = 0.1;
+
+  useEffect(() => {
+    if (isInView) {
+      setCatLurk(true);
+    } else {
+      setCatLurk(false);
+    }
+  }, [isInView]);
 
   function handleCatsHover() {
     setCatLurk(true);
