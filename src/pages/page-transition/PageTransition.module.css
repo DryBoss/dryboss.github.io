@@ -1,4 +1,5 @@
 .transitionPage {
+  font-weight: bold;
   background-color: #0a0c10;
   border-bottom: 2px solid #ffffff;
   position: fixed;
@@ -6,13 +7,32 @@
 }
 
 .appear {
-  animation: appear 1s alternate;
+  animation: appear 0.5s alternate;
 }
 
 .disappear {
-  animation: disappear 1s alternate;
+  animation: disappear 0.5s alternate;
 }
 
+.title {
+  font-size: 2rem;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffffff;
+  animation: typing 1s steps(14) 0s forwards, blink 0.25s step-end infinite;
+}
+
+@keyframes typing {
+  to {
+    width: 15rem;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 @keyframes appear {
   0% {
     border-radius: 50%;

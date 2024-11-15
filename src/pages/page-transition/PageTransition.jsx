@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import styles from "./PageTransition.module.css";
 
 function PageTransition({ title, animation }) {
-  const [currentAnimation, setCurrentAnimation] = useState("none");
+  const [currentAnimation, setCurrentAnimation] = useState(animation);
 
   useEffect(() => {
     if (animation === "appear") {
       setCurrentAnimation("appear");
-      const timer = setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setCurrentAnimation("disappear");
       }, 1000);
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer1);
     } else if (animation === "none") {
-      const timer = setTimeout(() => {
+      const timer2 = setTimeout(() => {
         setCurrentAnimation("disappear");
-      }, 1000);
-      return () => clearTimeout(timer);
+      }, 1500);
+      return () => clearTimeout(timer2);
     }
   }, [animation]);
 
@@ -29,7 +29,7 @@ function PageTransition({ title, animation }) {
           : ""
       }`}
     >
-      <h1>{title}</h1>
+      <p className={styles.title}>{title}</p>
     </div>
   );
 }
