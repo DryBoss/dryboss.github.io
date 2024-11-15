@@ -30,7 +30,7 @@ function Home() {
       ([entry]) => {
         setIsAboutMeInView(entry.isIntersecting); // Update state based on visibility
       },
-      { threshold: 0.5 } // 50% of the div must be in view to trigger
+      { threshold: 0.75 } // 50% of the div must be in view to trigger
     );
 
     if (targetRef.current) {

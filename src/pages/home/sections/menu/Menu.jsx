@@ -3,7 +3,7 @@ import styles from "./Menu.module.css";
 
 import menuIcon from "./../../../../assets/icons/menu.svg";
 import cancelIcon from "./../../../../assets/icons/cancel.svg";
-import drybossLogo from "./../../../../../public/dryboss-logo.png";
+import drybossLogo from "./../../../../assets/dryboss-logo.png";
 import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";

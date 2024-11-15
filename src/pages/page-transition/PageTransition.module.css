@@ -1,0 +1,35 @@
+.transitionPage {
+  background-color: #0a0c10;
+  border-bottom: 2px solid #ffffff;
+  position: fixed;
+  z-index: 1000;
+}
+
+.appear {
+  animation: appear 1s alternate;
+}
+
+.disappear {
+  animation: disappear 1s alternate;
+}
+
+@keyframes appear {
+  0% {
+    border-radius: 50%;
+    transform: translateY(-100vh);
+  }
+  100% {
+    border-radius: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes disappear {
+  0% {
+    border-radius: 0;
+    transform: translateY(0);
+  }
+  100% {
+    border-radius: 50%;
+    transform: translateY(-100vh);
+  }
+}

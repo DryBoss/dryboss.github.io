@@ -1,5 +1,5 @@
 import styles from "./intro.module.css";
-import drybossLogo from "./../../../../../public/dryboss-logo.png";
+import drybossLogo from "./../../../../assets/dryboss-logo.png";
 import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
