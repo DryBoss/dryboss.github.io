@@ -1,6 +1,7 @@
 .transitionPage {
   font-weight: bold;
-  background-color: #000000;
+  background-color: #1b1f23;
+  color: #ffffff;
   position: fixed;
   z-index: 1000;
 }
@@ -35,7 +36,7 @@
 @keyframes appear {
   0% {
     border-radius: 50%;
-    transform: translateY(-100vh);
+    transform: translateY(100vh);
   }
   100% {
     border-radius: 0;

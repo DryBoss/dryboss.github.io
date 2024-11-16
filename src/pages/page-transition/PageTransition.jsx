@@ -9,7 +9,7 @@ function PageTransition({ title, animation }) {
       setCurrentAnimation("appear");
       const timer1 = setTimeout(() => {
         setCurrentAnimation("disappear");
-      }, 1000);
+      }, 1500);
       return () => clearTimeout(timer1);
     } else if (animation === "none") {
       const timer2 = setTimeout(() => {
