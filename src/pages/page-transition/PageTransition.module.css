@@ -1,7 +1,6 @@
 .transitionPage {
   font-weight: bold;
-  background-color: #0a0c10;
-  border-bottom: 2px solid #ffffff;
+  background-color: #000000;
   position: fixed;
   z-index: 1000;
 }
