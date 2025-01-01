@@ -64,7 +64,6 @@ function AboutMe({ isInView }) {
         src={catImage}
         alt="cat"
         className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""}`}
-        onClick={() => handleCatsClick()}
       />
       <div className={styles.coreSection}>
         <h1>
