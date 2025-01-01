@@ -9,7 +9,7 @@ import Footer from "./sections/footer/Footer";
 function Home() {
   const [showMenuPC, setShowMenuPC] = useState(false);
   const [isAboutMeInView, setIsAboutMeInView] = useState(false);
-  const [roverProgress, setRoverProgress] = useState(-10);
+  const [roverProgress, setRoverProgress] = useState(-20);
   const targetRef = useRef(null);
 
   function handleScroll() {
