@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./projects.module.css";
+import styles from "./Projects.module.css";
 
 import rover from "./../../../../assets/images/rover.png";
 
