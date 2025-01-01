@@ -48,10 +48,10 @@ function Home() {
       Math.min(
         Math.max(0, sectionTopVisible + sectionBottomVisible - 0.5), // Normalize to 50% visibility for both top and bottom
         1
-      ) * 120; // Multiply by 100 for 0 to 100 range
+      ) * 140; // Multiply by 100 for 0 to 100 range
 
     // Log or use the progress
-    setRoverProgress(sectionScrollProgress - 10);
+    setRoverProgress(sectionScrollProgress - 22.5);
   }
 
   useEffect(() => {
@@ -86,6 +86,7 @@ function Home() {
         <AboutMe isInView={isAboutMeInView} />
       </div>
       <Projects roverProgress={roverProgress} />
+      <AboutMe />
       <Footer />
     </div>
   );
