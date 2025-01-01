@@ -30,10 +30,25 @@ function Home() {
     const sectionHeight = section.offsetHeight; // Total height of the section
     const viewportHeight = window.innerHeight; // Height of the viewport
 
-    // Calculate the percentage scrolled through the section
+    // Calculate the percentage of the section that is visible in the viewport
+    const sectionTopVisible = Math.min(
+      Math.max(0, (viewportHeight - sectionTop) / sectionHeight),
+      1
+    );
+    const sectionBottomVisible = Math.min(
+      Math.max(
+        0,
+        (viewportHeight - (sectionTop + sectionHeight)) / sectionHeight
+      ),
+      1
+    );
+
+    // The section scroll progress should be based on both the top and bottom visibility
     const sectionScrollProgress =
-      Math.min(Math.max(0, (viewportHeight - sectionTop) / sectionHeight), 1) *
-      120; // Clamp between 0 and 120
+      Math.min(
+        Math.max(0, sectionTopVisible + sectionBottomVisible - 0.5), // Normalize to 50% visibility for both top and bottom
+        1
+      ) * 120; // Multiply by 100 for 0 to 100 range
 
     // Log or use the progress
     setRoverProgress(sectionScrollProgress - 10);
@@ -47,7 +62,7 @@ function Home() {
       ([entry]) => {
         setIsAboutMeInView(entry.isIntersecting); // Update state based on visibility
       },
-      { threshold: 0.75 } // 75% of the div must be in view to trigger
+      { threshold: 0.5 } // 75% of the div must be in view to trigger
     );
 
     if (targetRef.current) {
