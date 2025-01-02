@@ -40,6 +40,9 @@ function Menu({ showMenuPC }) {
           <button>
             <a href="#projects">projects</a>
           </button>
+          <button>
+            <a href="#achievements">achievements</a>
+          </button>
         </div>
         <button className={styles.resume}>
           <a href="">resume</a>

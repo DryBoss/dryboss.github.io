@@ -63,7 +63,7 @@ function AboutMe({ isInView }) {
         alt="cat"
         className={`${styles.catImage} ${catLurk ? styles.catImageLurk : ""}`}
       />
-      <div className={styles.coreSection}>
+      <div className={`${styles.coreSection} hidden`}>
         <h1>
           Hi, I am <span>Mohammad Taiham</span>
           <br />
@@ -89,7 +89,7 @@ function AboutMe({ isInView }) {
           </p>
         </div>
       </div>
-      <div className={styles.additionalSection}>
+      <div className={`${styles.additionalSection} hidden`}>
         <div className={styles.hobbies}>
           <h3>things I like,</h3>
           {hobbies.map((hobby, index) => (
