@@ -26,6 +26,9 @@ body {
   justify-content: center;
   width: 100%;
 }
+.home-section * {
+  overflow: hidden;
+}
 
 .hidden {
   opacity: 0;

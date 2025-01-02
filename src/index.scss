@@ -21,6 +21,9 @@ body {
 }
 
 .home-section {
+  * {
+    overflow: hidden;
+  }
   overflow: hidden;
   display: flex;
   align-items: center;
