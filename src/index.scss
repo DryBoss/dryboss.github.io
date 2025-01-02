@@ -25,11 +25,17 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
 .menu-pc {
   position: fixed;
+}
+
+svg {
+  display: block; /* Ensures no extra space under inline SVG */
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 1024px) {

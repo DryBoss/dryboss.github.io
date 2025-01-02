@@ -37,8 +37,6 @@ function AboutMe({ isInView }) {
     const updateRandom = () => {
       const randomIndex1 = Math.floor(Math.random() * funFacts.length);
       setRandomFact(funFacts[randomIndex1]);
-      const randomIndex2 = Math.floor(Math.random() * thoughts.length);
-      setRandomThought(thoughts[randomIndex2]);
     };
 
     // Set an initial fact
@@ -118,9 +116,6 @@ function AboutMe({ isInView }) {
         </div>
         <div className={styles.funFact}>
           <p>{randomFact}</p>
-        </div>
-        <div className={styles.thought}>
-          <p>{randomThought}</p>
         </div>
         <div className={styles.socials}>
           <a href="">

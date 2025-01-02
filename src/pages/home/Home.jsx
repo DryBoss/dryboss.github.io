@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
+import Wave from "./Wave";
 import Menu from "./sections/menu/Menu";
 import Intro from "./sections/intro/Intro";
 import AboutMe from "./sections/about-me/AboutMe";
@@ -64,7 +65,8 @@ function Home() {
     <div className="Home">
       <Menu showMenuPC={showMenuPC} />
       <Intro />
-      <div ref={targetRef}>
+      <Wave />
+      <div ref={targetRef} styles={"display: flex"}>
         <AboutMe isInView={isAboutMeInView} />
       </div>
       <div ref={roverRef}>
