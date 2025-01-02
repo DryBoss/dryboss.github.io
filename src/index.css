@@ -20,11 +20,11 @@ body {
 }
 
 .home-section {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
 .hidden {
@@ -46,6 +46,19 @@ svg {
   display: block; /* Ensures no extra space under inline SVG */
   margin: 0;
   padding: 0;
+}
+
+#intro {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+#about-me {
+  height: calc(var(--vh, 1vh) * 100 - 200px);
+}
+
+#projects,
+#achievements {
+  height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
 @media (max-width: 1024px) {

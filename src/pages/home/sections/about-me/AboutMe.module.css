@@ -1,8 +1,6 @@
 .aboutMe {
   background-color: #24292f;
-  height: calc(var(--vh, 1vh) * 100 - 100px);
   overflow: hidden;
-  padding-top: 50px;
 }
 
 h1 {

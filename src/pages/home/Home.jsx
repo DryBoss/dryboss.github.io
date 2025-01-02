@@ -76,6 +76,7 @@ function Home() {
       <Menu showMenuPC={showMenuPC} />
       <Intro />
       <Wave
+        id={1}
         colorOld={"#0a0c10"}
         colorNew={["#24292f"]}
         waveCode={[
@@ -86,6 +87,7 @@ function Home() {
         <AboutMe isInView={isAboutMeInView} />
       </div>
       <Wave
+        id={2}
         colorOld={"#0a0c10"}
         colorNew={["#24292f"]}
         waveCode={[
@@ -96,6 +98,7 @@ function Home() {
         <Projects roverAppear={roverAppear} />
       </div>
       <Wave
+        id={3}
         colorOld={"#0a0c10"}
         colorNew={["#24292f", "#1d2025", "#15171b", "#0a0c10"]}
         waveCode={[
@@ -107,6 +110,7 @@ function Home() {
       />
       <Achievements />
       <Wave
+        id={4}
         colorOld={"#0a0c10"}
         colorNew={["#2f3742"]}
         waveCode={[

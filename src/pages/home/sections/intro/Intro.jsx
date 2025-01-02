@@ -48,18 +48,23 @@ function Intro() {
         </div>
         <div className={styles.aboutMe}>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ea
-            dolorum aut doloribus eligendi velit architecto expedita dicta, non
-            repellat, ipsam soluta suscipit pariatur. Ipsum repellat neque ex
-            delectus modi? <br />
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum,
-            suscipit temporibus excepturi ipsa quod nam adipisci nulla vero,
-            autem deleniti assumenda quis similique, eum vel dignissimos. Porro
-            fugiat explicabo quidem!
+            I’m a passionate tech enthusiast with a strong foundation in data
+            science, web development, quantum computing, and cryptography. I
+            love solving problems and creating innovative solutions.
+            <br />
+            Beyond coding, I value curiosity and continuous learning, always
+            aiming to make a meaningful impact through technology.
+            <br />
+            I enjoy gaming, experimenting with new recipes, and working on
+            personal projects.
+            <br />
+            Feel free to explore my work, and let's connect if you'd like to
+            collaborate!
           </p>
+
           <div className={styles.moreAboutMe}>
             <button>
-              <a href="#about-me">more about me</a>
+              <a href="#wave1">more about me</a>
             </button>
             <button>
               <a href="">Download CV</a>

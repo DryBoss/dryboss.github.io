@@ -35,7 +35,7 @@ function Menu({ showMenuPC }) {
         </div>
         <div className={styles.menu}>
           <button>
-            <a href="#about-me">about me</a>
+            <a href="#wave1">about me</a>
           </button>
           <button>
             <a href="#projects">projects</a>
