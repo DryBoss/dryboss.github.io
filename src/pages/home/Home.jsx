@@ -48,7 +48,7 @@ function Home() {
       ([entry]) => {
         setRoverAppear(entry.isIntersecting); // Update state for rover appearance
       },
-      { threshold: 0.8 } // 50% of the Projects section must be in view
+      { threshold: 0.9 } // 50% of the Projects section must be in view
     );
 
     if (targetRef.current) {
@@ -77,6 +77,7 @@ function Home() {
       <Intro />
       <Wave
         id={1}
+        height={50}
         colorOld={"#0a0c10"}
         colorNew={["#24292f"]}
         waveCode={[
@@ -88,6 +89,7 @@ function Home() {
       </div>
       <Wave
         id={2}
+        height={50}
         colorOld={"#0a0c10"}
         colorNew={["#24292f"]}
         waveCode={[
@@ -99,6 +101,7 @@ function Home() {
       </div>
       <Wave
         id={3}
+        height={100}
         colorOld={"#0a0c10"}
         colorNew={["#24292f", "#1d2025", "#15171b", "#0a0c10"]}
         waveCode={[
@@ -111,6 +114,7 @@ function Home() {
       <Achievements />
       <Wave
         id={4}
+        height={100}
         colorOld={"#0a0c10"}
         colorNew={["#2f3742"]}
         waveCode={[

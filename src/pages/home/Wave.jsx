@@ -1,11 +1,11 @@
-function Wave({ id, colorOld, colorNew, waveCode }) {
+function Wave({ id, height, colorOld, colorNew, waveCode }) {
   return (
     <svg
       id={`wave${id}`}
       viewBox="0 0 900 600"
       style={{
         width: "100%",
-        height: "100px",
+        height: `${height}px`,
       }}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

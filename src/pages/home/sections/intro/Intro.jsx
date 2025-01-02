@@ -4,12 +4,6 @@ import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-import jsLogo from "./../../../../assets/icons/js.svg";
-import pythonLogo from "./../../../../assets/icons/python.svg";
-import reactLogo from "./../../../../assets/icons/react.svg";
-import pandasLogo from "./../../../../assets/icons/pandas.svg";
-import scikitlearnLogo from "./../../../../assets/icons/scikit-learn.svg";
-
 function Intro() {
   const techs = document.querySelectorAll(".techs");
 
