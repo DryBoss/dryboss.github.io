@@ -13,12 +13,15 @@ function Wave({ colorOld, colorNew, waveCode }) {
       preserveAspectRatio="none" // This ensures the wave stretches
     >
       <rect x="0" y="0" width="900" height="600" fill={colorOld}></rect>
-      <path
-        d={waveCode}
-        fill={colorNew}
-        strokeLinecap="round"
-        strokeLinejoin="miter"
-      ></path>
+      {waveCode.map((code, index) => (
+        <path
+          key={index} // Add a unique key for each element in a list
+          d={code}
+          fill={colorNew[index]} // Use the corresponding color from colorNew
+          strokeLinecap="round"
+          strokeLinejoin="miter"
+        ></path>
+      ))}
     </svg>
   );
 }

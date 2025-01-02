@@ -1,9 +1,14 @@
 .transitionPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   font-weight: bold;
   background-color: #1b1f23;
   color: #ffffff;
   position: fixed;
   z-index: 1000;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 .appear {

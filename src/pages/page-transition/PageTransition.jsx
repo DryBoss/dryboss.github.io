@@ -21,7 +21,7 @@ function PageTransition({ title, animation }) {
 
   return (
     <div
-      className={`home-section ${styles.transitionPage} ${
+      className={`${styles.transitionPage} ${
         currentAnimation == "appear"
           ? styles.appear
           : currentAnimation == "disappear"
