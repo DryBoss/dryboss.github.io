@@ -61,7 +61,7 @@ function Intro() {
               <a href="#wave1">more about me</a>
             </button>
             <button>
-              <a href="">Download CV</a>
+              <a href="">resume</a>
             </button>
           </div>
           <div className={styles.socials}>

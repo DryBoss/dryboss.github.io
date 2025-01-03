@@ -32,7 +32,7 @@
   border-radius: 8px;
 }
 .menu button a {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #26cd41;
 }
 .menu button:hover {
@@ -60,7 +60,7 @@
   border-radius: 8px;
 }
 .aboutMe div button a {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .aboutMe div button:hover {
   scale: 1.05;
