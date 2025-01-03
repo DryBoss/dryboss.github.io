@@ -66,13 +66,13 @@ function Intro() {
           </div>
           <div className={styles.socials}>
             <a href="">
-              <img src={facebookLogo} alt="facebook" />
+              <img className="social" src={facebookLogo} alt="facebook" />
             </a>
             <a href="">
-              <img src={linkedinLogo} alt="linkedin" />
+              <img className="social" src={linkedinLogo} alt="linkedin" />
             </a>
             <a href="">
-              <img src={githubLogo} alt="github" />
+              <img className="social" src={githubLogo} alt="github" />
             </a>
           </div>
         </div>

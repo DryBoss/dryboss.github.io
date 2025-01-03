@@ -119,10 +119,10 @@ function AboutMe({ isInView }) {
         </div>
         <div className={styles.socials}>
           <a href="">
-            <img src={instagramIcon} alt="instagram" />
+            <img className="social" src={instagramIcon} alt="instagram" />
           </a>
           <a href="">
-            <img src={discordIcon} alt="discord" />
+            <img className="social" src={discordIcon} alt="discord" />
           </a>
         </div>
       </div>
