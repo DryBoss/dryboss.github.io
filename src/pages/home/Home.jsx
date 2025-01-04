@@ -18,12 +18,9 @@ function Home() {
   const sections = [
     "intro",
     "about-me",
-    "skills",
     "projects",
-    "publications",
-    "blogs",
+    "writings",
     "achievements",
-    "testimonials",
     "contacts",
   ];
 
