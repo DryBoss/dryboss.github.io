@@ -35,7 +35,7 @@ function Menu({ showMenuPC, sections }) {
         </a>
         <div className={styles.menu}>
           {sections.map((section, index) =>
-            index > 2 ? (
+            index > 1 ? (
               <button key={index}>
                 <a href={`#${section}`}>{section}</a>
               </button>
