@@ -29,7 +29,7 @@ function Intro({ sections }) {
           <img src={drybossLogo} alt="dryboss" />
           <div className={styles.title}>
             <h1>Mohammad Taiham</h1>
-            <p>Web Developer</p>
+            <p>Developer | Data scientist</p>
           </div>
         </div>
         <div className={styles.menu}>
@@ -46,18 +46,13 @@ function Intro({ sections }) {
 
         <div className={styles.aboutMe}>
           <p>
-            I’m a passionate tech enthusiast with a strong foundation in data
-            science, web development, quantum computing, and cryptography. I
-            love solving problems and creating innovative solutions.
+            I'm a passionate tech enthusiast with a solid foundation in data
+            science, web development, quantum computing, and cryptography.
+            Driven by curiosity and creativity, I strive to push boundaries and
+            explore new possibilities in the tech world.
             <br />
-            Beyond coding, I value curiosity and continuous learning, always
-            aiming to make a meaningful impact through technology.
-            <br />
-            I enjoy gaming, experimenting with new recipes, and working on
-            personal projects.
-            <br />
-            Feel free to explore my work, and let's connect if you'd like to
-            collaborate!
+            Feel free to explore my work, and don't hesitate to reach out if
+            you're interested in collaborating!
           </p>
 
           <div className={styles.moreAboutMe}>
