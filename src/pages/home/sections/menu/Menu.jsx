@@ -8,7 +8,7 @@ import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function Menu({ showMenuPC }) {
+function Menu({ showMenuPC, sections }) {
   const [showMenuMobile, setShowMenuMobile] = useState(false);
 
   function handleMenuIconClick() {
@@ -29,20 +29,20 @@ function Menu({ showMenuPC }) {
           showMenuPC ? styles.showMenuPc : ""
         } ${showMenuMobile && showMenuPC ? styles.showMenuMobile : ""}`}
       >
-        <div className={styles.title}>
+        <a href="#intro" className={styles.title}>
           <img src={drybossLogo} alt="dryboss" />
           <h1>Mohammad Taiham</h1>
-        </div>
+        </a>
         <div className={styles.menu}>
-          <button>
-            <a href="#wave1">about me</a>
-          </button>
-          <button>
-            <a href="#projects">projects</a>
-          </button>
-          <button>
-            <a href="#achievements">achievements</a>
-          </button>
+          {sections.map((section, index) =>
+            index > 2 ? (
+              <button key={index}>
+                <a href={`#${section}`}>{section}</a>
+              </button>
+            ) : (
+              ""
+            )
+          )}
         </div>
         <button className={styles.resume}>
           <a href="">resume</a>

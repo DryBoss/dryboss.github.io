@@ -4,7 +4,7 @@ import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function Intro() {
+function Intro({ sections }) {
   const techs = document.querySelectorAll(".techs");
 
   techs.forEach((tech) => {
@@ -33,13 +33,17 @@ function Intro() {
           </div>
         </div>
         <div className={styles.menu}>
-          <button>
-            <a href="#projects">projects</a>
-          </button>
-          <button>
-            <a href="#achievements">achievements</a>
-          </button>
+          {sections.map((section, index) =>
+            index > 2 ? (
+              <button key={index}>
+                <a href={`#${section}`}>{section}</a>
+              </button>
+            ) : (
+              ""
+            )
+          )}
         </div>
+
         <div className={styles.aboutMe}>
           <p>
             I’m a passionate tech enthusiast with a strong foundation in data

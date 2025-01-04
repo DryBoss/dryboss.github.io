@@ -15,6 +15,18 @@ function Home() {
   const targetRef = useRef(null);
   const roverRef = useRef(null); // Ref for Projects section
 
+  const sections = [
+    "intro",
+    "about-me",
+    "skills",
+    "projects",
+    "publications",
+    "blogs",
+    "achievements",
+    "testimonials",
+    "contacts",
+  ];
+
   function handleScroll() {
     setShowMenuPC(
       window.scrollY >
@@ -73,8 +85,8 @@ function Home() {
 
   return (
     <div className="Home">
-      <Menu showMenuPC={showMenuPC} />
-      <Intro />
+      <Menu showMenuPC={showMenuPC} sections={sections} />
+      <Intro sections={sections} />
       <Wave
         id={1}
         height={50}
