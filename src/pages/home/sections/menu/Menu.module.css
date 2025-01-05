@@ -1,15 +1,17 @@
 .menuButton {
   width: 2rem;
   height: 2rem;
-  margin: 8px;
+  margin: 2rem;
   padding: 8px;
   background-color: #0a0c10;
   border: 2px solid #ffffff;
   border-radius: 8px;
   z-index: 100;
   opacity: 1;
-  transform: translateX(-80px);
+  transform: translateY(100px);
   transition: 0.5s;
+  bottom: 0;
+  right: 0;
 }
 
 .menubar {
@@ -83,39 +85,47 @@
 
 @media (max-width: 1200px) {
   .showMenuButton {
-    opacity: 1;
     transform: translateX(0px);
   }
   .menubar {
-    flex-direction: column;
-    width: auto;
-    height: 100%;
-    padding: 16px 32px;
-    margin: 0;
-    border: 0;
-    border-right: 2px solid #ffffff;
-    border-radius: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     opacity: 0;
-    transform: translateX(-700px);
+    transform: translateY(700px);
+    bottom: 0;
+    margin: 8px;
+    width: calc(100% - 50px);
   }
   .menubar .title {
-    flex-direction: column;
-  }
-  .menubar .title h1 {
-    margin-top: 8px;
-    margin-left: 0;
+    margin: auto;
   }
   .menubar .menu {
     display: flex;
     flex-direction: column;
   }
-  .menubar .menu button {
-    border-bottom: 2px solid #ffffff;
-  }
   .showMenuMobile {
     opacity: 1;
-    transform: translateX(0px);
-    border-radius: 0%;
+    transform: translateY(0px);
     pointer-events: all;
+  }
+  .iconUp {
+    transform: translateY(-155px);
+  }
+  .title {
+    grid-column: 1;
+  }
+  .menu {
+    grid-column: 2;
+    grid-row: 1/span 3;
+  }
+  .resume {
+    width: 50%;
+    min-width: 80px;
+    grid-column: 1;
+  }
+  .socials {
+    text-align: center;
+    grid-column: 1;
   }
 }
