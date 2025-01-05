@@ -15,14 +15,7 @@ function Home() {
   const targetRef = useRef(null);
   const roverRef = useRef(null); // Ref for Projects section
 
-  const sections = [
-    "intro",
-    "about-me",
-    "projects",
-    "writings",
-    "achievements",
-    "contacts",
-  ];
+  const sections = ["intro", "about-me", "projects", "blogs", "achievements"];
 
   function handleScroll() {
     setShowMenuPC(

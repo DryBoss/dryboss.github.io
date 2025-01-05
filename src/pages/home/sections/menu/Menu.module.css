@@ -90,6 +90,7 @@
   .menubar {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
     justify-items: center;
     opacity: 0;
     transform: translateY(700px);
@@ -120,8 +121,7 @@
     grid-row: 1/span 3;
   }
   .resume {
-    width: 50%;
-    min-width: 80px;
+    width: 100px;
     grid-column: 1;
   }
   .socials {

@@ -21,7 +21,7 @@ function Menu({ showMenuPC, sections }) {
         alt="menu"
         className={`menu-pc ${styles.menuButton} ${
           showMenuPC ? styles.showMenuButton : ""
-        } ${showMenuMobile ? styles.iconUp : ""}`}
+        } ${showMenuMobile && showMenuPC ? styles.iconUp : ""}`}
         onClick={handleMenuIconClick}
       />
       <div
