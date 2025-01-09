@@ -1,10 +1,12 @@
 import styles from "./intro.module.css";
+import { website, myself } from "../../../../database/data";
+
 import drybossLogo from "./../../../../assets/dryboss-logo.png";
 import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function Intro({ sections }) {
+function Intro() {
   const techs = document.querySelectorAll(".techs");
 
   techs.forEach((tech) => {
@@ -33,26 +35,21 @@ function Intro({ sections }) {
           </div>
         </div>
         <div className={styles.menu}>
-          {sections.map((section, index) =>
-            index > 1 ? (
-              <button key={index}>
-                <a href={`#${section}`}>{section}</a>
-              </button>
-            ) : (
-              ""
-            )
-          )}
+          {website.menuItems.map((section, index) => (
+            <button key={index}>
+              <a href={`#${section}`}>{section}</a>
+            </button>
+          ))}
         </div>
 
         <div className={styles.aboutMe}>
           <p>
-            I'm a passionate tech enthusiast with a solid foundation in data
-            science, web development, quantum computing, and cryptography.
-            Driven by curiosity and creativity, I strive to push boundaries and
-            explore new possibilities in the tech world.
-            <br />
-            Feel free to explore my work, and don't hesitate to reach out if
-            you're interested in collaborating!
+            {myself.bio.map((text, index) => (
+              <span key={index}>
+                {text}
+                {index < myself.bio.length - 1 && <br />}
+              </span>
+            ))}
           </p>
 
           <div className={styles.moreAboutMe}>

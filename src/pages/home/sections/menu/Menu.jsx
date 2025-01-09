@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Menu.module.css";
+import { website } from "../../../../database/data";
 
 import menuIcon from "./../../../../assets/icons/menu.svg";
 import cancelIcon from "./../../../../assets/icons/cancel.svg";
@@ -8,7 +9,7 @@ import facebookLogo from "./../../../../assets/icons/facebook.svg";
 import linkedinLogo from "./../../../../assets/icons/linkedin.svg";
 import githubLogo from "./../../../../assets/icons/github.svg";
 
-function Menu({ showMenuPC, sections }) {
+function Menu({ showMenuPC }) {
   const [showMenuMobile, setShowMenuMobile] = useState(false);
 
   function handleMenuIconClick() {
@@ -34,15 +35,11 @@ function Menu({ showMenuPC, sections }) {
           <h1>Mohammad Taiham</h1>
         </a>
         <div className={styles.menu}>
-          {sections.map((section, index) =>
-            index > 1 ? (
-              <button key={index}>
-                <a href={`#${section}`}>{section}</a>
-              </button>
-            ) : (
-              ""
-            )
-          )}
+          {website.menuItems.map((section, index) => (
+            <button key={index}>
+              <a href={`#${section}`}>{section}</a>
+            </button>
+          ))}
         </div>
         <button className={styles.resume}>
           <a href="">resume</a>
