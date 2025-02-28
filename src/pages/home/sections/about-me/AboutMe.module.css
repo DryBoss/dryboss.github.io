@@ -37,10 +37,12 @@ h1 span {
   margin-right: 8px;
 }
 
-.hobbies h3 {
+.hobbies h3,
+.skills h3 {
   margin: 8px 0;
 }
-.hobbies p {
+.hobbies p,
+.skills p {
   display: inline-block;
   padding: 8px 16px;
   margin: 4px;
