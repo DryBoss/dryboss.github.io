@@ -1,5 +1,5 @@
 export const website = {
-  menuItems: ["projects", "achievements"],
+  menuItems: ["projects", "achievements", "contacts"],
 };
 
 export const myself = {

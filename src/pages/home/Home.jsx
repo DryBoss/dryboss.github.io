@@ -6,7 +6,7 @@ import Intro from "./sections/intro/Intro";
 import AboutMe from "./sections/about-me/AboutMe";
 import Projects from "./sections/projects/Projects";
 import Achievements from "./sections/achievements/achievements";
-import Footer from "./sections/footer/Footer";
+import Contacts from "./sections/contacts/Contacts";
 
 function Home() {
   const [showMenuPC, setShowMenuPC] = useState(false);
@@ -116,12 +116,12 @@ function Home() {
         id={4}
         height={100}
         colorOld={"#0a0c10"}
-        colorNew={["#2f3742"]}
+        colorNew={["#24292f"]}
         waveCode={[
           "M0 151L69 151L69 229L138 229L138 381L208 381L208 383L277 383L277 96L346 96L346 178L415 178L415 492L485 492L485 391L554 391L554 496L623 496L623 147L692 147L692 461L762 461L762 359L831 359L831 206L900 206L900 271L900 601L900 601L831 601L831 601L762 601L762 601L692 601L692 601L623 601L623 601L554 601L554 601L485 601L485 601L415 601L415 601L346 601L346 601L277 601L277 601L208 601L208 601L138 601L138 601L69 601L69 601L0 601Z",
         ]}
       />
-      <Footer />
+      <Contacts />
     </div>
   );
 }

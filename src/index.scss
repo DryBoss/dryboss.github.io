@@ -57,7 +57,8 @@ svg {
   height: 1.25rem;
 }
 
-#intro {
+#intro,
+#contacts {
   height: calc(var(--vh, 1vh) * 100);
 }
 #about-me {
