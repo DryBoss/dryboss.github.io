@@ -61,15 +61,42 @@ svg {
   height: calc(var(--vh, 1vh) * 100);
 }
 
-#about-me {
-  height: calc(var(--vh, 1vh) * 100 - 100px);
-}
-
+#about-me,
 #projects,
 #achievements {
   height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
+@media (min-width: 1281px) and (min-height: 1000px) {
+  html {
+    font-size: 24px;
+  }
+  #intro,
+  #contacts {
+    height: 1000px;
+  }
+  #about-me,
+  #projects,
+  #achievements {
+    height: 900px;
+  }
+}
+@media (max-width: 1281px) and (min-height: 600px) {
+  #intro,
+  #contacts {
+    height: 600px;
+  }
+  #about-me,
+  #projects,
+  #achievements {
+    height: 500px;
+  }
+}
+@media (max-width: 1280px) {
+  .html {
+    font-size: 18px;
+  }
+}
 @media (max-width: 1024px) {
   .featured {
     display: none;
