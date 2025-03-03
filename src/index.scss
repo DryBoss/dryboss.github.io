@@ -87,3 +87,15 @@ svg {
     font-size: 20px;
   }
 }
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1880px) {
+  html {
+    font-size: 32px;
+  }
+}

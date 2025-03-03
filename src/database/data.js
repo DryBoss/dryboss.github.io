@@ -20,3 +20,13 @@ export const myself = {
     "camping",
   ],
 };
+
+export const projects = {
+  showCase: [
+    ["Snake Game", "", ["js"]],
+    ["bd_map_plotter", "", ["python"]],
+    ["Diarrhea data analysis", "", ["pandas"]],
+    ["Match Card", "", ["js"]],
+  ],
+  projects: [],
+};

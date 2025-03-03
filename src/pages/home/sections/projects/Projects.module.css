@@ -1,3 +1,12 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectShowcase {
+  display: flex;
+}
+
 .roverImage {
   position: fixed;
   bottom: 0px;
