@@ -1,0 +1,26 @@
+.card {
+  position: relative;
+  border-radius: 1rem;
+  width: 8rem;
+  height: 10rem;
+  border: 2px solid #ffffff;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bgImg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1; /* Ensure the image stays behind the content */
+}
+
+/* Zoom effect on the background */
+.card:hover::before {
+  transform: scale(1.2); /* Zoom the background */
+}
