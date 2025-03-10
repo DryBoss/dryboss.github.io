@@ -8,7 +8,7 @@ function ProjectCard({ bgImg, title, description, tags }) {
         "--bgImg": `url(${bgImg})`,
       }}
     >
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <p>{description}</p>
     </div>
   );

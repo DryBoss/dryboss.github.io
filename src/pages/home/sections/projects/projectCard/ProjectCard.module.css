@@ -1,9 +1,19 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   position: relative;
   border-radius: 1rem;
   width: 8rem;
   height: 10rem;
+  padding: 0.5rem 1rem;
   border: 2px solid #ffffff;
+}
+.card p {
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .card::before {
@@ -23,4 +33,21 @@
 /* Zoom effect on the background */
 .card:hover::before {
   transform: scale(1.2); /* Zoom the background */
+}
+
+.card:hover p,
+.card:hover h4 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  z-index: -1;
 }
