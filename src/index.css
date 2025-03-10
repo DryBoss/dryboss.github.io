@@ -2,6 +2,9 @@
   margin: 0;
   overflow-x: hidden;
 }
+* button {
+  overflow: hidden;
+}
 
 a {
   color: #ffffff;
@@ -68,14 +71,14 @@ svg {
   height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1024px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
   .featured {
     display: none;
@@ -83,16 +86,10 @@ svg {
 }
 @media (min-width: 1280px) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
-}
-@media (min-width: 1440px) {
-  html {
-    font-size: 26px;
-  }
-}
-@media (min-width: 1880px) {
-  html {
-    font-size: 32px;
+  .Home {
+    width: 1280px;
+    margin: auto;
   }
 }

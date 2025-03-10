@@ -16,11 +16,11 @@
   h4 {
     transform: translateY(3rem);
     transition: transform 0.3s ease-in-out;
-    margin: 2px;
+    margin: calc(1rem / 10);
   }
   .description {
     font-size: 0.8rem;
-    margin: 2px;
+    margin: calc(1rem / 10);
     height: 3rem;
     opacity: 0;
     transform: translateY(100%);
@@ -28,8 +28,8 @@
   }
   .tag {
     display: inline-block;
-    padding: 3px 6px;
-    margin: 0px 2px;
+    padding: calc(1rem / 6) calc(1rem / 2);
+    margin: 0px calc(1rem / 10);
     font-size: 0.8rem;
     background-color: $background-tertiary;
     border-radius: 8px;
@@ -55,9 +55,13 @@
   transform: scale(1.2); /* Zoom the background */
 }
 
-.card:hover .description,
 .card:hover h4 {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .description {
+  opacity: 0.8;
   transform: translateY(0);
 }
 

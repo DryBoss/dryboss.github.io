@@ -20,7 +20,7 @@ function Projects({ roverAppear }) {
           />
         ))}
       </div>
-      <button>see more</button>
+      <button className={styles.seeMore}>see more</button>
       <img
         src={rover}
         alt="Rover"
