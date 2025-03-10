@@ -48,7 +48,7 @@ function Home() {
       ([entry]) => {
         setRoverAppear(entry.isIntersecting); // Update state for rover appearance
       },
-      { threshold: 1 } // 50% of the Projects section must be in view
+      { threshold: 0.5 } // 50% of the Projects section must be in view
     );
 
     if (targetRef.current) {

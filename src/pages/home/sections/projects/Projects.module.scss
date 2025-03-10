@@ -7,10 +7,13 @@
 }
 
 .projectShowcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   overflow: hidden;
   width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .roverImage {
@@ -21,4 +24,10 @@
 }
 .roverImageAppear {
   left: 33%;
+}
+
+@media (max-width: 700px) {
+  .projectShowcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

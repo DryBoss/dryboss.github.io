@@ -6,7 +6,7 @@
   border-radius: 1rem;
   width: 8rem;
   height: 10rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border: 2px solid #ffffff;
 }
 .card * {
@@ -15,9 +15,11 @@
 .card h4 {
   transform: translateY(3rem);
   transition: transform 0.3s ease-in-out;
+  margin: 2px;
 }
 .card .description {
   font-size: 0.8rem;
+  margin: 2px;
   height: 3rem;
   opacity: 0;
   transform: translateY(100%);
@@ -25,7 +27,7 @@
 }
 .card .tag {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 3px 6px;
   margin: 0px 2px;
   font-size: 0.8rem;
   background-color: #2f3742;
