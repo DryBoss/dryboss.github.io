@@ -1,3 +1,5 @@
+@import "./../../../../styles/colors";
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -8,12 +10,12 @@
 
 .projectShowcase {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   overflow: hidden;
   width: 100%;
   justify-items: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem 0.5rem;
 }
 
 .roverImage {
@@ -26,7 +28,24 @@
   left: 33%;
 }
 
-@media (max-width: 700px) {
+button {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 2px solid $active;
+  color: $text;
+  border-radius: 16px;
+  &:hover {
+    background-color: $active;
+    color: #000000;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectShowcase {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 500px) {
   .projectShowcase {
     grid-template-columns: repeat(2, 1fr);
   }

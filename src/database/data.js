@@ -39,5 +39,7 @@ export const projects = {
       ["pandas", "research", "health"],
     ],
     [projectImg1, "Match Card", "match card game", ["js", "games", "web"]],
+    [projectImg1, "Match Card", "match card game", ["js", "games", "web"]],
+    [projectImg1, "Match Card", "match card game", ["js", "games", "web"]],
   ],
 };
