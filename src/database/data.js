@@ -25,19 +25,19 @@ export const myself = {
 
 export const projects = {
   showCase: [
-    [projectImg1, "Snake Game", "a snake game", ["js"]],
+    [projectImg1, "Snake Game", "a snake game", ["js", "games", "web"]],
     [
       projectImg1,
       "BD map plotter",
       "a simple bangladeshi map plotter",
-      ["python"],
+      ["python", "library", "project"],
     ],
     [
       projectImg1,
       "Diarrhea data analysis",
       "a research about diarrhea",
-      ["pandas"],
+      ["pandas", "research", "health"],
     ],
-    [projectImg1, "Match Card", "match card game", ["js"]],
+    [projectImg1, "Match Card", "match card game", ["js", "games", "web"]],
   ],
 };

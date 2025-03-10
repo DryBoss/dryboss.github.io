@@ -9,16 +9,27 @@
   padding: 0.5rem 1rem;
   border: 2px solid #ffffff;
 }
+.card * {
+  overflow: hidden;
+}
 .card h4 {
-  transform: translateY(5rem);
+  transform: translateY(3rem);
   transition: transform 0.3s ease-in-out;
 }
-.card p {
-  font-size: 1rem;
-  height: 5rem;
+.card .description {
+  font-size: 0.8rem;
+  height: 3rem;
   opacity: 0;
   transform: translateY(100%);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.card .tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 0px 2px;
+  font-size: 0.8rem;
+  background-color: #2f3742;
+  border-radius: 8px;
 }
 
 .card::before {
@@ -40,7 +51,7 @@
   transform: scale(1.2); /* Zoom the background */
 }
 
-.card:hover p,
+.card:hover .description,
 .card:hover h4 {
   opacity: 1;
   transform: translateY(0);

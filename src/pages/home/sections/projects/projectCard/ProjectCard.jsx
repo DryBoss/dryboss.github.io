@@ -9,7 +9,14 @@ function ProjectCard({ bgImg, title, description, tags }) {
       }}
     >
       <h4>{title}</h4>
-      <p>{description}</p>
+      <p className={styles.description}>{description}</p>
+      <div className={styles.tags}>
+        {tags.map((tag, index) => (
+          <p className={styles.tag} key={index}>
+            {tag}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }

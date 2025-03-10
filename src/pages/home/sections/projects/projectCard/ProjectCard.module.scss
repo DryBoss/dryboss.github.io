@@ -10,16 +10,27 @@
   height: 10rem;
   padding: 0.5rem 1rem;
   border: 2px solid $text;
+  * {
+    overflow: hidden;
+  }
   h4 {
-    transform: translateY(5rem);
+    transform: translateY(3rem);
     transition: transform 0.3s ease-in-out;
   }
-  p {
-    font-size: 1rem;
-    height: 5rem;
+  .description {
+    font-size: 0.8rem;
+    height: 3rem;
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .tag {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 0px 2px;
+    font-size: 0.8rem;
+    background-color: $background-tertiary;
+    border-radius: 8px;
   }
 }
 
@@ -42,7 +53,7 @@
   transform: scale(1.2); /* Zoom the background */
 }
 
-.card:hover p,
+.card:hover .description,
 .card:hover h4 {
   opacity: 1;
   transform: translateY(0);
