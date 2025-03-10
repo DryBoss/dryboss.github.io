@@ -13,7 +13,7 @@
   overflow: hidden;
 }
 .card h4 {
-  transform: translateY(3rem);
+  transform: translateY(2rem);
   transition: transform 0.3s ease-in-out;
   margin: 0.1rem;
 }
@@ -27,7 +27,7 @@
 }
 .card .tag {
   display: inline-block;
-  padding: 0.1666666667rem 0.5rem;
+  padding: 0.1666666667rem 0.3333333333rem;
   margin: 0px 0.1rem;
   font-size: 0.8rem;
   background-color: #2f3742;

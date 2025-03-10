@@ -14,7 +14,7 @@
     overflow: hidden;
   }
   h4 {
-    transform: translateY(3rem);
+    transform: translateY(2rem);
     transition: transform 0.3s ease-in-out;
     margin: calc(1rem / 10);
   }
@@ -28,7 +28,7 @@
   }
   .tag {
     display: inline-block;
-    padding: calc(1rem / 6) calc(1rem / 2);
+    padding: calc(1rem / 6) calc(1rem / 3);
     margin: 0px calc(1rem / 10);
     font-size: 0.8rem;
     background-color: $background-tertiary;
