@@ -83,6 +83,11 @@
   pointer-events: all;
 }
 
+@media (min-width: 1280px) {
+  .menubar {
+    width: 1216px;
+  }
+}
 @media (max-width: 1200px) {
   .showMenuButton {
     transform: translateX(0px);

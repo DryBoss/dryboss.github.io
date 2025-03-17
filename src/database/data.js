@@ -1,4 +1,5 @@
 import projectImg1 from "./../assets/images/project1.png";
+import projectImg2 from "./../assets/images/project2.png";
 
 export const website = {
   menuItems: ["projects", "achievements", "contacts"],
@@ -25,19 +26,29 @@ export const myself = {
 
 export const projects = {
   showCase: [
-    [projectImg1, "Snake Game", "a snake game", ["js", "games", "web"]],
     [
       projectImg1,
+      "Snake Game",
+      "a snake game within website",
+      ["js", "games", "web"],
+    ],
+    [
+      projectImg2,
       "BD map plotter",
       "a simple bangladeshi map plotter",
       ["python", "library", "project"],
     ],
     [
-      projectImg1,
+      projectImg2,
       "Diarrhea data analysis",
-      "a research about diarrhea",
+      "a research about diarrhea data",
       ["pandas", "research", "health"],
     ],
-    [projectImg1, "Match Card", "match card game", ["js", "games", "web"]],
+    [
+      projectImg1,
+      "Match Card",
+      "match card game within website",
+      ["js", "games", "web"],
+    ],
   ],
 };
