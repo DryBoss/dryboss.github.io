@@ -6,6 +6,8 @@ function Wave({ id, height, colorOld, colorNew, waveCode }) {
       style={{
         width: "100%",
         height: `${height}px`,
+        position: `absolute`,
+        bottom: `0`,
       }}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

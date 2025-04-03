@@ -68,7 +68,8 @@ svg {
 #about-me,
 #projects,
 #achievements {
-  height: calc(var(--vh, 1vh) * 100 - 100px);
+  position: relative;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 @media (min-width: 768px) {

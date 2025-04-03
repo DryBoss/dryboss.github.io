@@ -2,7 +2,7 @@ import projectImg1 from "./../assets/images/project1.png";
 import projectImg2 from "./../assets/images/project2.png";
 
 export const website = {
-  menuItems: ["projects", "achievements", "contacts"],
+  menuItems: ["projects", "achievements"],
 };
 
 export const myself = {
@@ -52,3 +52,6 @@ export const projects = {
     ],
   ],
 };
+
+export const achievements = {};
+export const testimonials = {};
