@@ -100,8 +100,18 @@ h1 span {
   .aboutMe {
     flex-direction: column;
   }
-  .coreSection,
+  .coreSection {
+    margin: 3rem 3rem 0 3rem;
+  }
   .additionalSection {
-    margin: 0 3rem;
+    margin: 0 3rem 3rem 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .coreSection {
+    margin: 3rem 1.5rem 0 1.5rem;
+  }
+  .additionalSection {
+    margin: 0 3rem 1.5rem 1.5rem;
   }
 }

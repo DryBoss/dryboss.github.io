@@ -16,7 +16,7 @@
 }
 
 .roverImage {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   left: -20%;
   transition: 5s;
