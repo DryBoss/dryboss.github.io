@@ -63,6 +63,7 @@ h1 {
   bottom: 200px;
   right: -100px;
   transition: 0.5s;
+  z-index: 100;
 }
 .controllerGive {
   right: -5px;
@@ -73,6 +74,7 @@ h1 {
   bottom: -100px;
   right: 50px;
   transition: 0.5s;
+  z-index: 100;
 }
 .catImageLurk {
   bottom: -10px;

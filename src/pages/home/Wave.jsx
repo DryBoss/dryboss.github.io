@@ -1,4 +1,4 @@
-function Wave({ id, height, colorOld, colorNew, waveCode }) {
+function Wave({ id, height, colorOld, colorNew, waveCode, top, bottom }) {
   return (
     <svg
       id={`wave${id}`}
@@ -7,7 +7,9 @@ function Wave({ id, height, colorOld, colorNew, waveCode }) {
         width: "100%",
         height: `${height}px`,
         position: `absolute`,
-        bottom: `0`,
+        ...(top !== undefined
+          ? { top: `${top}px` }
+          : { bottom: `${bottom}px` }),
       }}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

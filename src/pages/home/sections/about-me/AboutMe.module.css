@@ -61,6 +61,7 @@ h1 span {
   bottom: 200px;
   right: -100px;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .controllerGive {
@@ -72,6 +73,7 @@ h1 span {
   bottom: -100px;
   right: 50px;
   transition: 0.5s;
+  z-index: 100;
 }
 
 .catImageLurk {

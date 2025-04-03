@@ -20,6 +20,7 @@
   bottom: 0px;
   left: -20%;
   transition: 5s;
+  z-index: 100;
 }
 
 .roverImageAppear {

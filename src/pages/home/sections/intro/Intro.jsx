@@ -54,7 +54,7 @@ function Intro() {
 
           <div className={styles.moreAboutMe}>
             <button>
-              <a href="#wave1">more about me</a>
+              <a href="#about-me">more about me</a>
             </button>
             <button>
               <a href="">resume</a>
