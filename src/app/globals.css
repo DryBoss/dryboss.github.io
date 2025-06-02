@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Balatro";
+  src: url("/fonts/balatro.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-primary: "Balatro";
+
+  --color-primary-dark: #222831;
+  --color-primary-light: #dfd0b8;
+  --color-secondary-dark: #393e46;
+  --color-secondary-light: #948979;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @apply bg-primary-dark font-primary;
+}
