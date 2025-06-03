@@ -105,7 +105,7 @@ export default function ThemeToggle() {
   }, []);
 
   return (
-    <div>
+    <div className="z-100">
       <svg
         className={`${styles["toggle-scene"]} ${styles["toggle-scene__cords"]}`}
         xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +149,7 @@ export default function ThemeToggle() {
               markerEnd="url(#a)"
               fill="none"
               strokeLinecap="square"
-              strokeWidth="8"
+              strokeWidth="6"
               d={d}
               transform="translate(-24.503 256.106)"
             />
@@ -166,7 +166,7 @@ export default function ThemeToggle() {
               x2="98.7255"
               y1="240.5405"
               y2="380.5405"
-              strokeWidth="8"
+              strokeWidth="6"
             />
           </g>
 
@@ -175,7 +175,7 @@ export default function ThemeToggle() {
             className={styles["toggle-scene__hit-spot"]}
             cx="98.7255"
             cy="380.5405"
-            r="60"
+            r="50"
             fill="transparent"
           />
         </g>

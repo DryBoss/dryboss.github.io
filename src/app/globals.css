@@ -16,6 +16,9 @@
   --color-primary-light: #222222;
   --color-secondary-dark: #222222;
   --color-secondary-light: #e3d2c3;
+  --color-card-white: #eeeade;
+  --color-card-red: #b23535;
+  --color-card-black: #282828;
 }
 
 html {
