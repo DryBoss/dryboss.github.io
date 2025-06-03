@@ -15,7 +15,13 @@ export default function Intro() {
         mounted ? "translate-y-0" : "translate-y-500"
       }`}
     >
-      <h1 className="m-2 text-2xl">Hi, I’m Taiham</h1>
+      <h1
+        className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
+              transition-all duration-[1000ms] ${mounted ? "w-[13ch]" : "w-0"}`}
+      >
+        Hi, I'm Taiham
+      </h1>
+
       <div className="flex items-center">
         <img src="/icons/cat.gif" alt="My GIF" className="w-12 h-12 mx-2" />
         <p className="m-4 text-base">
