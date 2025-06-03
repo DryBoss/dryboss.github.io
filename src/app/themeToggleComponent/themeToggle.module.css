@@ -1,4 +1,4 @@
-:root {
+:global(:root) {
   --on: 0;
   --bg: hsl(
     calc(200 - (var(--on) * 160)),
