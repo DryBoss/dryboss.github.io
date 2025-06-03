@@ -1,19 +1,19 @@
 .toggle-scene {
   width: 60px;
-  height: 120px;
   position: fixed;
 }
 
 .toggle-scene__bulb {
-  right: 60;
-  top: -60;
+  right: 75px;
+  top: -75px;
   rotate: 180deg;
 }
 
 .toggle-scene__cords {
+  width: 150px;
   overflow: visible;
-  top: -60;
-  right: 0;
+  top: -185px;
+  right: -10px;
 }
 
 .toggle-scene__cord {
