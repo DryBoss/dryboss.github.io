@@ -12,10 +12,10 @@
 @theme {
   --font-primary: "Balatro";
 
-  --color-primary-dark: #222831;
-  --color-primary-light: #dfd0b8;
-  --color-secondary-dark: #393e46;
-  --color-secondary-light: #948979;
+  --color-primary-dark: #e3d2c3;
+  --color-primary-light: #222222;
+  --color-secondary-dark: #222222;
+  --color-secondary-light: #e3d2c3;
 }
 
 html {

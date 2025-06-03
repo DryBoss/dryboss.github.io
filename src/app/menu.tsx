@@ -32,7 +32,7 @@ export default function Menu() {
             height={56}
             priority={true}
           />
-          <p>{title}</p>
+          <p className="rotate-180">{title}</p>
         </div>
       ))}
     </div>
