@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Menu from "./menu";
 import ThemeToggle from "./themeToggleComponent/themeToggle";
 
