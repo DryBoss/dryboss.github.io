@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
@@ -11,17 +10,15 @@ import styles from "./themeToggle.module.css";
 gsap.registerPlugin(Draggable, MorphSVGPlugin);
 
 export default function ThemeToggle() {
+  const cordsRef = useRef<SVGPathElement[]>([]);
+  const hitRef = useRef<SVGCircleElement>(null);
+  const dummyRef = useRef<SVGGElement>(null);
+  const dummyCordRef = useRef<SVGLineElement>(null);
+
   useEffect(() => {
-    const CORDS = document.querySelectorAll(`.${styles["toggle-scene__cord"]}`);
-    const HIT = document.querySelector(
-      `.${styles["toggle-scene__hit-spot"]}`
-    ) as HTMLElement;
-    const DUMMY = document.querySelector(
-      `.${styles["toggle-scene__dummy-cord"]}`
-    ) as SVGElement;
-    const DUMMY_CORD = document.querySelector(
-      `.${styles["toggle-scene__dummy-cord"]} line`
-    ) as SVGLineElement;
+    const HIT = hitRef.current!;
+    const DUMMY = dummyRef.current!;
+    const DUMMY_CORD = dummyCordRef.current!;
     const PROXY = document.createElement("div");
 
     const AUDIO = {
@@ -51,21 +48,21 @@ export default function ThemeToggle() {
         STATE.ON = !STATE.ON;
         gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
         gsap.set([DUMMY, HIT], { display: "none" });
-        gsap.set(CORDS[0], { display: "block" });
+        gsap.set(cordsRef.current[0], { display: "block" });
         AUDIO.CLICK.play();
       },
 
       onComplete: () => {
         gsap.set([DUMMY, HIT], { display: "block" });
-        gsap.set(CORDS[0], { display: "none" });
+        gsap.set(cordsRef.current[0], { display: "none" });
         RESET();
       },
     });
 
-    for (let i = 1; i < CORDS.length; i++) {
+    for (let i = 1; i < cordsRef.current.length; i++) {
       CORD_TL.add(
-        gsap.to(CORDS[0], {
-          morphSVG: CORDS[i] as SVGPathElement,
+        gsap.to(cordsRef.current[0], {
+          morphSVG: cordsRef.current[i],
           duration: CORD_DURATION,
           repeat: 1,
           yoyo: true,
@@ -76,12 +73,10 @@ export default function ThemeToggle() {
     Draggable.create(PROXY, {
       trigger: HIT,
       type: "x,y",
-
       onPress: (e) => {
         startX = e.x;
         startY = e.y;
       },
-
       onDrag: function () {
         gsap.set(DUMMY_CORD, {
           attr: {
@@ -90,7 +85,6 @@ export default function ThemeToggle() {
           },
         });
       },
-
       onRelease: function (e) {
         const DISTX = Math.abs(e.x - startX);
         const DISTY = Math.abs(e.y - startY);
@@ -111,7 +105,7 @@ export default function ThemeToggle() {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <svg
         className={`${styles["toggle-scene"]} ${styles["toggle-scene__cords"]}`}
         xmlns="http://www.w3.org/2000/svg"
@@ -148,30 +142,40 @@ export default function ThemeToggle() {
           ].map((d, i) => (
             <path
               key={i}
+              ref={(el) => {
+                if (el) cordsRef.current[i] = el;
+              }}
               className={styles["toggle-scene__cord"]}
               markerEnd="url(#a)"
               fill="none"
               strokeLinecap="square"
-              strokeWidth="6"
+              strokeWidth="8"
               d={d}
               transform="translate(-24.503 256.106)"
             />
           ))}
-          <g className={`${styles.line} ${styles["toggle-scene__dummy-cord"]}`}>
+
+          <g
+            ref={dummyRef}
+            className={`${styles.line} ${styles["toggle-scene__dummy-cord"]}`}
+          >
             <line
+              ref={dummyCordRef}
               markerEnd="url(#a)"
               x1="98.7255"
               x2="98.7255"
               y1="240.5405"
-              y2="380.5405" // lengthened line
-              strokeWidth="6" // made it wider
+              y2="380.5405"
+              strokeWidth="8"
             />
           </g>
+
           <circle
+            ref={hitRef}
             className={styles["toggle-scene__hit-spot"]}
             cx="98.7255"
             cy="380.5405"
-            r="0"
+            r="60"
             fill="transparent"
           />
         </g>
