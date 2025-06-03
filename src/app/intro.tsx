@@ -19,7 +19,7 @@ export default function Intro() {
         className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
               transition-all duration-[1000ms] ${mounted ? "w-[13ch]" : "w-0"}`}
       >
-        Hi, I'm Taiham
+        Hi, I&apos;m Taiham
       </h1>
 
       <div className="flex items-center">
