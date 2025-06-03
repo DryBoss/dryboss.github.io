@@ -164,7 +164,7 @@ export default function ThemeToggle() {
               x2="98.7255"
               y1="240.5405"
               y2="380.5405" // lengthened line
-              strokeWidth="8" // made it wider
+              strokeWidth="6" // made it wider
             />
           </g>
           <circle
