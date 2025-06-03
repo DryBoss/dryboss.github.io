@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
@@ -14,6 +14,23 @@ export default function ThemeToggle() {
   const hitRef = useRef<SVGCircleElement>(null);
   const dummyRef = useRef<SVGGElement>(null);
   const dummyCordRef = useRef<SVGLineElement>(null);
+
+  const [mounted1, setMounted1] = useState(false);
+  const [mounted2, setMounted2] = useState(false);
+
+  useEffect(() => {
+    const timeout1 = setTimeout(() => {
+      setMounted1(true);
+    }, 700);
+    const timeout2 = setTimeout(() => {
+      setMounted2(true);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+    };
+  }, []);
 
   useEffect(() => {
     const HIT = hitRef.current!;
@@ -105,9 +122,13 @@ export default function ThemeToggle() {
   }, []);
 
   return (
-    <div className="z-100">
+    <div className={`z-100`}>
       <svg
-        className={`${styles["toggle-scene"]} ${styles["toggle-scene__cords"]}`}
+        className={`${styles["toggle-scene"]} ${
+          styles["toggle-scene__cords"]
+        } transition-all duration-1000 ease-out transform ${
+          mounted1 ? "translate-y-0" : "-translate-y-1000"
+        }`}
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMinYMin"
         viewBox="0 0 197.451 481.081"
@@ -181,7 +202,11 @@ export default function ThemeToggle() {
         </g>
       </svg>
       <svg
-        className={`${styles["toggle-scene__bulb"]} ${styles.bulb} ${styles["toggle-scene"]}`}
+        className={`${styles["toggle-scene__bulb"]} ${styles.bulb} ${
+          styles["toggle-scene"]
+        } transition-all duration-1000 transform ${
+          mounted2 ? "translate-y-0" : "-translate-y-500"
+        }`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 197.451 481.081"
       >

@@ -17,7 +17,7 @@ export default function Intro() {
     >
       <h1 className="m-2 text-2xl">Hi, I’m Taiham</h1>
       <div className="flex items-center">
-        <img src="/icons/cat.gif" alt="My GIF" className="w-12 h-12" />
+        <img src="/icons/cat.gif" alt="My GIF" className="w-12 h-12 mx-2" />
         <p className="m-4 text-base">
           full stack developer | machine learning engineer | quantum computing
           researcher
