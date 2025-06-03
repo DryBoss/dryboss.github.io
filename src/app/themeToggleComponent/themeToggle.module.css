@@ -1,21 +1,3 @@
-:global(:root) {
-  --on: 0;
-  --bg: hsl(
-    calc(200 - (var(--on) * 160)),
-    calc((20 + (var(--on) * 50)) * 1%),
-    calc((20 + (var(--on) * 60)) * 1%)
-  );
-  --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
-  --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
-  --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
-  --filament: hsl(
-    45,
-    calc(var(--on) * 80%),
-    calc((25 + (var(--on) * 75)) * 1%)
-  );
-}
-
 .toggle-scene {
   height: 120px;
   position: fixed;
