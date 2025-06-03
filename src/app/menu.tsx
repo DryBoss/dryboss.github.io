@@ -1,22 +1,18 @@
-import Image from "next/image";
-
 export default function Menu() {
   const menuItems = [
     {
       title: "projects",
-      icon: "./icons/rocket.svg",
       rotation: "-5",
     },
     {
       title: "achievements",
-      icon: "./icons/achievements.svg",
       rotation: "5",
     },
   ];
 
   return (
     <div className="flex fixed bottom-[-24] left-1/2 -translate-x-1/2 z-99">
-      {menuItems.map(({ title, icon, rotation }, index) => (
+      {menuItems.map(({ title, rotation }, index) => (
         <div
           key={title}
           className={`w-32 h-40 m-0 p-3 bg-card-white text-xs ${
