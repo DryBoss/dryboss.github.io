@@ -111,9 +111,9 @@ export default function ThemeToggle() {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <svg
-        className={styles["toggle-scene"]}
+        className={`${styles["toggle-scene"]} ${styles["toggle-scene__cords"]}`}
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMinYMin"
         viewBox="0 0 197.451 481.081"
@@ -136,17 +136,6 @@ export default function ThemeToggle() {
               />
             </marker>
           ))}
-          <clipPath id="g" clipPathUnits="userSpaceOnUse">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="4.677"
-              d="M-774.546 827.629s12.917-13.473 29.203-13.412c16.53.062 29.203 13.412 29.203 13.412v53.6s-8.825 16-29.203 16c-21.674 0-29.203-16-29.203-16z"
-            />
-          </clipPath>
-          <clipPath id="f" clipPathUnits="userSpaceOnUse">
-            <path d="M-868.418 945.051c-4.188 73.011 78.255 53.244 150.216 52.941 82.387-.346 98.921-19.444 98.921-47.058 0-27.615-4.788-42.55-73.823-42.55-69.036 0-171.436-30.937-175.314 36.667z" />
-          </clipPath>
         </defs>
 
         <g className={styles["toggle-scene__cords"]}>
@@ -174,7 +163,8 @@ export default function ThemeToggle() {
               x1="98.7255"
               x2="98.7255"
               y1="240.5405"
-              y2="380.5405"
+              y2="380.5405" // lengthened line
+              strokeWidth="8" // made it wider
             />
           </g>
           <circle
@@ -185,11 +175,27 @@ export default function ThemeToggle() {
             fill="transparent"
           />
         </g>
+      </svg>
+      <svg
+        className={`${styles["toggle-scene__bulb"]} ${styles.bulb} ${styles["toggle-scene"]}`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 197.451 481.081"
+      >
+        <defs>
+          <clipPath id="g" clipPathUnits="userSpaceOnUse">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="4.677"
+              d="M-774.546 827.629s12.917-13.473 29.203-13.412c16.53.062 29.203 13.412 29.203 13.412v53.6s-8.825 16-29.203 16c-21.674 0-29.203-16-29.203-16z"
+            />
+          </clipPath>
+          <clipPath id="f" clipPathUnits="userSpaceOnUse">
+            <path d="M-868.418 945.051c-4.188 73.011 78.255 53.244 150.216 52.941 82.387-.346 98.921-19.444 98.921-47.058 0-27.615-4.788-42.55-73.823-42.55-69.036 0-171.436-30.937-175.314 36.667z" />
+          </clipPath>
+        </defs>
 
-        <g
-          className={`${styles["toggle-scene__bulb"]} ${styles.bulb}`}
-          transform="translate(844.069 -645.213)"
-        >
+        <g transform="translate(844.069 -645.213)">
           <path
             className={styles["bulb__cap"]}
             strokeLinecap="round"

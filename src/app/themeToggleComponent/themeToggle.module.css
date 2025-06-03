@@ -1,13 +1,25 @@
 .toggle-scene {
+  width: 60px;
   height: 120px;
   position: fixed;
-  top: 0;
-  right: 32px;
+}
+
+.toggle-scene__bulb {
+  right: 60;
+  top: -60;
+  rotate: 180deg;
+}
+
+.toggle-scene__cords {
+  overflow: visible;
+  top: -60;
+  right: 0;
 }
 
 .toggle-scene__cord {
+  right: 0;
   stroke: var(--cord);
-  cursor: move;
+  cursor: grab;
 }
 
 .toggle-scene__cord:nth-of-type(1) {
