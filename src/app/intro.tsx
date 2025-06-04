@@ -37,14 +37,17 @@ export default function Intro() {
       </p>
       <div className="m-2 mt-6 flex justify-between items-center">
         <div>
-          <button className="mr-2 px-2 py-1 text-sm tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+          <button className="mr-1 px-2 py-1 text-sm tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             linkedin
           </button>
-          <button className="mr-2 px-2 py-1 text-sm tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+          <button className="mr-1 px-2 py-1 text-sm tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             github
           </button>
+          <button className="mr-1 px-2 py-1 text-sm tracking-widest bg-tertiary-red text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+            mail
+          </button>
         </div>
-        <button className="ml-2 px-2 py-1 text-sm tracking-widest bg-tertiary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+        <button className="ml-1 px-2 py-1 text-sm tracking-widest bg-tertiary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
           resume
         </button>
       </div>
