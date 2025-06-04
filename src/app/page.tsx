@@ -25,7 +25,7 @@ export default function Home() {
       } overflow-hidden h-screen flex justify-center items-center bg-primary-light dark:bg-primary-dark`}
     >
       <Menu />
-      <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+      <ThemeToggle setDarkMode={setDarkMode} />
       <Intro />
     </div>
   );

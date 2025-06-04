@@ -8,16 +8,12 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 import styles from "./themeToggle.module.css";
 
 interface ThemeToggleProps {
-  darkMode: boolean;
   setDarkMode: Dispatch<SetStateAction<boolean>>;
 }
 
 gsap.registerPlugin(Draggable, MorphSVGPlugin);
 
-export default function ThemeToggle({
-  darkMode,
-  setDarkMode,
-}: ThemeToggleProps) {
+export default function ThemeToggle({ setDarkMode }: ThemeToggleProps) {
   const cordsRef = useRef<SVGPathElement[]>([]);
   const hitRef = useRef<SVGCircleElement>(null);
   const dummyRef = useRef<SVGGElement>(null);
