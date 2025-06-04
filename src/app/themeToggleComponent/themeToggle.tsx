@@ -50,7 +50,7 @@ export default function ThemeToggle({
       CLICK: new Audio("https://assets.codepen.io/605876/click.mp3"),
     };
     const STATE = {
-      ON: !darkMode,
+      ON: !(localStorage.theme == "dark"),
     };
     gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
 
@@ -73,6 +73,7 @@ export default function ThemeToggle({
       onStart: () => {
         STATE.ON = !STATE.ON;
         setDarkMode(!STATE.ON);
+        localStorage.theme = STATE.ON ? "light" : "dark";
         gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
         gsap.set([DUMMY, HIT], { display: "none" });
         gsap.set(cordsRef.current[0], { display: "block" });
