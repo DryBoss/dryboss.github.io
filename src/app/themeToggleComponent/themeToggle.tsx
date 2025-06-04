@@ -42,11 +42,16 @@ export default function ThemeToggle({ setDarkMode }: ThemeToggleProps) {
     const DUMMY_CORD = dummyCordRef.current!;
     const PROXY = document.createElement("div");
 
+    const isDark =
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+
     const AUDIO = {
       CLICK: new Audio("https://assets.codepen.io/605876/click.mp3"),
     };
     const STATE = {
-      ON: !(localStorage.theme == "dark"),
+      ON: !isDark,
     };
     gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
 
