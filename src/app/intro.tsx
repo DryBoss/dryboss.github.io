@@ -11,9 +11,9 @@ export default function Intro() {
 
   return (
     <div
-      className={`p-4 m-8 bg-secondary-dark text-gray-300 rounded-lg transition-all duration-200 ease-out ${
+      className={`p-4 m-8 bg-primary-dark text-primary-light rounded-lg transition-all duration-200 ease-out ${
         mounted ? "translate-y-0" : "translate-y-500"
-      }`}
+      } dark:border-2 dark:border-primary-light`}
     >
       <h1
         className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
@@ -35,6 +35,19 @@ export default function Intro() {
         site reflects my journey—projects, ideas, and experiments along the way.
         <br></br>Explore and feel free to say hi!
       </p>
+      <div className="m-2 mt-6 flex justify-between items-center">
+        <div>
+          <button className="mr-2 px-2 py-1 text-sm tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+            linkedin
+          </button>
+          <button className="mr-2 px-2 py-1 text-sm tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+            github
+          </button>
+        </div>
+        <button className="ml-2 px-2 py-1 text-sm tracking-widest bg-tertiary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+          resume
+        </button>
+      </div>
     </div>
   );
 }

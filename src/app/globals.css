@@ -12,10 +12,11 @@
 @theme {
   --font-primary: "Balatro";
 
-  --color-primary-dark: #e3d2c3;
-  --color-primary-light: #222222;
-  --color-secondary-dark: #222222;
-  --color-secondary-light: #e3d2c3;
+  --color-primary-dark: #282828;
+  --color-primary-light: #c0bbb3;
+  --color-tertiary-black: #7c7774;
+  --color-tertiary-green: #38ad5f;
+  --color-tertiary-blue: #6f87c4;
   --color-card-white: #eeeade;
   --color-card-red: #b23535;
   --color-card-black: #282828;
