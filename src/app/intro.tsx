@@ -11,7 +11,7 @@ export default function Intro() {
 
   return (
     <div
-      className={`p-4 m-8 bg-primary-dark text-primary-light rounded-lg transition-all duration-200 ease-out ${
+      className={`p-4 m-8 bg-primary-dark text-primary-light rounded-lg border-2 transition-all duration-200 ease-out ${
         mounted ? "translate-y-0" : "translate-y-500"
       } dark:border-2 dark:border-primary-light`}
     >

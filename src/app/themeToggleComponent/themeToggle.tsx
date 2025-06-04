@@ -1,15 +1,23 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Dispatch, SetStateAction } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 import styles from "./themeToggle.module.css";
 
+interface ThemeToggleProps {
+  darkMode: boolean;
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
+}
+
 gsap.registerPlugin(Draggable, MorphSVGPlugin);
 
-export default function ThemeToggle() {
+export default function ThemeToggle({
+  darkMode,
+  setDarkMode,
+}: ThemeToggleProps) {
   const cordsRef = useRef<SVGPathElement[]>([]);
   const hitRef = useRef<SVGCircleElement>(null);
   const dummyRef = useRef<SVGGElement>(null);
@@ -42,8 +50,9 @@ export default function ThemeToggle() {
       CLICK: new Audio("https://assets.codepen.io/605876/click.mp3"),
     };
     const STATE = {
-      ON: false,
+      ON: !darkMode,
     };
+    gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
 
     const CORD_DURATION = 0.1;
     const ENDX = DUMMY_CORD.getAttribute("x2")!;
@@ -63,6 +72,7 @@ export default function ThemeToggle() {
       paused: true,
       onStart: () => {
         STATE.ON = !STATE.ON;
+        setDarkMode(!STATE.ON);
         gsap.set(document.documentElement, { "--on": STATE.ON ? 1 : 0 });
         gsap.set([DUMMY, HIT], { display: "none" });
         gsap.set(cordsRef.current[0], { display: "block" });
