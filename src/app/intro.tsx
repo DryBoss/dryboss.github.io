@@ -13,7 +13,7 @@ export default function Intro() {
     <div
       className={`p-4 m-8 bg-primary-dark text-primary-light rounded-lg border-2 transition-all duration-200 ease-out ${
         mounted ? "translate-y-0" : "translate-y-500"
-      } dark:border-2 dark:border-primary-light`}
+      } dark:border-2 dark:border-primary-light lg:w-240`}
     >
       <h1
         className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
@@ -43,7 +43,7 @@ export default function Intro() {
           <button className="m-1 px-2 py-1 text-sm tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             github
           </button>
-          <br></br>
+          <br className="sm:hidden"></br>
           <button className="m-1 px-2 py-1 text-sm tracking-widest bg-tertiary-red text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             mail
           </button>

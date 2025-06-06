@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 14px;
+  @apply text-[14px] md:text-[16px];
 }
 
 body {
