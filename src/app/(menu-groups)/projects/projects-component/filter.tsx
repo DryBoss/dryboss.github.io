@@ -25,13 +25,13 @@ export default function Filter() {
       : subcategories[currentCategory];
 
   return (
-    <div className="mx-2">
+    <div className="mx-4">
       <div className="flex">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className={`w-8 m-1 bg-tertiary-red text-primary-dark border-2 rounded ${
+          className={`w-10 m-2 bg-tertiary-red text-primary-dark border-2 rounded ${
             currentCategory == "none" ? "hidden" : "visible"
           } cursor-pointer`}
           onClick={() => setCurrentCategory("none")}
@@ -46,7 +46,7 @@ export default function Filter() {
           <div
             key={category}
             onClick={() => setCurrentCategory(category)}
-            className={`m-1 px-2 py-1 text-sm tracking-widest border-2 border-primary-dark rounded cursor-pointer ${
+            className={`m-2 px-3 py-2 text-sm tracking-widest border-2 border-primary-dark rounded cursor-pointer ${
               currentCategory == category
                 ? "bg-primary-dark text-primary-light"
                 : "bg-primary-light text-primary-dark"
@@ -61,7 +61,7 @@ export default function Filter() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className={`w-8 m-1 bg-tertiary-red text-primary-dark border-2 rounded ${
+          className={`w-10 m-2 bg-tertiary-red text-primary-dark border-2 rounded ${
             currentSubCategory == "none" ? "hidden" : "visible"
           } cursor-pointer`}
           onClick={() => setCurrentSubCategory("none")}
@@ -77,7 +77,7 @@ export default function Filter() {
           <div
             key={index}
             onClick={() => setCurrentSubCategory(subcategory)}
-            className={`m-1 px-2 py-1 text-sm tracking-widest border-2 border-primary-dark rounded cursor-pointer ${
+            className={`m-2 px-3 py-2 text-sm tracking-widest border-2 border-primary-dark rounded cursor-pointer ${
               currentSubCategory == subcategory
                 ? "bg-primary-dark text-primary-light"
                 : "bg-primary-light text-primary-dark"
