@@ -2,11 +2,10 @@
 
 import { useState, useEffect } from "react";
 
-import Menu from "./homeComponents/menu";
-import ThemeToggle from "./homeComponents/themeToggleComponent/themeToggle";
-import Intro from "./homeComponents/intro";
+import Title from "./projects-component/title";
+import Filter from "./projects-component/filter";
 
-export default function Home() {
+export default function projects() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -22,11 +21,10 @@ export default function Home() {
     <div
       className={`${
         darkMode ? "dark" : ""
-      } overflow-hidden h-screen flex justify-center items-center bg-primary-light dark:bg-primary-dark`}
+      } overflow-hidden h-screen bg-primary-light dark:bg-primary-dark`}
     >
-      <Menu />
-      <ThemeToggle setDarkMode={setDarkMode} />
-      <Intro />
+      <Title />
+      <Filter />
     </div>
   );
 }
