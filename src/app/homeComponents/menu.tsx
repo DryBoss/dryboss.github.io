@@ -1,10 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Menu() {
+  const router = useRouter();
   const menuItems = [
     {
       title: "projects",
+      route: "/projects",
       rotation: "-5",
       translateY: "0",
       icon: (
@@ -25,6 +28,7 @@ export default function Menu() {
     },
     {
       title: "writings",
+      route: "/projects",
       rotation: "0",
       translateY: "-5",
       icon: (
@@ -40,6 +44,7 @@ export default function Menu() {
     },
     {
       title: "achievements",
+      route: "/projects",
       rotation: "5",
       translateY: "0",
       icon: (
@@ -60,6 +65,7 @@ export default function Menu() {
   ];
 
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const timeouts: NodeJS.Timeout[] = [];
@@ -76,19 +82,34 @@ export default function Menu() {
     };
   }, []);
 
+  const handleCLick = (route: string, index: number) => {
+    setClickedIndex(index);
+    setTimeout(() => {
+      router.push(route);
+    }, 300);
+  };
+
   return (
     <div className={`flex fixed bottom-[-24] left-1/2 -translate-x-1/2 z-99`}>
-      {menuItems.map(({ title, rotation, translateY, icon }, index) => (
+      {menuItems.map(({ title, route, rotation, translateY, icon }, index) => (
         <div
           key={title}
           className={`w-32 h-40 mx-[-10] p-3 bg-card-white text-xs ${
             index % 2 ? "text-card-red" : "text-card-black"
-          } tracking-widest flex flex-col justify-between items-center rounded drop-shadow-lg hover:-translate-y-2 duration-200 cursor-pointer transition-all transform ${
-            visibleItems.includes(index) ? "translate-y-0" : "translate-y-500"
-          } ease-out`}
+          } tracking-widest flex flex-col justify-between items-center rounded drop-shadow-lg hover:-translate-y-2 cursor-pointer transition-transform duration-200 ease-out`}
           style={{
-            transform: `rotate(${rotation}deg) translateY(${translateY}px`,
+            transform: `
+      rotate(${rotation}deg) 
+      translateY(${
+        clickedIndex === index
+          ? parseInt(translateY) - 50
+          : visibleItems.includes(index)
+          ? translateY
+          : 500
+      }px)
+    `,
           }}
+          onClick={() => handleCLick(route, index)}
         >
           <p>{title}</p>
           {icon}
