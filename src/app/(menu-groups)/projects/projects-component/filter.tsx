@@ -20,10 +20,10 @@ export default function Filter() {
                 ? setCurrentCategory("none")
                 : setCurrentCategory(category)
             }
-            className={`m-2 px-3 py-1 text-sm tracking-widest flex items-center border-2 border-primary-dark rounded cursor-pointer ${
+            className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center border-2 border-primary-dark dark:border-primary-light rounded cursor-pointer ${
               currentCategory == category
-                ? "bg-primary-dark text-primary-light"
-                : "bg-primary-light text-primary-dark"
+                ? "bg-primary-dark text-primary-light dark:bg-primary-light dark:text-primary-dark"
+                : "bg-primary-light text-primary-dark dark:bg-primary-dark dark:text-primary-light"
             }`}
           >
             {category}

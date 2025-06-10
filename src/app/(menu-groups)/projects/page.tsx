@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import Title from "./projects-component/title";
 import Filter from "./projects-component/filter";
+import ProjectsComp from "./projects-component/projects";
 
 export default function Projects() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +26,7 @@ export default function Projects() {
     >
       <Title />
       <Filter />
+      <ProjectsComp />
     </div>
   );
 }
