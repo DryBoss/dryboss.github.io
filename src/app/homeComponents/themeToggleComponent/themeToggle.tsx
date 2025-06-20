@@ -131,7 +131,7 @@ export default function ThemeToggle({ setDarkMode }: ThemeToggleProps) {
         });
       },
     });
-  }, []);
+  }, [setDarkMode]);
 
   return (
     <div className={`z-100`}>
