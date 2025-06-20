@@ -36,6 +36,9 @@ export async function connectToDatabase(): Promise<Connection> {
       .then((mongooseInstance) => {
         const db = mongooseInstance.connection;
 
+        console.log("MongoDB URI:", MONGODB_URI);
+        console.log("Connecting to database:", mongoose.connection.name);
+
         db.on("connected", () => {
           console.log("MongoDB connected");
         });
