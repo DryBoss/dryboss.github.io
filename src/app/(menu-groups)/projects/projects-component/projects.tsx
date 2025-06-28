@@ -43,13 +43,11 @@ export default function Projects() {
   if (projects.length === 0) return <p>Loading projects...</p>;
 
   return (
-    <div className="mx-10 my-5">
+    <div className="px-10 py-5">
       {projects.map((project, index) => (
         <div
           key={project._id}
-          className={`my-5 flex justify-center items-center${
-            index % 2 ? "flex-row-reverse text-right" : ""
-          }`}
+          className={`flex ${index % 2 ? "flex-row-reverse text-right" : ""}`}
         >
           <div
             className={`w-24 h-30 p-3 bg-card-white ${
