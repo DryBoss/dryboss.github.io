@@ -5,7 +5,6 @@ const ProjectSchema = new Schema(
     name: String,
     description: String,
     technologies: [String],
-    link: String,
   },
   { collection: "projects" }
 );
