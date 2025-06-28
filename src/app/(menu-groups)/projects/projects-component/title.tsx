@@ -11,7 +11,7 @@ export default function Title() {
 
   return (
     <div
-      className={`text-primary-dark flex items-center dark:text-primary-light`}
+      className={`p-5 text-primary-dark flex items-center dark:text-primary-light`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

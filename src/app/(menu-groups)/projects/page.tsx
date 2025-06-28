@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import Title from "./projects-component/title";
 import Filter from "./projects-component/filter";
 import ProjectsComp from "./projects-component/projects";
-import PageChange from "./projects-component/pageChange";
 
 export default function Projects() {
   const [darkMode, setDarkMode] = useState(false);
