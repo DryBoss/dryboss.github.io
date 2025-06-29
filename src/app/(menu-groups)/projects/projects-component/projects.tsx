@@ -28,30 +28,45 @@ const icons = {
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    console.log("test");
     fetch("/api/projects")
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
       })
-      .then((data: Project[]) => setProjects(data))
+      .then((data: Project[]) => {
+        setProjects(data);
+        // Delay to trigger animation
+        setTimeout(() => {
+          setMounted(true);
+        }, 100); // Give browser time to paint initial state
+      })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
 
   if (projects.length === 0) return <p>Loading projects...</p>;
 
   return (
-    <div className="py-5">
+    <div className="pb-5">
       {projects.map((project, index) => (
         <div
           key={project._id}
-          className={`p-5 my-5 bg-tertiary-black flex ${
-            index % 2
-              ? "ml-10 rounded-l-full flex-row-reverse text-right"
-              : "mr-10 rounded-r-full"
-          }`}
+          className={`px-10 py-5 my-5 bg-primary-dark flex transition-all duration-200 ease-out
+            ${
+              index % 2
+                ? "ml-10 rounded-l-4xl flex-row-reverse text-right"
+                : "mr-10 rounded-r-4xl"
+            }
+            ${
+              mounted
+                ? "translate-x-0"
+                : index % 2
+                ? "translate-x-200"
+                : "-translate-x-200"
+            }
+          `}
         >
           <div
             className={`w-24 h-30 p-3 bg-card-white ${
@@ -60,16 +75,16 @@ export default function Projects() {
           >
             {icons.game}
           </div>
-          <div className="px-5 flex flex-col justify-between">
+          <div className="px-5 text-primary-light flex flex-col justify-between">
             <h3 className="my-1 text-lg">{project.name}</h3>
             <p className="my-1 opacity-75 text-sm">{project.description}</p>
             <div className={`my-1 flex ${index % 2 ? "justify-end" : ""}`}>
-              {project.technologies.map((technology) => (
+              {project.technologies.map((tech) => (
                 <p
-                  key={technology}
+                  key={tech}
                   className="px-2 py-1 text-xs border-2 rounded-full"
                 >
-                  {technology}
+                  {tech}
                 </p>
               ))}
             </div>
