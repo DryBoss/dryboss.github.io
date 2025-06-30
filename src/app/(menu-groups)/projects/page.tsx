@@ -19,7 +19,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
+    <div className={`${darkMode ? "dark" : ""}  overflow-hidden`}>
       <div className={`bg-primary-light dark:bg-primary-dark`}>
         <Title />
         <Filter />
