@@ -20,9 +20,9 @@ export default function Filter() {
                 ? setCurrentCategory("none")
                 : setCurrentCategory(category)
             }
-            className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center border-2 border-primary-dark dark:border-primary-light rounded cursor-pointer text-primary-dark ${
+            className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
               currentCategory == category
-                ? "bg-primary-green"
+                ? "bg-tertiary-green"
                 : "bg-tertiary-red"
             }`}
           >
