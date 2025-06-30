@@ -1,12 +1,10 @@
 "use client";
-import { use } from "react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
-export default function ProjectModal(props: {
-  params: Promise<{ name: string }>;
-}) {
+export default function ProjectModal() {
   const router = useRouter();
-  const { name } = use(props.params); // <-- unwrap async params
+  const params = useParams(); // ✅ Get route params safely
+  const name = params.name as string;
 
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
@@ -18,7 +16,7 @@ export default function ProjectModal(props: {
           ×
         </button>
         <h2 className="text-xl font-bold mb-2">Project: {name}</h2>
-        <p>Details about {name}...</p>
+        <p>More details about {name}...</p>
       </div>
     </div>
   );
