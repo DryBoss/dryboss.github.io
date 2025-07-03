@@ -23,7 +23,7 @@ export default function Filter() {
             className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
               currentCategory == category
                 ? "bg-tertiary-green"
-                : "bg-tertiary-red"
+                : "bg-card-red text-primary-light"
             }`}
           >
             {category}

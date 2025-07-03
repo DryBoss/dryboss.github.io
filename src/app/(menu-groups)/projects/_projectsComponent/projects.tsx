@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 type Project = {
   _id: string;
@@ -29,8 +29,6 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
-  const router = useRouter();
-
   useEffect(() => {
     fetch("/api/projects")
       .then((res) => {
@@ -56,9 +54,15 @@ export default function Projects() {
       {projects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
-          <div
+          <Link
+            href={`/projects/${project.name}`}
+            prefetch
             key={project._id}
-            className={`transform transition-all dark:border-2 border-primary-light duration-200 ease-out
+            className="block"
+            scroll={false}
+          >
+            <div
+              className={`transform transition-all dark:border-2 border-primary-light duration-200 ease-out
               cursor-pointer ${
                 isVisible
                   ? "translate-x-0"
@@ -73,32 +77,32 @@ export default function Projects() {
                   : "mr-10 rounded-r-4xl dark:border-l-0"
               }
             `}
-            onClick={() => router.push(`/projects/${project.name}`)}
-          >
-            <div
-              className={`w-24 h-30 p-3 bg-card-white ${
-                index % 2
-                  ? "text-card-red rotate-5"
-                  : "text-card-black -rotate-5"
-              } flex justify-center items-center rounded drop-shadow-lg transition-transform duration-200 ease-out`}
             >
-              {icons.game}
-            </div>
-            <div className="px-5 text-primary-light flex flex-col justify-between">
-              <h3 className="my-1 text-lg">{project.name}</h3>
-              <p className="my-1 text-sm">{project.description}</p>
-              <div className={`my-1 flex ${index % 2 ? "justify-end" : ""}`}>
-                {project.technologies.map((tech) => (
-                  <p
-                    key={tech}
-                    className="px-3 py-2 text-xs text-primary-dark bg-primary-light rounded-full"
-                  >
-                    {tech}
-                  </p>
-                ))}
+              <div
+                className={`w-24 h-30 p-3 bg-card-white ${
+                  index % 2
+                    ? "text-card-red rotate-5"
+                    : "text-card-black -rotate-5"
+                } flex justify-center items-center rounded drop-shadow-lg transition-transform duration-200 ease-out`}
+              >
+                {icons.game}
+              </div>
+              <div className="px-5 text-primary-light flex flex-col justify-between">
+                <h3 className="my-1 text-lg">{project.name}</h3>
+                <p className="my-1 text-sm">{project.description}</p>
+                <div className={`my-1 flex ${index % 2 ? "justify-end" : ""}`}>
+                  {project.technologies.map((tech) => (
+                    <p
+                      key={tech}
+                      className="px-3 py-2 text-xs text-primary-dark bg-primary-light rounded-full"
+                    >
+                      {tech}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </div>
