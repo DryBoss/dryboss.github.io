@@ -1,5 +1,6 @@
 "use client";
 
+import React, { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 type Category = "web development" | "machine learning" | "none";
@@ -37,22 +38,17 @@ export default function Filter({
   };
 
   return (
-    <div className="mx-4">
-      <div className="flex">
-        {categories.map((category) => (
-          <div
-            key={category}
-            onClick={() => handleClick(category)}
-            className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
-              currentCategory === category
-                ? "bg-tertiary-green"
-                : "bg-card-red text-primary-light"
-            }`}
-          >
-            {category}
-          </div>
-        ))}
-      </div>
+    <div>
+      {/* Wrap with Suspense */}
+      <Suspense fallback={<div>Loading filters...</div>}>
+        <Filter
+          categories={["web development", "machine learning", "none"]}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        />
+      </Suspense>
+
+      {/* rest of page */}
     </div>
   );
 }
