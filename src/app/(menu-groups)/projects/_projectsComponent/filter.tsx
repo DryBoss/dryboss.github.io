@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 type Category = "web development" | "machine learning" | "none";
