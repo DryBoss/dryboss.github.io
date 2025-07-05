@@ -1,16 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 
+// Type definitions
 type Project = {
   _id: string;
   name: string;
   description: string;
   technologies: string[];
+  field: string;
+  type: string;
+  priority: number;
 };
 
-const icons = {
+type Category = "web development" | "machine learning" | "none";
+
+interface ProjectsProps {
+  currentCategory: Category;
+}
+
+const icons: { [key: string]: React.ReactElement } = {
   game: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,72 +35,89 @@ const icons = {
   ),
 };
 
-export default function Projects() {
+export default function Projects({ currentCategory }: ProjectsProps) {
   const [projects, setProjects] = useState<Project[]>([]);
   const [visibleIndexes, setVisibleIndexes] = useState<number[]>([]);
 
+  // Fetch all projects once
   useEffect(() => {
     fetch("/api/projects")
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
       })
-      .then((data: Project[]) => {
-        setProjects(data);
-
-        data.forEach((_, i) => {
-          setTimeout(() => {
-            setVisibleIndexes((prev) => [...prev, i]);
-          }, (i + 1) * 100);
-        });
-      })
+      .then((data: Project[]) => setProjects(data))
       .catch((error) => console.error("Fetch error:", error));
   }, []);
 
-  if (projects.length === 0) return <p>Loading projects...</p>;
+  // Filtered and sorted projects
+  const filteredProjects = useMemo(() => {
+    return [...projects]
+      .filter(
+        (project) =>
+          currentCategory === "none" || project.field === currentCategory
+      )
+      .sort((a, b) => b.priority - a.priority);
+  }, [projects, currentCategory]);
+
+  // Animate on filter change
+  useEffect(() => {
+    setVisibleIndexes([]);
+    const initialDelay = 200;
+    const stepDelay = 100;
+
+    filteredProjects.forEach((_, i) => {
+      setTimeout(() => {
+        setVisibleIndexes((prev) => [...prev, i]);
+      }, initialDelay + i * stepDelay);
+    });
+  }, [filteredProjects]);
+
+  if (!projects.length) return <p>Loading projects...</p>;
 
   return (
     <div className="pb-5">
-      {projects.map((project, index) => {
+      {filteredProjects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
           <Link
-            href={`/projects/${project.name}`}
+            href={`/projects/${project.name
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
             prefetch
             key={project._id}
             className="block"
             scroll={false}
           >
             <div
-              className={`transform transition-all dark:border-2 border-primary-light duration-200 ease-out
-              cursor-pointer ${
-                isVisible
-                  ? "translate-x-0"
-                  : index % 2
-                  ? "translate-x-200"
-                  : "-translate-x-200"
-              }
-              px-10 py-5 my-5 bg-primary-dark flex
-              ${
-                index % 2
-                  ? "ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
-                  : "mr-10 rounded-r-4xl dark:border-l-0"
-              }
-            `}
+              className={`flex items-center transform transition-all dark:border-2 border-primary-light duration-200 ease-out
+                cursor-pointer ${
+                  isVisible
+                    ? "translate-x-0"
+                    : index % 2
+                    ? "translate-x-200"
+                    : "-translate-x-200"
+                }
+                px-10 py-5 my-5 bg-primary-dark flex
+                ${
+                  index % 2
+                    ? "ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
+                    : "mr-10 rounded-r-4xl dark:border-l-0"
+                }`}
             >
               <div
-                className={`w-24 h-30 p-3 bg-card-white ${
+                className={`min-w-24 h-30 p-3 bg-card-white ${
                   index % 2
                     ? "text-card-red rotate-5"
                     : "text-card-black -rotate-5"
                 } flex justify-center items-center rounded drop-shadow-lg transition-transform duration-200 ease-out`}
               >
-                {icons.game}
+                {icons[project.type]}
               </div>
               <div className="px-5 text-primary-light flex flex-col justify-between">
-                <h3 className="my-1 text-lg">{project.name}</h3>
+                <h3 className="my-2 text-lg">{project.name}</h3>
                 <p className="my-1 text-sm">{project.description}</p>
-                <div className={`my-1 flex ${index % 2 ? "justify-end" : ""}`}>
+                <div className={`my-2 flex ${index % 2 ? "justify-end" : ""}`}>
                   {project.technologies.map((tech) => (
                     <p
                       key={tech}

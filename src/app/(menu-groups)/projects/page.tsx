@@ -9,6 +9,12 @@ import ProjectsComp from "./_projectsComponent/projects";
 export default function Projects() {
   const [darkMode, setDarkMode] = useState(false);
 
+  const categories = ["web development", "machine learning"] as const;
+
+  type Category = (typeof categories)[number] | "none";
+
+  const [currentCategory, setCurrentCategory] = useState<Category>("none");
+
   useEffect(() => {
     const isDark =
       localStorage.theme === "dark" ||
@@ -22,8 +28,12 @@ export default function Projects() {
     <div className={`${darkMode ? "dark" : ""}  overflow-hidden`}>
       <div className={`bg-primary-light dark:bg-primary-dark`}>
         <Title />
-        <Filter />
-        <ProjectsComp />
+        <Filter
+          categories={categories}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        />
+        <ProjectsComp currentCategory={currentCategory} />
       </div>
     </div>
   );

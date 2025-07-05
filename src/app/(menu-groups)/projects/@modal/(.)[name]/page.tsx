@@ -17,12 +17,12 @@ export default function ProjectModal() {
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
       <div
-        className={`bg-white p-6 rounded-xl max-w-md w-full relative transform transition-transform duration-200 ease-out
+        className={`text-primary-dark bg-primary-light p-6 rounded-xl w-4/5 relative transform transition-transform duration-200 ease-out
         ${show ? "translate-y-0" : "translate-y-200"}`}
       >
         <button
           onClick={() => router.back()}
-          className="absolute top-2 right-2 text-xl text-gray-500 hover:text-red-500"
+          className="absolute top-5 right-5"
         >
           ×
         </button>
