@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 import Title from "./_projectsComponent/title";
 import Filter from "./_projectsComponent/filter";
@@ -25,16 +25,18 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className={`${darkMode ? "dark" : ""}  overflow-hidden`}>
-      <div className={`bg-primary-light dark:bg-primary-dark`}>
-        <Title />
-        <Filter
-          categories={categories}
-          currentCategory={currentCategory}
-          setCurrentCategory={setCurrentCategory}
-        />
-        <ProjectsComp currentCategory={currentCategory} />
+    <Suspense fallback={<div>Loading filters...</div>}>
+      <div className={`${darkMode ? "dark" : ""}  overflow-hidden`}>
+        <div className={`bg-primary-light dark:bg-primary-dark`}>
+          <Title />
+          <Filter
+            categories={categories}
+            currentCategory={currentCategory}
+            setCurrentCategory={setCurrentCategory}
+          />
+          <ProjectsComp currentCategory={currentCategory} />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
