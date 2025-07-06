@@ -32,6 +32,12 @@ body {
   @apply bg-primary-dark font-primary;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 /* src/app/globals.css */
 :root {
   --on: 0;

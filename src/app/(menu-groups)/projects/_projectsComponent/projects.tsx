@@ -76,7 +76,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
   if (!projects.length) return <p>Loading projects...</p>;
 
   return (
-    <div className="pb-5">
+    <div className="pb-5 grid md:grid-cols-2 items-center">
       {filteredProjects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
@@ -98,7 +98,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                     ? "translate-x-200"
                     : "-translate-x-200"
                 }
-                px-10 py-5 my-5 bg-primary-dark flex
+                px-5 py-5 my-5 bg-primary-dark flex
                 ${
                   index % 2
                     ? "ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"

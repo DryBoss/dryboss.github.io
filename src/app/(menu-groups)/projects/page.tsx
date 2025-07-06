@@ -25,9 +25,9 @@ export default function Projects() {
   }, []);
 
   return (
-    <Suspense fallback={<div>Loading filters...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       <div className={`${darkMode ? "dark" : ""}  overflow-hidden`}>
-        <div className={`bg-primary-light dark:bg-primary-dark`}>
+        <div className={`bg-primary-light dark:bg-primary-dark min-h-screen`}>
           <Title />
           <Filter
             categories={categories}
