@@ -56,3 +56,44 @@ body {
     calc((25 + (var(--on) * 75)) * 1%)
   );
 }
+
+@keyframes flipWhenHidden {
+  0% {
+    transform: scaleX(1) rotate(0deg);
+  }
+  4% {
+    transform: scaleX(0) rotate(0deg);
+  }
+  5% {
+    transform: scaleX(0) rotate(180deg);
+  }
+  6% {
+    transform: scaleX(0) rotate(180deg);
+  }
+  10% {
+    transform: scaleX(1) rotate(180deg);
+  }
+  50% {
+    transform: scaleX(1) rotate(180deg);
+  }
+  54% {
+    transform: scaleX(0) rotate(180deg);
+  }
+  55% {
+    transform: scaleX(0) rotate(360deg);
+  }
+  56% {
+    transform: scaleX(0) rotate(360deg);
+  }
+  60% {
+    transform: scaleX(1) rotate(360deg);
+  }
+  100% {
+    transform: scaleX(1) rotate(360deg);
+  }
+}
+
+.animate-flip {
+  animation: flipWhenHidden 2s ease-in-out infinite;
+  transform-origin: center;
+}
