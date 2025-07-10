@@ -7,11 +7,22 @@ function formatProjectName(slug: string) {
   return slug.replace(/-/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+type ProjectDetails = {
+  name: string;
+  description: string;
+  technologies: string[];
+  links: string[];
+  images: string[];
+};
+
 export default function ProjectModal() {
   const router = useRouter();
   const params = useParams();
   const name = params.name as string;
 
+  const [projectDetails, setProjectDetails] = useState<ProjectDetails | null>(
+    null
+  );
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -19,7 +30,11 @@ export default function ProjectModal() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const displayName = formatProjectName(name);
+  useEffect(() => {
+    fetch(`/api/projects/${encodeURIComponent(formatProjectName(name))}`)
+      .then((res) => res.json())
+      .then((data) => setProjectDetails(data));
+  }, [name]);
 
   const handleClose = () => {
     setShow(false); // triggers exit animation
@@ -40,7 +55,10 @@ export default function ProjectModal() {
         >
           ×
         </button>
-        <h2 className="text-xl font-bold mb-2 w-4/5">{displayName}</h2>
+        <h2 className="text-xl font-bold mb-2 w-4/5">{projectDetails?.name}</h2>
+        <h2 className="text-xl font-bold mb-2 w-4/5">
+          {projectDetails?.description}
+        </h2>
       </div>
     </div>
   );

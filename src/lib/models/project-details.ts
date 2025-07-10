@@ -8,7 +8,8 @@ const ProjectSchema = new Schema(
     links: [String],
     images: [String],
   },
-  { collection: "projects" }
+  { collection: "project-details" }
 );
 
-export const Project = models.Project || model("Project", ProjectSchema);
+export const ProjectDetails =
+  models.ProjectDetails || model("ProjectDetails", ProjectSchema);
