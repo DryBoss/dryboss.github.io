@@ -1,14 +1,14 @@
+import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db-connect";
 import { ProjectDetails } from "@/lib/models/project-details";
-import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { name: string } }
+  { params }: { params: { name: string } }
 ) {
   await connectToDatabase();
 
-  const name = decodeURIComponent(context.params.name);
+  const name = decodeURIComponent(params.name);
 
   const projectDetail = await ProjectDetails.findOne({
     name: name,
