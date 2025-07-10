@@ -4,11 +4,13 @@ import { ProjectDetails } from "@/lib/models/project-details";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { name: string } } // params is an object, not a Promise
+  { params }: { params: Promise<{ name: string }> }
 ) {
   await connectToDatabase();
 
-  const name = decodeURIComponent(params.name); // now it's safe to access directly
+  const resolvedParams = await params; // await the Promise first
+  const name = decodeURIComponent(resolvedParams.name); // then decode the string
+
   const project = await ProjectDetails.findOne({ name }).lean();
 
   if (!project) {
