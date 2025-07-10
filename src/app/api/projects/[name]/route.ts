@@ -4,11 +4,11 @@ import { ProjectDetails } from "@/lib/models/project-details";
 
 export async function GET(
   req: NextRequest,
-  context: any // ← Don't type this!
+  { params }: { params: { name: string } }
 ) {
   await connectToDatabase();
 
-  const name = decodeURIComponent(context.params.name);
+  const name = decodeURIComponent(params.name);
 
   const project = await ProjectDetails.findOne({ name }).lean();
 
