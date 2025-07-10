@@ -2,14 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/db-connect";
 import { ProjectDetails } from "@/lib/models/project-details";
 
-// define type for context correctly
-type Context = {
-  params: {
-    name: string;
-  };
-};
-
-export async function GET(req: NextRequest, context: Context) {
+export async function GET(
+  req: NextRequest,
+  context: any // ← Don't type this!
+) {
   await connectToDatabase();
 
   const name = decodeURIComponent(context.params.name);
