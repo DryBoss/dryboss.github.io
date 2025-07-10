@@ -4,17 +4,28 @@ import { ProjectDetails } from "@/lib/models/project-details";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { name: string } }
+  context: { params: { name: string } } // ✅ valid context shape
 ) {
-  await connectToDatabase();
+  try {
+    await connectToDatabase();
 
-  const name = decodeURIComponent(params.name);
+    const name = decodeURIComponent(context.params.name);
 
-  const project = await ProjectDetails.findOne({ name }).lean();
+    const project = await ProjectDetails.findOne({ name }).lean();
 
-  if (!project) {
-    return NextResponse.json({ message: "Project not found" }, { status: 404 });
+    if (!project) {
+      return NextResponse.json(
+        { message: "Project not found" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json(project);
+  } catch (error) {
+    console.error("Error fetching project:", error);
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 }
+    );
   }
-
-  return NextResponse.json(project);
 }
