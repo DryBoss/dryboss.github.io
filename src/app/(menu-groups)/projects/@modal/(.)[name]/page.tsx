@@ -1,5 +1,6 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Convert slug to readable format
@@ -50,7 +51,7 @@ export default function ProjectModal() {
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50">
       <div
-        className={`text-primary-dark bg-primary-light p-6 rounded-xl w-4/5 h-4/5 relative transform transition-transform duration-200 ease-out
+        className={`flex flex-col justify-between text-primary-dark bg-primary-light p-6 rounded-xl w-4/5 h-4/5 relative transform transition-transform duration-200 ease-out
         ${show ? "translate-y-0" : "translate-y-200"}`}
       >
         <button
@@ -59,37 +60,41 @@ export default function ProjectModal() {
         >
           ×
         </button>
-        <h2
-          className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
+        <div>
+          <h2
+            className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
               transition-all duration-[1000ms] ${mounted ? "w-[13ch]" : "w-0"}`}
-        >
-          {projectDetails?.name}
-        </h2>
-        <div className={`my-2 flex `}>
-          {projectDetails?.technologies.map((tech) => (
-            <p
-              key={tech}
-              className="px-3 py-2 m-1 text-xs text-primary-dark border-2 border-primary-dark rounded-full"
-            >
-              {tech}
-            </p>
-          ))}
+          >
+            {projectDetails?.name}
+          </h2>
+          <div className={`my-2 flex `}>
+            {projectDetails?.technologies.map((tech) => (
+              <p
+                key={tech}
+                className="px-3 py-2 m-1 text-xs text-primary-dark border-2 border-primary-dark rounded-full"
+              >
+                {tech}
+              </p>
+            ))}
+          </div>
+          <p className="m-2 text-sm">{projectDetails?.description}</p>
         </div>
-        <p className="m-2 text-sm">{projectDetails?.description}</p>
+
         <div className="my-2 flex">
           {Object.entries(projectDetails?.links ?? {}).map(([title, link]) => (
-            <button
+            <Link
               key={title}
-              className={`m-1 px-3 py-2 text-sm tracking-widest text-primary-dark rounded hover:shadow-lg active:shadow-inner ${
-                title == "source"
+              href={link}
+              className={`m-2 px-3 py-2 text-sm tracking-widest text-primary-dark rounded hover:shadow-lg active:shadow-inner ${
+                title === "source"
                   ? "bg-tertiary-black"
-                  : title == "play"
+                  : title === "play"
                   ? "bg-tertiary-green"
                   : ""
               }`}
             >
               {title}
-            </button>
+            </Link>
           ))}
         </div>
       </div>
