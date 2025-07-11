@@ -24,6 +24,7 @@ export default function ProjectModal() {
     null
   );
   const [show, setShow] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => setShow(true), 10);
@@ -33,7 +34,10 @@ export default function ProjectModal() {
   useEffect(() => {
     fetch(`/api/projects/${encodeURIComponent(formatProjectName(name))}`)
       .then((res) => res.json())
-      .then((data) => setProjectDetails(data));
+      .then((data) => {
+        setProjectDetails(data);
+        setMounted(true);
+      });
   }, [name]);
 
   const handleClose = () => {
@@ -51,14 +55,43 @@ export default function ProjectModal() {
       >
         <button
           onClick={handleClose}
-          className="absolute top-0 right-5 text-6xl"
+          className="text-card-red absolute top-0 right-5 text-6xl font-black"
         >
           ×
         </button>
-        <h2 className="text-xl font-bold mb-2 w-4/5">{projectDetails?.name}</h2>
-        <h2 className="text-xl font-bold mb-2 w-4/5">
-          {projectDetails?.description}
+        <h2
+          className={`m-2 text-2xl overflow-hidden whitespace-nowrap 
+              transition-all duration-[1000ms] ${mounted ? "w-[13ch]" : "w-0"}`}
+        >
+          {projectDetails?.name}
         </h2>
+        <div className={`my-2 flex `}>
+          {projectDetails?.technologies.map((tech) => (
+            <p
+              key={tech}
+              className="px-3 py-2 m-1 text-xs text-primary-dark border-2 border-primary-dark rounded-full"
+            >
+              {tech}
+            </p>
+          ))}
+        </div>
+        <p className="m-2 text-sm">{projectDetails?.description}</p>
+        <div className="my-2 flex">
+          {Object.entries(projectDetails?.links ?? {}).map(([title, link]) => (
+            <button
+              key={title}
+              className={`m-1 px-3 py-2 text-sm tracking-widest text-primary-dark rounded hover:shadow-lg active:shadow-inner ${
+                title == "source"
+                  ? "bg-tertiary-black"
+                  : title == "play"
+                  ? "bg-tertiary-green"
+                  : ""
+              }`}
+            >
+              {title}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

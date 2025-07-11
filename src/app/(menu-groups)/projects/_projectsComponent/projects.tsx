@@ -136,11 +136,11 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                     ? "translate-x-200"
                     : "-translate-x-200"
                 }
-                px-5 py-5 my-5 bg-primary-dark flex
+                px-2 py-5 my-5 bg-primary-dark flex
                 ${
                   index % 2
-                    ? "ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
-                    : "mr-10 rounded-r-4xl dark:border-l-0"
+                    ? "pr-5 ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
+                    : "pl-5 mr-10 rounded-r-4xl dark:border-l-0"
                 }`}
             >
               <div
@@ -154,7 +154,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
               </div>
               <div className="px-5 text-primary-light flex flex-col justify-between">
                 <h3 className="my-2 text-lg">{project.name}</h3>
-                <p className="my-1 text-sm ">{project.description}</p>
+                <p className="my-2 text-sm opacity-80">{project.description}</p>
                 <div className={`my-2 flex ${index % 2 ? "justify-end" : ""}`}>
                   {project.technologies.map((tech) => (
                     <p
