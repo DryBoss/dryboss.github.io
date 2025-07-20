@@ -26,7 +26,7 @@ const menuItems = [
   },
   {
     title: "writings",
-    route: "/projects",
+    route: "/writings",
     rotation: "0",
     translateY: "-5",
     icon: (
@@ -42,7 +42,7 @@ const menuItems = [
   },
   {
     title: "achievements",
-    route: "/projects",
+    route: "/achievements",
     rotation: "5",
     translateY: "0",
     icon: (
