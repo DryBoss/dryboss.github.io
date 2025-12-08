@@ -45,10 +45,8 @@ export default function Filter({
             <div
               key={category}
               onClick={() => handleClick(category)}
-              className={`m-2 px-4 py-2 text-sm tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
-                currentCategory === category
-                  ? "bg-tertiary-green"
-                  : "bg-card-red text-primary-light"
+              className={`m-2 px-4 py-2 text-base tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
+                currentCategory === category ? "bg-tertiary-green" : ""
               }`}
             >
               {category}

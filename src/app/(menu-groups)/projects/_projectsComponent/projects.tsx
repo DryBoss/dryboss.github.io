@@ -114,7 +114,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
     );
 
   return (
-    <div className="pb-5 grid md:grid-cols-2 items-center">
+    <div className="px-10 grid md:grid-cols-2 items-center">
       {filteredProjects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
@@ -128,7 +128,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
             scroll={false}
           >
             <div
-              className={`flex items-center transform transition-all dark:border-2 border-primary-light duration-200 ease-out
+              className={`flex items-center transform transition-all duration-200 ease-out
                 cursor-pointer ${
                   isVisible
                     ? "translate-x-0"
@@ -144,7 +144,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                 }`}
             >
               <div
-                className={`min-w-24 h-30 p-3 bg-card-white ${
+                className={`w-16 h-20 p-2 bg-card-white ${
                   index % 2
                     ? "text-card-red rotate-5"
                     : "text-card-black -rotate-5"

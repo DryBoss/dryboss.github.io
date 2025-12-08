@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Menu from "./_homeComponents/menu";
 import ThemeToggle from "./_homeComponents/themeToggleComponent/themeToggle";
 import Intro from "./_homeComponents/intro";
+import Featured from "./_homeComponents/features";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,7 +27,14 @@ export default function Home() {
     >
       <Menu />
       <ThemeToggle setDarkMode={setDarkMode} />
-      <Intro />
+      <div className="flex w-full h-full">
+        <div className="flex-[3] flex items-center justify-center">
+          <Intro darkMode={darkMode} />
+        </div>
+        <div className="hidden lg:flex flex-[2] items-center justify-center">
+          <Featured darkMode={darkMode} />
+        </div>
+      </div>
     </div>
   );
 }

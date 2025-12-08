@@ -11,7 +11,7 @@ export default function Intro({ darkMode }: { darkMode: boolean }) {
 
   return (
     <div
-      className={`p-4 overflow-hidden text-primary-dark rounded-lg transition-all duration-200 ease-out ${
+      className={`p-4 m-8 overflow-hidden text-primary-dark rounded-lg transition-all duration-200 ease-out border-2 ${
         mounted ? "translate-y-0" : "translate-y-500"
       } dark:text-primary-light max-w-180`}
     >
@@ -32,19 +32,7 @@ export default function Intro({ darkMode }: { darkMode: boolean }) {
         quantum computing.
       </p>
       <div className="flex justify-between items-center">
-        <div>
-          <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
-            linkedin
-          </button>
-          <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
-            github
-          </button>
-          <br className="sm:hidden"></br>
-          <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-red text-primary-dark rounded hover:shadow-lg active:shadow-inner">
-            mail
-          </button>
-        </div>
-        <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+        <button className="m-2 w-full px-4 py-2 tracking-widest bg-tertiary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
           resume
         </button>
       </div>
