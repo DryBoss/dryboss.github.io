@@ -29,10 +29,10 @@ export default function Home() {
       <ThemeToggle setDarkMode={setDarkMode} />
       <div className="flex w-full h-full">
         <div className="flex-[3] flex items-center justify-center">
-          <Intro darkMode={darkMode} />
+          <Intro />
         </div>
         <div className="hidden lg:flex flex-[2] items-center justify-center">
-          <Featured darkMode={darkMode} />
+          <Featured />
         </div>
       </div>
     </div>

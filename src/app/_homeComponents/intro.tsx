@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function Intro({ darkMode }: { darkMode: boolean }) {
+export default function Intro() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

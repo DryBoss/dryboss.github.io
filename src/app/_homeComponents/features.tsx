@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function Intro({ darkMode }: { darkMode: boolean }) {
+export default function Intro() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Intro({ darkMode }: { darkMode: boolean }) {
       <h1
         className={`m-8 text-5xl overflow-hidden whitespace-nowrap 
         transition-[width] duration-[1000ms] md:text-6xl
-        ${mounted ? "w-[12ch]" : "w-0"} ${darkMode ? "text-white" : ""}`}
+        ${mounted ? "w-[12ch]" : "w-0"}`}
       >
         Hi, I&apos;m Taiham
       </h1>
