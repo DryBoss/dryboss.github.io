@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Title from "./_writingsComponent/title";
-import WritingsComp from "./_writingsComponent/writings";
+import Title from "./_researchComponent/title";
+import WritingsComp from "./_researchComponent/writings";
 
 export default function Achievements() {
   const [darkMode, setDarkMode] = useState(false);
