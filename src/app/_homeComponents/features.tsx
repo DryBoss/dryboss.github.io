@@ -18,7 +18,7 @@ export default function Intro({ darkMode }: { darkMode: boolean }) {
       <h1
         className={`m-8 text-5xl overflow-hidden whitespace-nowrap 
         transition-[width] duration-[1000ms] md:text-6xl
-        ${mounted ? "w-[12ch]" : "w-0"}`}
+        ${mounted ? "w-[12ch]" : "w-0"} ${darkMode ? "text-white" : ""}`}
       >
         Hi, I&apos;m Taiham
       </h1>
