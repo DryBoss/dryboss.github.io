@@ -97,7 +97,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
     return (
       <div className="flex justify-center items-center">
         <div
-          className={`w-36 h-45 p-3 my-20 bg-card-white flex justify-center items-center rounded drop-shadow-lg transition-transform duration-200 ease-out animate-flip`}
+          className={`w-36 h-45 p-3 my-20 bg-card-white  flex justify-center items-center rounded drop-shadow-lg transition-transform duration-200 ease-out animate-flip`}
         >
           <svg
             fill="#000000"
@@ -114,7 +114,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
     );
 
   return (
-    <div className="p-2 grid md:grid-cols-2 items-center">
+    <div className="p-2 grid md:grid-cols-2 items-center text-primary-dark dark:text-primary-light">
       {filteredProjects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
@@ -128,7 +128,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
             scroll={false}
           >
             <div
-              className={`flex items-center text-primary-dark dark:text-primary-dark transform transition-all duration-200 ease-out
+              className={`flex items-center transform transition-all duration-200 ease-out
                 cursor-pointer ${
                   isVisible
                     ? "translate-x-0"
@@ -154,12 +154,12 @@ export default function Projects({ currentCategory }: ProjectsProps) {
               </div>
               <div className="px-4 flex flex-col justify-between">
                 <h3 className="text-xl">{project.name}</h3>
-                <p className="my-2 text-md opacity-80">{project.description}</p>
+                <p className="my-4 text-sm opacity-80">{project.description}</p>
                 <div className={`py-1 flex ${index % 2 ? "justify-end" : ""}`}>
                   {project.technologies.map((tech) => (
                     <p
                       key={tech}
-                      className="px-3 py-2 text-sm border-4 rounded-full"
+                      className="px-3 py-2 text-xs border-3 rounded-full"
                     >
                       {tech}
                     </p>
