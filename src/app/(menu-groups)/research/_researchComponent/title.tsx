@@ -28,7 +28,7 @@ export default function Title() {
           mounted ? "w-[9ch]" : "w-0"
         }`}
       >
-        Writings
+        Research
       </h1>
     </div>
   );

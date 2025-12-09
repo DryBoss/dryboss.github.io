@@ -31,13 +31,16 @@ export default function Intro() {
         Focused on web apps, machine learning and an emerging interest in
         quantum computing.
       </p>
-      <div className="flex justify-between align-center">
+      <div className="flex justify-between items-center">
         <div>
           <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             linkedin
           </button>
           <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-black text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             github
+          </button>
+          <button className="m-2 px-4 py-2 tracking-widest bg-primary-green text-primary-dark rounded hover:shadow-lg active:shadow-inner">
+            research gate
           </button>
           <br className="sm:hidden"></br>
           <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-red text-primary-dark rounded hover:shadow-lg active:shadow-inner">

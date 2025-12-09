@@ -141,7 +141,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                   index % 2
                     ? "pr-5 ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
                     : "pl-5 mr-10 rounded-r-4xl dark:border-l-0"
-                }`}
+                } hover:scale-105`}
             >
               <div
                 className={`w-20 h-25 p-2 mx-4 bg-card-white ${
