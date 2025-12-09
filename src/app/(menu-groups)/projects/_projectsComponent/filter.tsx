@@ -40,13 +40,15 @@ export default function Filter({
   return (
     <Suspense fallback={<div>Loading filters...</div>}>
       <div className="mx-4">
-        <div className="flex">
+        <div className="flex flex-wrap">
           {categories.map((category) => (
             <div
               key={category}
               onClick={() => handleClick(category)}
-              className={`m-2 px-4 py-2 text-base tracking-widest flex items-center rounded cursor-pointer text-primary-dark ${
-                currentCategory === category ? "bg-tertiary-green" : ""
+              className={`m-2 px-4 py-2 text-base tracking-widest flex items-center border-4 rounded cursor-pointer ${
+                currentCategory === category
+                  ? "bg-tertiary-green text-primary-dark dark:text-primary-dark"
+                  : "text-primary-dark dark:text-primary-light"
               }`}
             >
               {category}

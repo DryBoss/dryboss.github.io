@@ -114,7 +114,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
     );
 
   return (
-    <div className="px-10 grid md:grid-cols-2 items-center">
+    <div className="p-2 grid md:grid-cols-2 items-center">
       {filteredProjects.map((project, index) => {
         const isVisible = visibleIndexes.includes(index);
         return (
@@ -128,7 +128,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
             scroll={false}
           >
             <div
-              className={`flex items-center transform transition-all duration-200 ease-out
+              className={`flex items-center text-primary-dark dark:text-primary-dark transform transition-all duration-200 ease-out
                 cursor-pointer ${
                   isVisible
                     ? "translate-x-0"
@@ -136,7 +136,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                     ? "translate-x-200"
                     : "-translate-x-200"
                 }
-                px-2 py-5 my-5 bg-primary-dark flex
+                px-2 py-2 my-4 flex
                 ${
                   index % 2
                     ? "pr-5 ml-10 rounded-l-4xl flex-row-reverse text-right dark:border-r-0"
@@ -144,7 +144,7 @@ export default function Projects({ currentCategory }: ProjectsProps) {
                 }`}
             >
               <div
-                className={`w-16 h-20 p-2 bg-card-white ${
+                className={`w-20 h-25 p-2 mx-4 bg-card-white ${
                   index % 2
                     ? "text-card-red rotate-5"
                     : "text-card-black -rotate-5"
@@ -152,14 +152,14 @@ export default function Projects({ currentCategory }: ProjectsProps) {
               >
                 {icons[project.type]}
               </div>
-              <div className="px-5 text-primary-light flex flex-col justify-between">
-                <h3 className="my-2 text-lg">{project.name}</h3>
-                <p className="my-2 text-sm opacity-80">{project.description}</p>
-                <div className={`my-2 flex ${index % 2 ? "justify-end" : ""}`}>
+              <div className="px-4 flex flex-col justify-between">
+                <h3 className="text-xl">{project.name}</h3>
+                <p className="my-2 text-md opacity-80">{project.description}</p>
+                <div className={`py-1 flex ${index % 2 ? "justify-end" : ""}`}>
                   {project.technologies.map((tech) => (
                     <p
                       key={tech}
-                      className="px-3 py-2 text-xs text-primary-dark bg-primary-light rounded-full"
+                      className="px-3 py-2 text-sm border-4 rounded-full"
                     >
                       {tech}
                     </p>
