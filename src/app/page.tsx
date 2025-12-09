@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Menu from "./_homeComponents/menu";
 import ThemeToggle from "./_homeComponents/themeToggleComponent/themeToggle";
 import Intro from "./_homeComponents/intro";
-import Featured from "./_homeComponents/features";
+import Featured from "./_homeComponents/featured";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);

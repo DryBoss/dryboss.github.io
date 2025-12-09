@@ -31,7 +31,7 @@ export default function Intro() {
         Focused on web apps, machine learning and an emerging interest in
         quantum computing.
       </p>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between align-center">
         <div>
           <button className="m-2 px-4 py-2 tracking-widest bg-tertiary-blue text-primary-dark rounded hover:shadow-lg active:shadow-inner">
             linkedin

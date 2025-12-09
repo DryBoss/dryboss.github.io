@@ -110,7 +110,7 @@ export default function Menu() {
           key={title}
           className={`w-32 h-40 mx-[-10] p-3 bg-card-white text-sm ${
             index % 2 ? "text-card-red" : "text-card-black"
-          } tracking-widest flex flex-col justify-between items-center rounded drop-shadow-lg hover:-translate-y-2 cursor-pointer transition-transform duration-200 ease-out`}
+          } tracking-widest flex flex-col justify-between items-center rounded drop-shadow-lg hover:-translate-y-5 hover:scale-110 cursor-pointer transition-transform duration-200 ease-out`}
           style={{
             transform: `
       rotate(${rotation}deg) 
