@@ -6,6 +6,7 @@ import Menu from "./_homeComponents/menu";
 import ThemeToggle from "./_homeComponents/themeToggleComponent/themeToggle";
 import Intro from "./_homeComponents/intro";
 import Featured from "./_homeComponents/featured";
+import Status from "./_homeComponents/status";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
         darkMode ? "dark" : ""
       } overflow-hidden h-screen flex justify-center items-center bg-primary-light dark:bg-primary-dark`}
     >
+      <Status />
       <Menu />
       <ThemeToggle setDarkMode={setDarkMode} />
       <div className="flex w-full h-full">
