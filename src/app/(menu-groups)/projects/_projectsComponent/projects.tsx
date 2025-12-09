@@ -154,12 +154,14 @@ export default function Projects({ currentCategory }: ProjectsProps) {
               </div>
               <div className="px-4 flex flex-col justify-between">
                 <h3 className="text-xl">{project.name}</h3>
-                <p className="my-4 text-sm opacity-80">{project.description}</p>
+                <p className="my-4 text-md opacity-80 tracking-widest">
+                  {project.description}
+                </p>
                 <div className={`py-1 flex ${index % 2 ? "justify-end" : ""}`}>
                   {project.technologies.map((tech) => (
                     <p
                       key={tech}
-                      className="px-3 py-2 text-xs border-3 rounded-full"
+                      className="px-3 py-2 text-sm border-3 rounded-full"
                     >
                       {tech}
                     </p>

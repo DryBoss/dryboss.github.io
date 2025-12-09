@@ -71,7 +71,7 @@ export default function Intro() {
       <h3 className="text-2xl">
         {currentFeature?.title || "Featured Project"}
       </h3>
-      <p className="flex-grow my-5">
+      <p className="flex-grow my-5 tracking-widest text-center">
         {currentFeature?.description ||
           "Check out some of our highlighted work."}
       </p>
