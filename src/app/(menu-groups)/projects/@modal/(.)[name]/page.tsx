@@ -41,6 +41,16 @@ export default function ProjectModal() {
       });
   }, [name]);
 
+  // Lock body scroll when modal is open
+  useEffect(() => {
+    if (mounted) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mounted]);
+
   const handleClose = () => {
     setShow(false); // triggers exit animation
     setTimeout(() => {

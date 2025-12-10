@@ -26,9 +26,9 @@ export default function Home() {
         darkMode ? "dark" : ""
       } overflow-hidden h-screen flex justify-center items-center bg-primary-light dark:bg-primary-dark`}
     >
-      <Status />
       <Menu />
       <ThemeToggle setDarkMode={setDarkMode} />
+      <Status />
       <div className="flex w-full h-full">
         <div className="flex-[3] flex items-center justify-center">
           <Intro />
