@@ -1,20 +1,20 @@
 .toggle-scene {
-  width: 80px;
+  width: 70px;
   position: fixed;
 }
 
 .toggle-scene__bulb {
   right: 75px;
-  top: -50px;
+  top: -30px;
   rotate: 180deg;
 }
 
 .toggle-scene__cords {
   touch-action: none;
-  width: 200px;
+  width: 150px;
   overflow: visible;
-  top: -200px;
-  right: -30px;
+  top: -130px;
+  right: -10px;
 }
 
 .toggle-scene__cord {

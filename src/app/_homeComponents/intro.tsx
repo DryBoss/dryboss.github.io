@@ -41,25 +41,16 @@ export default function Intro() {
       </h1>
 
       {/* SUB-HEADING */}
-      <p className="mb-8 text-xl md:text-2xl font-bold uppercase tracking-widest opacity-80 border-l-[3px] border-tertiary-green pl-4">
+      <p className="mb-8 text-xl md:text-2xl font-bold uppercase tracking-widest opacity-80 border-l-[3px]  pl-4">
         Full Stack Developer &<br /> Machine Learning Engineer
       </p>
 
       {/* DESCRIPTION */}
       <p className="mb-10 text-lg leading-relaxed font-medium max-w-lg">
         Exploring technology with curiosity. Focused on{" "}
-        <span className="font-bold border-b-2 border-tertiary-blue">
-          web apps
-        </span>
-        ,{" "}
-        <span className="font-bold border-b-2 border-tertiary-red">
-          machine learning
-        </span>
-        , and an emerging interest in{" "}
-        <span className="font-bold border-b-2 border-primary-green">
-          quantum computing
-        </span>
-        .
+        <span className="font-bold">web apps</span>,{" "}
+        <span className="font-bold">machine learning</span>, and an emerging
+        interest in <span className="font-bold">quantum computing</span>.
       </p>
 
       {/* BUTTONS CONTAINER */}
