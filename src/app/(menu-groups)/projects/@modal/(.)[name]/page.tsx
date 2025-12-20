@@ -98,7 +98,7 @@ export default function ProjectModal() {
           <div className="flex flex-col h-full overflow-hidden">
             {/* Header Section */}
             <div className="mb-6 pr-12">
-              <h2 className="text-4xl tracking-tighter mb-4">
+              <h2 className="text-4xl tracking-widest mb-4">
                 {projectDetails?.name}
               </h2>
 
