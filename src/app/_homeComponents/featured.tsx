@@ -59,8 +59,8 @@ export default function Featured() {
         const randomIndex = Math.floor(Math.random() * features.length);
         setCurrentFeature(features[randomIndex]);
         setIsVisible(true);
-      }, 400);
-    }, 8000); // 8 seconds per card
+      }, 100);
+    }, 20000); // 8 seconds per card
 
     return () => clearInterval(interval);
   }, [features]);
@@ -105,7 +105,7 @@ export default function Featured() {
       <div
         className={`
           flex flex-col items-center justify-between h-full w-full
-          transition-opacity duration-500 ease-in-out
+          transition-opacity duration-100 ease-in-out
           ${isVisible ? "opacity-100" : "opacity-0"}
         `}
       >
@@ -137,7 +137,7 @@ export default function Featured() {
             active:translate-y-0 active:shadow-none
           `}
         >
-          View Case Study
+          View
         </button>
       </div>
     </div>
