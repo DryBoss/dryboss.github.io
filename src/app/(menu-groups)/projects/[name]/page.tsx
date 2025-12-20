@@ -71,7 +71,7 @@ export default function ProjectPage() {
       <div
         className={`
           max-w-5xl w-full h-full max-h-[90vh] relative flex flex-col
-          transform transition-all duration-1000 cubic-bezier(0.17, 0.55, 0.55, 1)
+          transform transition-all duration-0 cubic-bezier(0.17, 0.55, 0.55, 1)
           ${show ? "translate-y-0 opacity-100" : "translate-y-[20%] opacity-0"}
         `}
       >
