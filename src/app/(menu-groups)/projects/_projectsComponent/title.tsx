@@ -3,12 +3,6 @@
 import { useState, useEffect } from "react";
 
 export default function Title() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div
       // RESTORED: Transparent background (removed border/shadow box)
