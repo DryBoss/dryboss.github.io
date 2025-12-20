@@ -81,7 +81,7 @@ export default function Menu() {
 
   return (
     // Adjusted container to sit lower (bottom-[-10px]) since cards are smaller
-    <div className="fixed bottom-[-50px] left-1/2 -translate-x-1/2 z-50 flex items-end pb-4">
+    <div className="fixed bottom-[-40px] left-1/2 -translate-x-1/2 z-50 flex items-end pb-4">
       {menuItems.map(({ title, route, rotation, translateY, icon }, index) => {
         const isVisible = visibleItems.includes(index);
         const isClicked = clickedIndex === index;
@@ -96,7 +96,7 @@ export default function Menu() {
             // -ml-6 (Overlap reduced proportionally)
             className={`
               relative cursor-pointer
-              w-24 h-36 md:w-32 md:h-44 -ml-6 first:ml-0
+              w-24 h-36 md:w-28 md:h-40 -ml-6 first:ml-0
               flex flex-col justify-between items-center p-2
               bg-white dark:bg-card-white
               border-[3px] border-black rounded-xl
