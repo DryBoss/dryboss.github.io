@@ -1,14 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 export default function Title() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <div
       // Added 'transition-none duration-0' to ensure instant retro theme switching
