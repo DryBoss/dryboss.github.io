@@ -8,7 +8,7 @@ export default function Status() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setMounted(true);
-    }, 1000); // 2s delay
+    }, 1000); // 1s delay
 
     return () => clearTimeout(timeout);
   }, []);
@@ -16,34 +16,36 @@ export default function Status() {
   return (
     <div
       className={`
-        h-[56px] fixed top-0 w-full z-[9999] border-b-2 
-        flex items-center gap-2 p-2 
+        fixed top-0 left-0 w-full z-[9999] min-h-[56px]
+        flex items-center gap-4 px-4 py-2
         bg-primary-light dark:bg-primary-dark 
         text-primary-dark dark:text-primary-light
-        transform transition-all duration-200
-        ${mounted ? "translate-y-0" : "-translate-y-20"}
+        border-b-[3px] border-current
+        transform transition-transform duration-300 ease-out
+        ${mounted ? "translate-y-0" : "-translate-y-full"}
       `}
     >
-      <div className="w-5 h-5 mx-2 bg-tertiary-green rounded-full blink"></div>
+      {/* LED Indicator: 
+          - Added border-2 border-black to look like a physical hardware light.
+          - Kept the blink animation.
+      */}
+      <div className="flex-shrink-0 w-4 h-4 bg-tertiary-green rounded-full border-2 border-black blink shadow-[0_0_8px_rgba(0,255,0,0.6)]"></div>
 
-      <p className="text-sm tracking-widest">
-        Quantum computing & ML researcher with web development experience, open
-        to partnerships or professional roles.
+      <p className="text-xs md:text-sm font-bold uppercase tracking-widest leading-tight">
+        Quantum computing & ML researcher • Web Dev • Open to partnerships
       </p>
 
       <style jsx>{`
         .blink {
-          animation: blink 1s infinite;
+          animation: blink 1.5s infinite step-end;
         }
         @keyframes blink {
           0%,
-          50%,
           100% {
             opacity: 1;
           }
-          25%,
-          75% {
-            opacity: 0;
+          50% {
+            opacity: 0.3;
           }
         }
       `}</style>
