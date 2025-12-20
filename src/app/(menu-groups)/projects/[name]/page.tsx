@@ -85,9 +85,9 @@ export default function ProjectPage() {
           </button>
 
           <h1
-            className={`
-              text-5xl md:text-7xl font-black tracking-widest
-              overflow-hidden whitespace-nowrap 
+            className={`pb-2
+              text-3xl md:text-5xl font-black tracking-widest
+         
               transition-all duration-[1000ms] ease-linear
               ${mounted ? "w-full" : "w-0"}
             `}
