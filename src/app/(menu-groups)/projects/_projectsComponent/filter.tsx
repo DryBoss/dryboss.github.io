@@ -86,7 +86,7 @@ export default function Filter({
           {/* Optional "Clear" indicator if a filter is active */}
           {currentCategory !== "none" && (
             <button
-              onClick={() => handleClick("none" as any)}
+              onClick={() => handleClick("none" as Category)}
               className="text-[10px] font-bold uppercase opacity-50 hover:opacity-100 transition-opacity flex items-center gap-2"
             >
               <span>✕ Clear Filter</span>

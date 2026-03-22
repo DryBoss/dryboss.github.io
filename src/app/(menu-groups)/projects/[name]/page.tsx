@@ -25,7 +25,6 @@ export default function ProjectPage() {
     null,
   );
   const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false);
   const [show, setShow] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -46,7 +45,6 @@ export default function ProjectPage() {
       .then((data) => {
         setProjectDetails(data);
         setLoading(false);
-        setTimeout(() => setMounted(true), 100);
       })
       .catch(() => setLoading(false));
   }, [name]);
