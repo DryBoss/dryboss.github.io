@@ -5,7 +5,7 @@
 
 .toggle-scene__bulb {
   right: 75px;
-  top: -30px;
+  top: -50px;
   rotate: 180deg;
 }
 
@@ -13,7 +13,7 @@
   touch-action: none;
   width: 150px;
   overflow: visible;
-  top: -130px;
+  top: -150px;
   right: -10px;
 }
 

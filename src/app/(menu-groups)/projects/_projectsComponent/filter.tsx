@@ -3,7 +3,6 @@
 import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-// Ensure this matches the parent component's types
 type Category = "web development" | "machine learning" | "none";
 
 interface FilterProps {
@@ -41,33 +40,58 @@ export default function Filter({
   return (
     <Suspense
       fallback={
-        <div className="mx-4 text-sm font-bold uppercase tracking-widest animate-pulse border-[3px] border-dashed border-current p-2 w-fit">
-          [Loading filters...]
+        <div className="mx-4 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse border-2 border-dashed border-current p-4 w-fit opacity-50">
+          [ Sorting Deck... ]
         </div>
       }
     >
       <div className="mx-4">
-        <div className="flex flex-wrap gap-4">
-          {categories.map((category) => (
+        <div className="flex flex-wrap gap-6">
+          {categories.map((category) => {
+            const isActive = currentCategory === category;
+
+            return (
+              <button
+                key={category}
+                onClick={() => handleClick(category)}
+                type="button"
+                className={`
+                  relative px-6 py-2 text-xs font-bold tracking-[0.15em] uppercase 
+                  border-2 transition-all duration-150 ease-out
+                  /* Tactile movement */
+                  ${
+                    isActive
+                      ? "translate-x-[2px] translate-y-[2px] bg-tertiary-green border-black text-black shadow-none"
+                      : "bg-primary-light dark:bg-primary-dark border-black dark:border-white text-current hover:-translate-y-1 hover:-translate-x-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)]"
+                  }
+                `}
+              >
+                {/* Active Indicator "Sticker" */}
+                {isActive && (
+                  <div className="absolute -top-2 -right-2 w-4 h-4 bg-black dark:bg-white rotate-45 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-tertiary-green" />
+                  </div>
+                )}
+
+                <span className="relative z-10">{category}</span>
+
+                {/* Decorative corner accents */}
+                {!isActive && (
+                  <div className="absolute top-0 left-0 w-1 h-1 border-t border-l border-current opacity-30" />
+                )}
+              </button>
+            );
+          })}
+
+          {/* Optional "Clear" indicator if a filter is active */}
+          {currentCategory !== "none" && (
             <button
-              key={category}
-              onClick={() => handleClick(category)}
-              type="button"
-              className={`
-                px-6 py-2 text-base font-bold tracking-widest uppercase flex items-center 
-                border-[3px] rounded-full transition-all duration-0
-                hover:-translate-y-1 
-                active:translate-y-0 active:shadow-none
-                ${
-                  currentCategory === category
-                    ? "bg-tertiary-green border-black text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
-                    : "bg-transparent border-current text-primary-dark dark:text-primary-light hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]"
-                }
-              `}
+              onClick={() => handleClick("none" as any)}
+              className="text-[10px] font-bold uppercase opacity-50 hover:opacity-100 transition-opacity flex items-center gap-2"
             >
-              {category}
+              <span>✕ Clear Filter</span>
             </button>
-          ))}
+          )}
         </div>
       </div>
     </Suspense>
