@@ -1,12 +1,7 @@
 "use client";
 
 export default function Field() {
-  const fields = [
-    "Artificial Intelligence and Machine Learning",
-    "Data Science and Big Data Analytics",
-    "Computer Vision and Image Processing",
-    "Quantum Computing",
-  ];
+  const fields = ["Machine Learning", "Data Science", "Quantum Computing"];
 
   return (
     // Added 'transition-none duration-0' for instant theme switching

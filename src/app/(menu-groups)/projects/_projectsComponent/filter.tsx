@@ -40,12 +40,12 @@ export default function Filter({
   return (
     <Suspense
       fallback={
-        <div className="mx-4 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse border-2 border-dashed border-current p-4 w-fit opacity-50">
+        <div className="mx-4 text-[10px] font-bold uppercase tracking-[0.2em] animate-pulse border-2 border-dashed border-current p-4 w-fit opacity-50 text-primary-dark dark:text-primary-light ">
           [ Sorting Deck... ]
         </div>
       }
     >
-      <div className="mx-4">
+      <div className="mx-4 text-primary-dark dark:text-primary-light ">
         <div className="flex flex-wrap gap-6">
           {categories.map((category) => {
             const isActive = currentCategory === category;

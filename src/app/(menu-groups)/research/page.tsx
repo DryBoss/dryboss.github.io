@@ -57,7 +57,7 @@ export default function Achievements() {
           {/* Publications Section - The "Collection" grid feel */}
           <div className="mb-12">
             <div className="flex items-center gap-4 mb-8">
-              <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border-2 border-black dark:border-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)]">
+              <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border-2 border-black dark:border-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] dark:shadow-[3px_3px_0px_0px_rgba(255,255,255,0.2)] text-primary-dark dark:text-primary-light ">
                 Publications
               </span>
               <div className="h-[1px] flex-grow bg-black/20 dark:bg-white/20" />
