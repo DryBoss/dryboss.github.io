@@ -15,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body className={``}>{children}</body>
+      <body className={``}>
+        <SpeedInsights />
+        {children}
+      </body>
     </html>
   );
 }
