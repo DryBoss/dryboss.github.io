@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DryBoss | Projects",
+  title: "Projects — Taiham (DryBoss)",
   description:
-    "Explore the portfolio of Taiham AKA DryBoss, a passionate developer and researcher skilled in web development, machine learning, quantum computing and open-source innovation. Discover projects, research, and creative work all in one place.",
+    "Web development and machine learning projects built by Taiham (DryBoss) — browse by category, or dive into any project for details, tech stack, and links.",
 };
 
 export default function RootLayout(

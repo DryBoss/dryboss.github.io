@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
+import Link from "next/link";
 import Title from "./_projectsComponent/title";
 import Filter from "./_projectsComponent/filter";
 import ProjectsComp from "./_projectsComponent/projects";
@@ -41,6 +42,14 @@ export default function Projects() {
         <div className="absolute top-1/2 right-[5%] w-64 h-96 border-2 border-black/5 dark:border-white/5 rounded-xl -rotate-12 -z-0 pointer-events-none" />
 
         <div className="w-full mx-auto px-4 md:px-12 2xl:px-24 py-12 relative z-10">
+          {/* Back to Home */}
+          <Link
+            href="/"
+            className="flex w-fit items-center gap-2 mb-10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] border-2 border-black dark:border-white bg-primary-light dark:bg-primary-dark transition-all duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] active:translate-y-0 active:translate-x-0 active:shadow-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-green"
+          >
+            ← Home
+          </Link>
+
           {/* Header Placard - Matches Achievements Title */}
           <div className="mb-12 transform rotate-1 hover:rotate-0 transition-transform duration-300 ease-out inline-block">
             <div className="border-4 border-black dark:border-white p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] bg-primary-light dark:bg-primary-dark">

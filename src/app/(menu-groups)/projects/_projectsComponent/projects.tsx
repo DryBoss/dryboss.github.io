@@ -88,8 +88,15 @@ export default function Projects({ currentCategory }: ProjectsProps) {
 
   if (!loading && filteredProjects.length === 0) {
     return (
-      <div className="flex justify-center items-center py-20 opacity-50 tracking-[0.5em] font-bold">
-        EMPTY SLOT
+      <div className="flex flex-col items-center justify-center gap-4 py-20 text-primary-dark dark:text-primary-light">
+        <span className="opacity-50 tracking-[0.5em] font-bold text-sm">
+          EMPTY SLOT
+        </span>
+        {currentCategory !== "none" && (
+          <p className="text-xs font-bold uppercase tracking-widest opacity-40">
+            No {currentCategory} projects yet — try another category.
+          </p>
+        )}
       </div>
     );
   }
@@ -106,7 +113,8 @@ export default function Projects({ currentCategory }: ProjectsProps) {
             prefetch
             key={project._id}
             className={`
-              block transition-all duration-500 ease-out
+              block transition-all duration-500 ease-out rounded-sm
+              focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tertiary-green
               ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}
             `}
             scroll={false}

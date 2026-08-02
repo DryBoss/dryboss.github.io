@@ -58,6 +58,7 @@ export default function Filter({
                 className={`
                   relative px-6 py-2 text-xs font-bold tracking-[0.15em] uppercase 
                   border-2 transition-all duration-150 ease-out
+                  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-green
                   /* Tactile movement */
                   ${
                     isActive
@@ -87,7 +88,7 @@ export default function Filter({
           {currentCategory !== "none" && (
             <button
               onClick={() => handleClick("none" as Category)}
-              className="text-[10px] font-bold uppercase opacity-50 hover:opacity-100 transition-opacity flex items-center gap-2"
+              className="text-[10px] font-bold uppercase opacity-50 hover:opacity-100 transition-opacity flex items-center gap-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-green"
             >
               <span>✕ Clear Filter</span>
             </button>

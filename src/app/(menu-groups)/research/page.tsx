@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import Title from "./_researchComponent/title";
 import Publications from "./_researchComponent/publications";
 import Field from "./_researchComponent/field";
 
-export default function Achievements() {
+export default function ResearchPage() {
   const [mounted, setMounted] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -36,6 +37,14 @@ export default function Achievements() {
         <div className="absolute bottom-20 left-[5%] w-48 h-72 border-4 border-black/5 dark:border-white/5 rounded-2xl -rotate-6 -z-0 pointer-events-none" />
 
         <div className="container mx-auto px-4 py-12 max-w-6xl relative z-10">
+          {/* Back to Home */}
+          <Link
+            href="/"
+            className="flex w-fit items-center gap-2 mb-10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] border-2 border-black dark:border-white bg-primary-light dark:bg-primary-dark transition-all duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] active:translate-y-0 active:translate-x-0 active:shadow-none"
+          >
+            Home
+          </Link>
+
           {/* Header "Seal" - Hard shadow & slight tilt */}
           <div className="mb-16 transform -rotate-1 hover:rotate-0 transition-transform duration-300 ease-out inline-block">
             <div className="border-4 border-black dark:border-white p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] bg-primary-light dark:bg-primary-dark">

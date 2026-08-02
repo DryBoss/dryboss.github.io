@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DryBoss | Writings",
+  title: "Research - Taiham",
   description:
-    "Dive into the thoughts and writings of Taiham AKA DryBoss. From insightful articles on web development, machine learning, and quantum computing to personal reflections and technical explorations — discover a world of ideas, experience, and expertise.",
+    "Research interests and publications from Taiham. Spanning machine learning, data science, and quantum computing.",
 };
 
 export default function RootLayout({
