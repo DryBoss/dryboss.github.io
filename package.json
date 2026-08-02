@@ -13,9 +13,9 @@
     "@vercel/speed-insights": "^2.0.0",
     "gsap": "^3.13.0",
     "mongoose": "^8.15.2",
-    "next": "^9.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.2.12",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
